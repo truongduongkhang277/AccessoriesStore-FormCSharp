@@ -32,12 +32,16 @@ namespace TruongDuongKhang_1811546141
 
         private void ribBtnAccountActive_Click(object sender, EventArgs e)
         {
-
+            ListAccount listAccount = new ListAccount(true);
+            listAccount.MdiParent = this;
+            listAccount.Show();
         }
 
         private void ribBtnAccountInactive_Click(object sender, EventArgs e)
         {
-
+            ListAccount listAccount = new ListAccount(false);
+            listAccount.MdiParent = this;
+            listAccount.Show();
         }
 
         private void ribBtnRole_Click(object sender, EventArgs e)

@@ -17,12 +17,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         public BusAccount()
         {
             this.accountInfo = new AccountEntity();
-        }
-
-        private string selectSql()
-        {
-            return string.Format("Select * from TblAccount");
-        }
+        }      
 
         // trả về câu SQL insert dữ liệu vào bảng TblAccount ( mssql server )
         private string insertSql()
@@ -94,9 +89,24 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         }
 
         // lấy thông tin địa chỉ từ database và trả về dataset object cho nơi gọi
-        public DataSet getData()
+
+        // dựa vào trạng thái isActive để chọn ds : true - đã kích hoạt, false - chưa kích hoạt
+        // dựa vào giá trị roleId để lọc [nếu là 0 thì không lọc ]
+        public DataSet getData(bool isActive, int roleId)
         {
-            return new DaoMsSqlServer().getData(selectSql(), "TblAccount");
+            String query = "Select " +
+                            "FirstName, " +
+                            "LastName, " +
+                            "Username, " +
+                            "FORMAT(DateOfBirth, 'dd/MM/yyyy') as DateOfBirth, " +
+                            "iif(Sex=1,'Nam', N'Nữ') as Sex, " +
+                            "Phone, " +
+                            "Address + ',' +ad.District + ',' + ad.City as Address  " +
+                            "from TblAccount acc inner join TblAddress ad " +
+                            "on (acc.AddressId = ad.AddressId) ";
+                          "where Status = " + (isActive ? "1" : "0") + (roleId > 0 ? " And acc.RoleId = " + roleId.ToString() : "") + " Order by LastName";
+            
+            return new DaoMsSqlServer().getData(query, "TblAccount");
         }
     }
 }
