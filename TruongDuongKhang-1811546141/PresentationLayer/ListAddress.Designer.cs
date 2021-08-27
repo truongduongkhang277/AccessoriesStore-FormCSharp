@@ -129,7 +129,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(200, 26);
             this.txtCity.TabIndex = 25;
-            this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
             // 
             // btnUpdate
             // 
@@ -174,7 +173,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(600, 50);
             this.txtDescription.TabIndex = 27;
-            this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // txtDistrict
             // 
@@ -182,7 +180,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtDistrict.Name = "txtDistrict";
             this.txtDistrict.Size = new System.Drawing.Size(200, 26);
             this.txtDistrict.TabIndex = 23;
-            this.txtDistrict.TextChanged += new System.EventHandler(this.txtDistrict_TextChanged);
             // 
             // label2
             // 

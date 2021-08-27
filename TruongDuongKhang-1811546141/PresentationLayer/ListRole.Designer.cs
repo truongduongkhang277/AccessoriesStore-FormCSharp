@@ -162,7 +162,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(600, 50);
             this.txtDescription.TabIndex = 27;
-            this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // txtRoleName
             // 
@@ -170,7 +169,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtRoleName.Name = "txtRoleName";
             this.txtRoleName.Size = new System.Drawing.Size(300, 26);
             this.txtRoleName.TabIndex = 23;
-            this.txtRoleName.TextChanged += new System.EventHandler(this.txtRoleName_TextChanged);
             // 
             // panel2
             // 
@@ -188,6 +186,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvRole.Name = "dgvRole";
             this.dgvRole.Size = new System.Drawing.Size(800, 200);
             this.dgvRole.TabIndex = 0;
+            this.dgvRole.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRole_CellClick);
             // 
             // label1
             // 

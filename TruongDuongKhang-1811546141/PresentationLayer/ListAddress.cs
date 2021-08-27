@@ -55,32 +55,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvAddress.Columns[2].HeaderText = "TP (Tỉnh)";
             this.dgvAddress.Columns[2].Width = 200;
             this.dgvAddress.Columns[3].HeaderText = "Chú thích";
-            this.dgvAddress.Columns[3].Width = 170;
+            this.dgvAddress.Columns[3].Width = 270;
 
             // dòng được chọn
             this.dgvAddress.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        // khi tên quận (huyện) hoặc tên tỉnh (thành phố) hoặc chú thích thay đổi thì nút cập nhật có thể sử dụng
-        private bool enableUpdate()
-        {
-            return (this.txtDistrict.Text.Length > 0 || this.txtCity.Text.Length > 0 || this.txtDescription.Text.Length > 0);
-        }
-
-        private void txtDistrict_TextChanged(object sender, EventArgs e)
-        {
-            this.btnUpdate.Enabled = enableUpdate();
-        }
-
-        private void txtCity_TextChanged(object sender, EventArgs e)
-        {
-            this.btnUpdate.Enabled = enableUpdate();
-        }
-
-        private void txtDescription_TextChanged(object sender, EventArgs e)
-        {
-            this.btnUpdate.Enabled = enableUpdate();
-        }
 
         private void dgvAddress_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,6 +69,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtDistrict.Text = dgvAddress.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.txtCity.Text = dgvAddress.Rows[e.RowIndex].Cells[2].Value.ToString();
             this.txtDescription.Text = dgvAddress.Rows[e.RowIndex].Cells[3].Value.ToString();
+            this.btnUpdate.Enabled = true;
+            this.btnDelete.Enabled = true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -129,9 +111,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            this.txtDistrict.Clear();
-            this.txtCity.Clear();
-            this.txtDescription.Clear();
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
