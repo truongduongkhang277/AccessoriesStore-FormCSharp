@@ -31,14 +31,15 @@ namespace TruongDuongKhang_1811546141
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainApp));
             this.ribbon1 = new System.Windows.Forms.Ribbon();
-            this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
+            this.ribTabDirectory = new System.Windows.Forms.RibbonTab();
+            this.ribPanelAccount = new System.Windows.Forms.RibbonPanel();
+            this.ribBtnAddAccount = new System.Windows.Forms.RibbonButton();
+            this.ribBtnAccountActive = new System.Windows.Forms.RibbonButton();
+            this.ribBtnAccountInactive = new System.Windows.Forms.RibbonButton();
+            this.ribPanelRole = new System.Windows.Forms.RibbonPanel();
+            this.ribBtnRole = new System.Windows.Forms.RibbonButton();
+            this.ribPanelAddress = new System.Windows.Forms.RibbonPanel();
             this.ribBtnAddress = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
-            this.ribBtnGroupList = new System.Windows.Forms.RibbonButton();
             this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
@@ -79,7 +80,9 @@ namespace TruongDuongKhang_1811546141
             this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
-            this.ribBtnAddAccount = new System.Windows.Forms.RibbonButton();
+            this.ribBtnAddRole = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
+            this.ribBtnAddAddress = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbon1
@@ -100,7 +103,7 @@ namespace TruongDuongKhang_1811546141
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ribbon1.Size = new System.Drawing.Size(1370, 175);
             this.ribbon1.TabIndex = 1;
-            this.ribbon1.Tabs.Add(this.ribbonTab1);
+            this.ribbon1.Tabs.Add(this.ribTabDirectory);
             this.ribbon1.Tabs.Add(this.ribbonTab2);
             this.ribbon1.Tabs.Add(this.ribbonTab3);
             this.ribbon1.Tabs.Add(this.ribbonTab4);
@@ -110,67 +113,81 @@ namespace TruongDuongKhang_1811546141
             this.ribbon1.Tabs.Add(this.ribbonTab8);
             this.ribbon1.Text = "ribbon1";
             // 
-            // ribbonTab1
+            // ribTabDirectory
             // 
-            this.ribbonTab1.Name = "ribbonTab1";
-            this.ribbonTab1.Panels.Add(this.ribbonPanel1);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel5);
-            this.ribbonTab1.Panels.Add(this.ribbonPanel2);
-            this.ribbonTab1.Text = "Danh mục";
+            this.ribTabDirectory.Name = "ribTabDirectory";
+            this.ribTabDirectory.Panels.Add(this.ribPanelAccount);
+            this.ribTabDirectory.Panels.Add(this.ribPanelRole);
+            this.ribTabDirectory.Panels.Add(this.ribPanelAddress);
+            this.ribTabDirectory.Text = "Danh mục";
             // 
-            // ribbonPanel1
+            // ribPanelAccount
             // 
-            this.ribbonPanel1.Items.Add(this.ribbonButton1);
-            this.ribbonPanel1.Items.Add(this.ribBtnAddAccount);
-            this.ribbonPanel1.Items.Add(this.ribbonButton5);
-            this.ribbonPanel1.Name = "ribbonPanel1";
-            this.ribbonPanel1.Text = "Tài khoản - Thành viên";
+            this.ribPanelAccount.Items.Add(this.ribBtnAddAccount);
+            this.ribPanelAccount.Items.Add(this.ribBtnAccountActive);
+            this.ribPanelAccount.Items.Add(this.ribBtnAccountInactive);
+            this.ribPanelAccount.Name = "ribPanelAccount";
+            this.ribPanelAccount.Text = "Tài khoản - Thành viên";
             // 
-            // ribbonButton1
+            // ribBtnAddAccount
             // 
-            this.ribbonButton1.Image = global::TruongDuongKhang_1811546141.Properties.Resources.accountList;
-            this.ribbonButton1.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.accountList;
-            this.ribbonButton1.Name = "ribbonButton1";
-            this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
-            this.ribbonButton1.Text = "Danh sách tài khoản";
+            this.ribBtnAddAccount.Image = global::TruongDuongKhang_1811546141.Properties.Resources.accountAdd;
+            this.ribBtnAddAccount.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.accountAdd;
+            this.ribBtnAddAccount.Name = "ribBtnAddAccount";
+            this.ribBtnAddAccount.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnAddAccount.SmallImage")));
+            this.ribBtnAddAccount.Text = "Thêm tài khoản";
+            this.ribBtnAddAccount.Click += new System.EventHandler(this.ribBtnAddAccount_Click);
             // 
-            // ribbonButton5
+            // ribBtnAccountActive
             // 
-            this.ribbonButton5.Image = global::TruongDuongKhang_1811546141.Properties.Resources.AccountVerify;
-            this.ribbonButton5.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.AccountVerify;
-            this.ribbonButton5.Name = "ribbonButton5";
-            this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
-            this.ribbonButton5.Text = "Xác thực tài khoản";
+            this.ribBtnAccountActive.Image = global::TruongDuongKhang_1811546141.Properties.Resources.AccountVerify;
+            this.ribBtnAccountActive.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.AccountVerify;
+            this.ribBtnAccountActive.Name = "ribBtnAccountActive";
+            this.ribBtnAccountActive.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnAccountActive.SmallImage")));
+            this.ribBtnAccountActive.Text = "Tài khoản đã xác thực";
+            this.ribBtnAccountActive.Click += new System.EventHandler(this.ribBtnAccountActive_Click);
             // 
-            // ribbonPanel2
+            // ribBtnAccountInactive
             // 
-            this.ribbonPanel2.Items.Add(this.ribBtnAddress);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Text = "Địa chỉ lien lac";
+            this.ribBtnAccountInactive.Image = global::TruongDuongKhang_1811546141.Properties.Resources.accountInactive;
+            this.ribBtnAccountInactive.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.accountInactive;
+            this.ribBtnAccountInactive.Name = "ribBtnAccountInactive";
+            this.ribBtnAccountInactive.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnAccountInactive.SmallImage")));
+            this.ribBtnAccountInactive.Text = "Tài khoản chưa xác thực";
+            this.ribBtnAccountInactive.Click += new System.EventHandler(this.ribBtnAccountInactive_Click);
+            // 
+            // ribPanelRole
+            // 
+            this.ribPanelRole.Items.Add(this.ribBtnRole);
+            this.ribPanelRole.Items.Add(this.ribBtnAddRole);
+            this.ribPanelRole.Name = "ribPanelRole";
+            this.ribPanelRole.Text = "Loại tài khoản";
+            // 
+            // ribBtnRole
+            // 
+            this.ribBtnRole.Image = global::TruongDuongKhang_1811546141.Properties.Resources.group;
+            this.ribBtnRole.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.group;
+            this.ribBtnRole.Name = "ribBtnRole";
+            this.ribBtnRole.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnRole.SmallImage")));
+            this.ribBtnRole.Text = "Danh sách loại tài khoản";
+            this.ribBtnRole.Click += new System.EventHandler(this.ribBtnRole_Click);
+            // 
+            // ribPanelAddress
+            // 
+            this.ribPanelAddress.Items.Add(this.ribBtnAddress);
+            this.ribPanelAddress.Items.Add(this.ribBtnAddAddress);
+            this.ribPanelAddress.Name = "ribPanelAddress";
+            this.ribPanelAddress.Text = "Địa chỉ";
             // 
             // ribBtnAddress
             // 
+            this.ribBtnAddress.DropDownItems.Add(this.ribbonButton2);
             this.ribBtnAddress.Image = global::TruongDuongKhang_1811546141.Properties.Resources.districts;
             this.ribBtnAddress.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.districts;
             this.ribBtnAddress.Name = "ribBtnAddress";
             this.ribBtnAddress.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnAddress.SmallImage")));
-            this.ribBtnAddress.Text = "Địa chỉ";
+            this.ribBtnAddress.Text = "Danh sách quận (huyện)";
             this.ribBtnAddress.Click += new System.EventHandler(this.ribBtnAddress_Click);
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.ribBtnGroupList);
-            this.ribbonPanel5.Name = "ribbonPanel5";
-            this.ribbonPanel5.Text = "Phan quyen tai khoan";
-            // 
-            // ribBtnGroupList
-            // 
-            this.ribBtnGroupList.Image = global::TruongDuongKhang_1811546141.Properties.Resources.group;
-            this.ribBtnGroupList.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.group;
-            this.ribBtnGroupList.Name = "ribBtnGroupList";
-            this.ribBtnGroupList.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnGroupList.SmallImage")));
-            this.ribBtnGroupList.Text = "Danh sach quyen";
-            this.ribBtnGroupList.Click += new System.EventHandler(this.ribBtnGroupList_Click);
             // 
             // ribbonTab2
             // 
@@ -479,14 +496,31 @@ namespace TruongDuongKhang_1811546141
             this.ribbonButton10.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.SmallImage")));
             this.ribbonButton10.Text = "Danh sách loại SP";
             // 
-            // ribBtnAddAccount
+            // ribBtnAddRole
             // 
-            this.ribBtnAddAccount.Image = global::TruongDuongKhang_1811546141.Properties.Resources.accountAdd;
-            this.ribBtnAddAccount.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.accountAdd;
-            this.ribBtnAddAccount.Name = "ribBtnAddAccount";
-            this.ribBtnAddAccount.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnAddAccount.SmallImage")));
-            this.ribBtnAddAccount.Text = "Thêm tài khoản";
-            this.ribBtnAddAccount.Click += new System.EventHandler(this.ribBtnAddAccount_Click);
+            this.ribBtnAddRole.Image = global::TruongDuongKhang_1811546141.Properties.Resources.groupAdd;
+            this.ribBtnAddRole.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.groupAdd;
+            this.ribBtnAddRole.Name = "ribBtnAddRole";
+            this.ribBtnAddRole.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnAddRole.SmallImage")));
+            this.ribBtnAddRole.Text = "Thêm loại tài khoản";
+            this.ribBtnAddRole.Click += new System.EventHandler(this.ribBtnAddRole_Click);
+            // 
+            // ribbonButton2
+            // 
+            this.ribbonButton2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.Image")));
+            this.ribbonButton2.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.LargeImage")));
+            this.ribbonButton2.Name = "ribbonButton2";
+            this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
+            this.ribbonButton2.Text = "ribbonButton2";
+            // 
+            // ribBtnAddAddress
+            // 
+            this.ribBtnAddAddress.Image = global::TruongDuongKhang_1811546141.Properties.Resources.districtsAdd;
+            this.ribBtnAddAddress.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.districtsAdd;
+            this.ribBtnAddAddress.Name = "ribBtnAddAddress";
+            this.ribBtnAddAddress.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnAddAddress.SmallImage")));
+            this.ribBtnAddAddress.Text = "Thêm quận (huyện)";
+            this.ribBtnAddAddress.Click += new System.EventHandler(this.ribBtnAddAddress_Click);
             // 
             // MainApp
             // 
@@ -512,25 +546,23 @@ namespace TruongDuongKhang_1811546141
         #endregion
 
         private System.Windows.Forms.Ribbon ribbon1;
-        private System.Windows.Forms.RibbonTab ribbonTab1;
-        private System.Windows.Forms.RibbonPanel ribbonPanel1;
-        private System.Windows.Forms.RibbonButton ribbonButton1;
-        private System.Windows.Forms.RibbonPanel ribbonPanel2;
+        private System.Windows.Forms.RibbonTab ribTabDirectory;
+        private System.Windows.Forms.RibbonPanel ribPanelAccount;
+        private System.Windows.Forms.RibbonPanel ribPanelAddress;
         private System.Windows.Forms.RibbonPanel ribbonPanel3;
         private System.Windows.Forms.RibbonTab ribbonTab2;
         private System.Windows.Forms.RibbonTab ribbonTab3;
         private System.Windows.Forms.RibbonTab ribbonTab4;
         private System.Windows.Forms.RibbonTab ribbonTab5;
         private System.Windows.Forms.RibbonTab ribbonTab6;
-        private System.Windows.Forms.RibbonButton ribbonButton5;
         private System.Windows.Forms.RibbonButton ribBtnAddress;
         private System.Windows.Forms.RibbonTab ribbonTab7;
         private System.Windows.Forms.RibbonTab ribbonTab8;
         private System.Windows.Forms.RibbonPanel ribbonPanel4;
         private System.Windows.Forms.RibbonButton ribbonButton6;
         private System.Windows.Forms.RibbonButton ribbonButton14;
-        private System.Windows.Forms.RibbonPanel ribbonPanel5;
-        private System.Windows.Forms.RibbonButton ribBtnGroupList;
+        private System.Windows.Forms.RibbonPanel ribPanelRole;
+        private System.Windows.Forms.RibbonButton ribBtnRole;
         private System.Windows.Forms.RibbonPanel ribbonPanel6;
         private System.Windows.Forms.RibbonButton ribbonButton3;
         private System.Windows.Forms.RibbonPanel ribbonPanel7;
@@ -562,6 +594,11 @@ namespace TruongDuongKhang_1811546141
         private System.Windows.Forms.RibbonButton ribbonButton19;
         private System.Windows.Forms.RibbonButton ribbonButton20;
         private System.Windows.Forms.RibbonButton ribBtnAddAccount;
+        private System.Windows.Forms.RibbonButton ribBtnAccountActive;
+        private System.Windows.Forms.RibbonButton ribBtnAccountInactive;
+        private System.Windows.Forms.RibbonButton ribBtnAddRole;
+        private System.Windows.Forms.RibbonButton ribbonButton2;
+        private System.Windows.Forms.RibbonButton ribBtnAddAddress;
     }
 }
 

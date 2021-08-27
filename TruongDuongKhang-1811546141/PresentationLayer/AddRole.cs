@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
-    public partial class Role : Form
+    public partial class AddRole : Form
     {
-        public Role()
+        public AddRole()
         {
             InitializeComponent();
         }
 
-        private void btnNew_Click(object sender, EventArgs e)
+        private void txtRoleName_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -27,7 +27,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
 
         }

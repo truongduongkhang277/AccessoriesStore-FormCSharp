@@ -13,9 +13,9 @@ using TruongDuongKhang_1811546141.BussinessLayer.Workflow;
 
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
-    public partial class Account : Form
+    public partial class AddAccount : Form
     {
-        public Account()
+        public AddAccount()
         {
             InitializeComponent();
             // lấy dữ liệu truyền vào các combobox

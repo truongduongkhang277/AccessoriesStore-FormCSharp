@@ -1,7 +1,7 @@
 ﻿
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
-    partial class Account
+    partial class AddAccount
     {
         /// <summary>
         /// Required designer variable.

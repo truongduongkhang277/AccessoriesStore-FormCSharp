@@ -21,7 +21,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
 
         private string selectSql()
         {
-            return string.Format("Select * from TblRole");
+            return string.Format("Select r.RoleId, r.RoleName, r.Description, (select count(*) from TblAccount where RoleId = r.RoleId) as 'NumOfAcc' from TblRole r");
         }
 
         // trả về câu SQL insert dữ liệu vào bảng TblRole ( mssql server )

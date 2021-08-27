@@ -74,17 +74,35 @@
     <Compile Include="MainApp.Designer.cs">
       <DependentUpon>MainApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Account.cs">
+    <Compile Include="PresentationLayer\AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Account.Designer.cs">
-      <DependentUpon>Account.cs</DependentUpon>
+    <Compile Include="PresentationLayer\AddAccount.Designer.cs">
+      <DependentUpon>AddAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Address.cs">
+    <Compile Include="PresentationLayer\AddAddress.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Address.Designer.cs">
-      <DependentUpon>Address.cs</DependentUpon>
+    <Compile Include="PresentationLayer\AddAddress.Designer.cs">
+      <DependentUpon>AddAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\AddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\AddRole.Designer.cs">
+      <DependentUpon>AddRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ListAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ListAccount.Designer.cs">
+      <DependentUpon>ListAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ListAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ListAddress.Designer.cs">
+      <DependentUpon>ListAddress.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Category.cs">
       <SubType>Form</SubType>
@@ -116,22 +134,31 @@
     <Compile Include="PresentationLayer\Product.Designer.cs">
       <DependentUpon>Product.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Role.cs">
+    <Compile Include="PresentationLayer\ListRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Role.Designer.cs">
-      <DependentUpon>Role.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ListRole.Designer.cs">
+      <DependentUpon>ListRole.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainApp.resx">
       <DependentUpon>MainApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Account.resx">
-      <DependentUpon>Account.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\AddAccount.resx">
+      <DependentUpon>AddAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Address.resx">
-      <DependentUpon>Address.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\AddAddress.resx">
+      <DependentUpon>AddAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\AddRole.resx">
+      <DependentUpon>AddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ListAccount.resx">
+      <DependentUpon>ListAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ListAddress.resx">
+      <DependentUpon>ListAddress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
@@ -145,8 +172,8 @@
     <EmbeddedResource Include="PresentationLayer\Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Role.resx">
-      <DependentUpon>Role.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ListRole.resx">
+      <DependentUpon>ListRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -312,6 +339,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\role.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountInactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

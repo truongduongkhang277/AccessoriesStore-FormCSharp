@@ -25,24 +25,47 @@ namespace TruongDuongKhang_1811546141
 
         private void ribBtnAddAccount_Click(object sender, EventArgs e)
         {
-            Account account = new Account();
+            AddAccount account = new AddAccount();
             account.MdiParent = this;
             account.Show();
         }
 
-        private void ribBtnGroupList_Click(object sender, EventArgs e)
+        private void ribBtnAccountActive_Click(object sender, EventArgs e)
         {
-            Role role = new Role();
-            role.MdiParent = this;
-            role.Show();
+
+        }
+
+        private void ribBtnAccountInactive_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribBtnRole_Click(object sender, EventArgs e)
+        {
+            ListRole listRole = new ListRole();
+            listRole.MdiParent = this;
+            listRole.Show();
+        }
+        private void ribBtnAddRole_Click(object sender, EventArgs e)
+        {
+            AddRole addRole = new AddRole();
+            addRole.MdiParent = this;
+            addRole.Show();
         }
 
         private void ribBtnAddress_Click(object sender, EventArgs e)
         {
-            Address address = new Address();
-            address.MdiParent = this;
-            address.Show();
+            ListAddress listAddress = new ListAddress();
+            listAddress.MdiParent = this;
+            listAddress.Show();
         }
-        
+
+
+        private void ribBtnAddAddress_Click(object sender, EventArgs e)
+        {
+            AddAddress addAddress = new AddAddress();
+            addAddress.MdiParent = this;
+            addAddress.Show();
+        }
     }
 }
