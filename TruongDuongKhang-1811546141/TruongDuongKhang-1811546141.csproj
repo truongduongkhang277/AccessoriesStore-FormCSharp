@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6041EBB1-F38D-42FE-9D90-1146A0F19C5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TruongDuongKhang_1811546141</RootNamespace>
+    <AssemblyName>TruongDuongKhang-1811546141</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
+      <HintPath>..\packages\RibbonWinForms.5.0.1.1\lib\net472\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BussinessLayer\Entity\AccountEntity.cs" />
+    <Compile Include="BussinessLayer\Entity\AddressEntity.cs" />
+    <Compile Include="BussinessLayer\Entity\CategoryEntity.cs" />
+    <Compile Include="BussinessLayer\Entity\CustomerEntity.cs" />
+    <Compile Include="BussinessLayer\Entity\OrderDetailEntity.cs" />
+    <Compile Include="BussinessLayer\Entity\OrderEntity.cs" />
+    <Compile Include="BussinessLayer\Entity\ProductEntity.cs" />
+    <Compile Include="BussinessLayer\Entity\RoleEntity.cs" />
+    <Compile Include="BussinessLayer\Workflow\BusAccount.cs" />
+    <Compile Include="BussinessLayer\Workflow\BusAddress.cs" />
+    <Compile Include="BussinessLayer\Workflow\BusCategory.cs" />
+    <Compile Include="BussinessLayer\Workflow\BusCustomer.cs" />
+    <Compile Include="BussinessLayer\Workflow\BusOrder.cs" />
+    <Compile Include="BussinessLayer\Workflow\BusOrderDetail.cs" />
+    <Compile Include="BussinessLayer\Workflow\BusProduct.cs" />
+    <Compile Include="BussinessLayer\Workflow\BusRole.cs" />
+    <Compile Include="DataAccessLayer\DaoMsSqlServer.cs" />
+    <Compile Include="Lib\Encryption.cs" />
+    <Compile Include="Lib\ValidationByRegex.cs" />
+    <Compile Include="MainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApp.Designer.cs">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Address.Designer.cs">
+      <DependentUpon>Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Role.Designer.cs">
+      <DependentUpon>Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainApp.resx">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Address.resx">
+      <DependentUpon>Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Role.resx">
+      <DependentUpon>Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoryAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoryDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoryEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\districts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\districtsAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\districtsDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\districtsEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphPie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderProcess_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderProcess_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderProcess_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderProcess_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderProcess_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountVerify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\role.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
