@@ -5,12 +5,12 @@ using TruongDuongKhang_1811546141.BussinessLayer.Workflow;
 
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
-    public partial class ListRole : Form
+    public partial class ListCategory : Form
     {
         private DataSet ds;
         private DataViewManager dsView;
 
-        public ListRole()
+        public ListCategory()
         {
             InitializeComponent();
             dataBinding();
@@ -18,8 +18,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void loadDataSet()
         {
-            BusRole busRole = new BusRole();
-            ds = busRole.getData();
+            BusCategory busCategory = new BusCategory();
+            ds = busCategory.getData();
 
             // đặt hiển thị mặc định
             if (ds != null)
@@ -31,8 +31,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
                 dsView = null;
             }
             // chuyển dữ liệu đến dataGridView
-            this.dgvRole.DataSource = dsView;
-            this.dgvRole.DataMember = "TblRole";
+            this.dgvCategory.DataSource = dsView;
+            this.dgvCategory.DataMember = "TblCategory";
 
         }
         private void dataBinding()
@@ -40,38 +40,38 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             loadDataSet();
 
             // đặt kích thước cho các cột trong bảng
-            this.dgvRole.Columns[0].HeaderText = "Mã";
-            this.dgvRole.Columns[0].Width = 100;
-            this.dgvRole.Columns[1].HeaderText = "Loại tài khoản";
-            this.dgvRole.Columns[1].Width = 250;
-            this.dgvRole.Columns[2].HeaderText = "Chú thích";
-            this.dgvRole.Columns[2].Width = 300;
+            this.dgvCategory.Columns[0].HeaderText = "Mã";
+            this.dgvCategory.Columns[0].Width = 100;
+            this.dgvCategory.Columns[1].HeaderText = "Loại sản phẩm";
+            this.dgvCategory.Columns[1].Width = 250;
+            this.dgvCategory.Columns[2].HeaderText = "Chú thích";
+            this.dgvCategory.Columns[2].Width = 300;
 
             // dòng được chọn
-            this.dgvRole.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCategory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        private void dgvRole_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // chuyển dữ liệu đến Textbox (txtDistrict, txtCity, txtDescription
-            this.lblRoleId.Text = dgvRole.Rows[e.RowIndex].Cells[0].Value.ToString();
-            this.txtRoleName.Text = dgvRole.Rows[e.RowIndex].Cells[1].Value.ToString();
-            this.txtDescription.Text = dgvRole.Rows[e.RowIndex].Cells[2].Value.ToString();
+            this.lblCategoryId.Text = dgvCategory.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.txtCategoryName.Text = dgvCategory.Rows[e.RowIndex].Cells[1].Value.ToString();
+            this.txtDescription.Text = dgvCategory.Rows[e.RowIndex].Cells[2].Value.ToString();
             this.btnUpdate.Enabled = true;
             this.btnDelete.Enabled = true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(this.lblRoleId.Text);
+            int id = int.Parse(this.lblCategoryId.Text);
             // đóng gói dữ liệu
-            BusRole busRole = new BusRole();
-            busRole.roleInfo.RoleName = this.txtRoleName.Text.Trim();
-            busRole.roleInfo.Description = this.txtDescription.Text.Trim();
-            busRole.roleInfo.RoleId = id;
+            BusCategory busCategory = new BusCategory();
+            busCategory.categoryInfo.CategoryName = this.txtCategoryName.Text.Trim();
+            busCategory.categoryInfo.Description = this.txtDescription.Text.Trim();
+            busCategory.categoryInfo.CategoryId = id;
 
             // gọi hàm từ busRole để cập nhật dữ liệu vào database
-            int result = busRole.updateRole();
+            int result = busCategory.updateCategory();
             if (result == 1)
             {
                 loadDataSet();
@@ -82,12 +82,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(this.lblRoleId.Text);
-            BusRole busRole = new BusRole();
-            busRole.roleInfo.RoleName = this.txtRoleName.Text.Trim();
-            busRole.roleInfo.Description = this.txtDescription.Text.Trim();
-            busRole.roleInfo.RoleId = id;
-            if (busRole.deleteRole() > 0)
+            int id = int.Parse(this.lblCategoryId.Text);
+            BusCategory busCategory = new BusCategory();
+            busCategory.categoryInfo.CategoryName = this.txtCategoryName.Text.Trim();
+            busCategory.categoryInfo.Description = this.txtDescription.Text.Trim();
+            busCategory.categoryInfo.CategoryId = id;
+            if (busCategory.deleteCategory() > 0)
             {
                 loadDataSet();
                 // gọi nút thêm mới dữ liệu khởi động
@@ -104,6 +104,5 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             this.Dispose();
         }
-
     }
 }

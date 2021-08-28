@@ -128,6 +128,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAccount.Location = new System.Drawing.Point(0, 0);
             this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.RowTemplate.Height = 34;
             this.dgvAccount.Size = new System.Drawing.Size(1200, 450);
             this.dgvAccount.TabIndex = 0;
             // 

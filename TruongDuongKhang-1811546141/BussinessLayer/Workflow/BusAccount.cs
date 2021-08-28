@@ -103,7 +103,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
                             "Phone, " +
                             "Address + ',' +ad.District + ',' + ad.City as Address  " +
                             "from TblAccount acc inner join TblAddress ad " +
-                            "on (acc.AddressId = ad.AddressId) ";
+                            "on (acc.AddressId = ad.AddressId) " +
                           "where Status = " + (isActive ? "1" : "0") + (roleId > 0 ? " And acc.RoleId = " + roleId.ToString() : "") + " Order by LastName";
             
             return new DaoMsSqlServer().getData(query, "TblAccount");

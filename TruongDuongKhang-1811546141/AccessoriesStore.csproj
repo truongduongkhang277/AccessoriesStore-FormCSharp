@@ -86,6 +86,12 @@
     <Compile Include="PresentationLayer\AddAddress.Designer.cs">
       <DependentUpon>AddAddress.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\AddRole.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,11 +110,11 @@
     <Compile Include="PresentationLayer\ListAddress.Designer.cs">
       <DependentUpon>ListAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Category.cs">
+    <Compile Include="PresentationLayer\ListCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Category.Designer.cs">
-      <DependentUpon>Category.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ListCategory.Designer.cs">
+      <DependentUpon>ListCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Customer.cs">
       <SubType>Form</SubType>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="PresentationLayer\AddAddress.resx">
       <DependentUpon>AddAddress.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\AddRole.resx">
       <DependentUpon>AddRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,8 +169,8 @@
     <EmbeddedResource Include="PresentationLayer\ListAddress.resx">
       <DependentUpon>ListAddress.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Category.resx">
-      <DependentUpon>Category.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ListCategory.resx">
+      <DependentUpon>ListCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>

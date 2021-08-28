@@ -71,5 +71,25 @@ namespace TruongDuongKhang_1811546141
             addAddress.MdiParent = this;
             addAddress.Show();
         }
+
+        private void ribBtnCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribBtnAddCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribBtnProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribBtnAddProduct_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
