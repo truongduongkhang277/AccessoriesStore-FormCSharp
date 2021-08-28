@@ -55,5 +55,12 @@ namespace TruongDuongKhang_1811546141.DataAccessLayer
 
             return ds;
         }
+
+        // đọc dữ liệu từ database và trả về SqlDataReader object cho nơi gọi
+        // query: câu truy vấn T-SQL cần thwujc thi trên MSSQL Server
+        public SqlDataReader getDataReader(string query)
+        {
+            return new SqlCommand(query, getConnection()).ExecuteReader();
+        }
     }
 }

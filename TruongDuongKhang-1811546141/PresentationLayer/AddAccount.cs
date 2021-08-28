@@ -18,7 +18,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         public AddAccount()
         {
             InitializeComponent();
-            // lấy dữ liệu truyền vào các combobox
+            loadDataToCombobox();
+        }
+
+        // lấy dữ liệu truyền vào các combobox
+        private void loadDataToCombobox()
+        {
             // cbbAddress
             DataSet dsAddress = new BusAddress().getData();
             this.cbbAddress.DataSource = dsAddress.Tables[0];
@@ -32,7 +37,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.cbbRole.DisplayMember = "RoleName";
             this.cbbRole.ValueMember = "RoleId";
             this.cbbRole.SelectedIndex = -1;
-
         }
 
         // kiểm tra tính hợp lệ của dữ liệu ngày sinh được nhập vào 
@@ -119,7 +123,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         }
 
         // lấy dữ liệu được nhập từ form
-        private AccountEntity dataFromUI()
+        private AccountEntity getDataFromUI()
         {
             AccountEntity accountEntity = new AccountEntity();
 
@@ -163,8 +167,40 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
                 );
         }
 
-        // khi nhấn nút thêm
-        private void btnNew_Click(object sender, EventArgs e)
+        // khi nhấn nút lưu
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(this.txtPassword.Text.Trim().Equals(this.txtConfirmPassword.Text.Trim()))
+            {
+
+                BusAccount busAccount = new BusAccount();
+                busAccount.accountInfo = getDataFromUI();
+
+                // gọi hàm addAccount từ busAccount để lưu dữ liệu vào database
+                int result = busAccount.addAccount();
+                if (result == 1)
+                {
+                    MessageBox.Show(string.Format("Thêm mới thành công tài khoản {0} cho thành viên {1} {2}", 
+                        busAccount.accountInfo.Username, busAccount.accountInfo.FirstName , busAccount.accountInfo.LastName));
+                    
+                    // gọi nút thêm mới dữ liệu khởi động
+                    this.btnClear.PerformClick();
+                } else
+                {
+                    MessageBox.Show("Thêm mới thất bại");
+                }
+
+            } else
+            {
+                this.ErrorMessage.Show("Mật khẩu không khớp !! Vui lòng thử lại !!", this.txtPassword, 0, -70, 5000);
+                this.txtPassword.Clear();
+                this.txtConfirmPassword.Clear();
+                this.txtPassword.Focus();
+            }
+        }
+
+        // khi nhấn tạo mới
+        private void btnClear_Click(object sender, EventArgs e)
         {
             this.txtUsername.Clear();
             this.txtPassword.Clear();
@@ -184,49 +220,10 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtFirstName.Focus();
         }
 
-        // khi nhấn nút lưu
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if(this.txtPassword.Text.Trim().Equals(this.txtConfirmPassword.Text.Trim()))
-            {
-
-                BusAccount busAccount = new BusAccount();
-                busAccount.accountInfo = dataFromUI();
-
-                // gọi hàm addAccount từ busAccount để lưu dữ liệu vào database
-                int result = busAccount.addAccount();
-                if (result == 1)
-                {
-                    MessageBox.Show(string.Format("Thêm mới thành công tài khoản {0} cho thành viên {1} {2}", 
-                        busAccount.accountInfo.Username, busAccount.accountInfo.FirstName , busAccount.accountInfo.LastName));
-                    
-                    // gọi nút thêm mới dữ liệu khởi động
-                    this.btnNew.PerformClick();
-                } else
-                {
-                    MessageBox.Show("Thêm mới thất bại");
-                }
-
-            } else
-            {
-                this.ErrorMessage.Show("Mật khẩu không khớp !! Vui lòng thử lại !!", this.txtPassword, 0, -70, 5000);
-                this.txtPassword.Clear();
-                this.txtConfirmPassword.Clear();
-                this.txtPassword.Focus();
-            }
-        }
-
-        // khi nhấn nút in
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-
-        }
-
         // khi nhấn nút thoát
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
-
     }
 }
