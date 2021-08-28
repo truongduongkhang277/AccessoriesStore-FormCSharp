@@ -24,7 +24,8 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
                             "FORMAT(DateOfBirth, 'dd/MM/yyyy') as DateOfBirth, " +
                             "iif(Sex=1,'Nam', N'Nữ') as Sex, " +
                             "Phone, " +
-                            "Address + ',' +ad.District + ',' + ad.City as Address " +
+                            "Address + ',' +ad.District + ',' + ad.City as Address, " +
+                            "iif(Status=1,'Đã kích hoạt', N'Chưa kích hoạt') as Status " +
                             "from TblAccount acc inner join TblAddress ad " +
                             "on (acc.AddressId = ad.AddressId) " +
                             "where Status = " + (isActive ? "1" : "0") + (roleId > 0 ? " And acc.RoleId = " + roleId.ToString() : "") + " Order by FullName");
@@ -82,7 +83,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         // trả về câu SQL xóa dữ liệu vào bảng TblAccount ( mssql server )
         private string deleteSql()
         {
-            return string.Format("Delete TblAccount where AccountId='{0}'", this.accountInfo.Username);
+            return string.Format("Delete TblAccount where Username='{0}'", this.accountInfo.Username);
         }
 
         // thêm thông tin địa chỉ vào database

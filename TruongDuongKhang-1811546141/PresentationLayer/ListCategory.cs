@@ -84,8 +84,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             int id = int.Parse(this.lblCategoryId.Text);
             BusCategory busCategory = new BusCategory();
-            busCategory.categoryInfo.CategoryName = this.txtCategoryName.Text.Trim();
-            busCategory.categoryInfo.Description = this.txtDescription.Text.Trim();
             busCategory.categoryInfo.CategoryId = id;
             if (busCategory.deleteCategory() > 0)
             {

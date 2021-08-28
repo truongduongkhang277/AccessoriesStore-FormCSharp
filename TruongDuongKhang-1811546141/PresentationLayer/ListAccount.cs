@@ -51,6 +51,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.cbbFilterRole.DisplayMember = "RoleName";
             this.cbbFilterRole.ValueMember = "RoleId";
             this.cbbFilterRole.SelectedIndex = -1;
+
+            this.radStatus.Checked = isActive;
         }
 
         private void loadDataSet(bool isActive, int roleId)
@@ -89,6 +91,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvAccount.Columns[4].Width = 150;
             this.dgvAccount.Columns[5].HeaderText = "Địa chỉ";
             this.dgvAccount.Columns[5].Width = 295;
+            this.dgvAccount.Columns[6].HeaderText = "Trạng thái";
+            this.dgvAccount.Columns[6].Width = 150;
         }
 
         // khi nhấn vào mỗi dòng trong bảng
@@ -109,11 +113,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             //thông tin tài khoản
             this.cbbRole.SelectedValue = entity.RoleId.ToString();
+            this.radStatus.Checked = entity.Status;
             
             // thông tin người dùng
             this.txtFirstName.Text = entity.FirstName;
             this.txtLastName.Text = entity.LastName;
-            this.txtDateOfBirth.Text = string.Format("{0:MM/dd/yyyy}", entity.DateOfBirth);
+            this.txtDateOfBirth.Text = string.Format("{0:dd/MM/yyyy}", entity.DateOfBirth);
             this.radMale.Checked = entity.Sex;
 
             // địa chỉ - phương thức liên lạc
@@ -143,6 +148,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // đóng gói dữ liệu
             BusAccount busAccount = new BusAccount();
             busAccount.accountInfo.RoleId = int.Parse(this.cbbRole.SelectedValue.ToString());
+            busAccount.accountInfo.Status = this.radStatus.Checked;
             // thông tin người dùng
             busAccount.accountInfo.FirstName = this.txtFirstName.Text.Trim();
             busAccount.accountInfo.LastName = this.txtLastName.Text.Trim();
@@ -200,5 +206,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Dispose();
         }
 
+        
     }
 }

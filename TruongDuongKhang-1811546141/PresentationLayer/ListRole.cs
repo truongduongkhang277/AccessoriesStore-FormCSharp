@@ -84,8 +84,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             int id = int.Parse(this.lblRoleId.Text);
             BusRole busRole = new BusRole();
-            busRole.roleInfo.RoleName = this.txtRoleName.Text.Trim();
-            busRole.roleInfo.Description = this.txtDescription.Text.Trim();
             busRole.roleInfo.RoleId = id;
             if (busRole.deleteRole() > 0)
             {

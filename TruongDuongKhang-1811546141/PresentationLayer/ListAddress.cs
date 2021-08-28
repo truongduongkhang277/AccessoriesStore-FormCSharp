@@ -90,9 +90,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             int id = int.Parse(this.lblAddressId.Text);
             BusAddress busAddress = new BusAddress();
-            busAddress.addressInfo.District = this.txtDistrict.Text.Trim();
-            busAddress.addressInfo.City = this.txtCity.Text.Trim();
-            busAddress.addressInfo.Description = this.txtDescription.Text.Trim();
             busAddress.addressInfo.AddressId = id;
             if (busAddress.deleteAddress() > 0)
             {

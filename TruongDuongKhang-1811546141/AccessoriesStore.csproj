@@ -93,6 +93,18 @@
     <Compile Include="PresentationLayer\AddCategory.Designer.cs">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\AddRole.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,11 +129,11 @@
     <Compile Include="PresentationLayer\ListCategory.Designer.cs">
       <DependentUpon>ListCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Customer.cs">
+    <Compile Include="PresentationLayer\ListCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ListCustomer.Designer.cs">
+      <DependentUpon>ListCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Order.cs">
       <SubType>Form</SubType>
@@ -135,11 +147,11 @@
     <Compile Include="PresentationLayer\OrderDetail.Designer.cs">
       <DependentUpon>OrderDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Product.cs">
+    <Compile Include="PresentationLayer\ListProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Product.Designer.cs">
-      <DependentUpon>Product.cs</DependentUpon>
+    <Compile Include="PresentationLayer\ListProduct.Designer.cs">
+      <DependentUpon>ListProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\ListRole.cs">
       <SubType>Form</SubType>
@@ -161,6 +173,12 @@
     <EmbeddedResource Include="PresentationLayer\AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\AddRole.resx">
       <DependentUpon>AddRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,14 +191,14 @@
     <EmbeddedResource Include="PresentationLayer\ListCategory.resx">
       <DependentUpon>ListCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ListCustomer.resx">
+      <DependentUpon>ListCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Product.resx">
-      <DependentUpon>Product.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\ListProduct.resx">
+      <DependentUpon>ListProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ListRole.resx">
       <DependentUpon>ListRole.cs</DependentUpon>

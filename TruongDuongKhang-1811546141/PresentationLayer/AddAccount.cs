@@ -87,6 +87,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnSave.Enabled = enableSave();
         }
 
+        
+
         private void txtAddress_TextChanged(object sender, EventArgs e)
         {
             this.btnSave.Enabled = enableSave();
@@ -225,5 +227,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             this.Dispose();
         }
+
     }
 }

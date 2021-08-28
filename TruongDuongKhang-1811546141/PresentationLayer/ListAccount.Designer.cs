@@ -30,13 +30,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radStatus = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.cbbRole = new System.Windows.Forms.ComboBox();
             this.btnFilter = new System.Windows.Forms.Button();
             this.cbbFilterRole = new System.Windows.Forms.ComboBox();
-            this.cbbRole = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.radFemale = new System.Windows.Forms.RadioButton();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbAddress = new System.Windows.Forms.ComboBox();
@@ -46,9 +49,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radMale = new System.Windows.Forms.RadioButton();
             this.txtDateOfBirth = new System.Windows.Forms.MaskedTextBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.lblUsername = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -58,20 +59,21 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.radFemale = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.radFemale);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btnFilter);
             this.panel1.Controls.Add(this.cbbFilterRole);
-            this.panel1.Controls.Add(this.cbbRole);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.txtPhone);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.radFemale);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cbbAddress);
@@ -81,9 +83,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel1.Controls.Add(this.radMale);
             this.panel1.Controls.Add(this.txtDateOfBirth);
             this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtLastName);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnUpdate);
@@ -94,6 +94,64 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 225);
             this.panel1.TabIndex = 28;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radStatus);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lblUsername);
+            this.groupBox1.Controls.Add(this.cbbRole);
+            this.groupBox1.Location = new System.Drawing.Point(25, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(947, 50);
+            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabStop = false;
+            // 
+            // radStatus
+            // 
+            this.radStatus.AutoSize = true;
+            this.radStatus.Location = new System.Drawing.Point(782, 17);
+            this.radStatus.Name = "radStatus";
+            this.radStatus.Size = new System.Drawing.Size(159, 24);
+            this.radStatus.TabIndex = 38;
+            this.radStatus.Text = "Xác thực tài khoản";
+            this.radStatus.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(411, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(108, 20);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Loại tài khoản";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 20);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Tên tài khoản";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Location = new System.Drawing.Point(134, 22);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(0, 20);
+            this.lblUsername.TabIndex = 32;
+            // 
+            // cbbRole
+            // 
+            this.cbbRole.Enabled = false;
+            this.cbbRole.FormattingEnabled = true;
+            this.cbbRole.Location = new System.Drawing.Point(534, 15);
+            this.cbbRole.Name = "cbbRole";
+            this.cbbRole.Size = new System.Drawing.Size(124, 28);
+            this.cbbRole.TabIndex = 35;
             // 
             // btnFilter
             // 
@@ -118,24 +176,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.cbbFilterRole.TabIndex = 36;
             this.cbbFilterRole.SelectedIndexChanged += new System.EventHandler(this.cbbFilterRole_SelectedIndexChanged);
             // 
-            // cbbRole
-            // 
-            this.cbbRole.Enabled = false;
-            this.cbbRole.FormattingEnabled = true;
-            this.cbbRole.Location = new System.Drawing.Point(550, 25);
-            this.cbbRole.Name = "cbbRole";
-            this.cbbRole.Size = new System.Drawing.Size(124, 28);
-            this.cbbRole.TabIndex = 35;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(427, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 20);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Loại tài khoản";
-            // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(609, 125);
@@ -153,16 +193,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label9.Size = new System.Drawing.Size(54, 20);
             this.label9.TabIndex = 18;
             this.label9.Text = "Số ĐT";
-            // 
-            // radFemale
-            // 
-            this.radFemale.AutoSize = true;
-            this.radFemale.Location = new System.Drawing.Point(925, 75);
-            this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(47, 24);
-            this.radFemale.TabIndex = 12;
-            this.radFemale.Text = "Nữ";
-            this.radFemale.UseVisualStyleBackColor = true;
             // 
             // txtEmail
             // 
@@ -218,7 +248,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.radMale.AutoSize = true;
             this.radMale.Checked = true;
-            this.radMale.Location = new System.Drawing.Point(850, 75);
+            this.radMale.Location = new System.Drawing.Point(843, 76);
             this.radMale.Name = "radMale";
             this.radMale.Size = new System.Drawing.Size(60, 24);
             this.radMale.TabIndex = 11;
@@ -228,7 +258,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // txtDateOfBirth
             // 
-            this.txtDateOfBirth.Location = new System.Drawing.Point(699, 75);
+            this.txtDateOfBirth.Location = new System.Drawing.Point(692, 75);
             this.txtDateOfBirth.Mask = "00/00/0000";
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(125, 26);
@@ -250,14 +280,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(150, 25);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(0, 20);
-            this.lblUsername.TabIndex = 32;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -266,15 +288,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label8.Size = new System.Drawing.Size(78, 20);
             this.label8.TabIndex = 9;
             this.label8.Text = "Ngày sinh";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 20);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Tên tài khoản";
             // 
             // txtLastName
             // 
@@ -367,6 +380,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label1.TabIndex = 30;
             this.label1.Text = "Danh sách tài khoản";
             // 
+            // radFemale
+            // 
+            this.radFemale.AutoSize = true;
+            this.radFemale.Location = new System.Drawing.Point(919, 77);
+            this.radFemale.Name = "radFemale";
+            this.radFemale.Size = new System.Drawing.Size(47, 24);
+            this.radFemale.TabIndex = 39;
+            this.radFemale.Text = "Nữ";
+            this.radFemale.UseVisualStyleBackColor = true;
+            // 
             // ListAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -383,6 +406,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Text = "AccountList";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.ResumeLayout(false);
@@ -401,12 +426,10 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvAccount;
-        private System.Windows.Forms.RadioButton radFemale;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RadioButton radMale;
         private System.Windows.Forms.MaskedTextBox txtDateOfBirth;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox txtPhone;
@@ -416,10 +439,14 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.ComboBox cbbAddress;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbbRole;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radStatus;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbbRole;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.ComboBox cbbFilterRole;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.RadioButton radFemale;
     }
 }

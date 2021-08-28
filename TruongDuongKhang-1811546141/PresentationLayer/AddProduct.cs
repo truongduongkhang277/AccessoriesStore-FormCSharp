@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
-    public partial class Product : Form
+    public partial class AddProduct : Form
     {
-        public Product()
+        public AddProduct()
         {
             InitializeComponent();
         }
