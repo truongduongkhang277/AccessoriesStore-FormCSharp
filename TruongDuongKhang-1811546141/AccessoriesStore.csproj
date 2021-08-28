@@ -67,6 +67,7 @@
     <Compile Include="BussinessLayer\Workflow\BusRole.cs" />
     <Compile Include="DataAccessLayer\DaoMsSqlServer.cs" />
     <Compile Include="Lib\Encryption.cs" />
+    <Compile Include="Lib\Tools.cs" />
     <Compile Include="Lib\ValidationByRegex.cs" />
     <Compile Include="MainApp.cs">
       <SubType>Form</SubType>
@@ -314,9 +315,6 @@
     <None Include="Resources\print.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\productAdd.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\productDelete.png" />
   </ItemGroup>
   <ItemGroup>
@@ -363,6 +361,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountInVerify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productApproved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productBestSelling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productForapproved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productSlowSelling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
