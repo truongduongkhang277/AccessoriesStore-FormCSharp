@@ -35,7 +35,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Entity
         // lưu trữ thông tin khác về khách hàng
         public string Description { get; set; }
 
-        // Default contructor
+        // default contructor:: initalize all of member in class
         public CustomerEntity()
         {
             this.CustomerName = "";

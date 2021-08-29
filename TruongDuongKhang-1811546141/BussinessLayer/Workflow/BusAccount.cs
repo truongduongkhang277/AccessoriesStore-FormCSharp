@@ -25,7 +25,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
                             "iif(Sex=1,'Nam', N'Nữ') as Sex, " +
                             "Phone, " +
                             "Address + ',' +ad.District + ',' + ad.City as Address, " +
-                            "iif(Status=1,'Đã kích hoạt', N'Chưa kích hoạt') as Status " +
+                            "iif(Status=1,N'Đã kích hoạt', N'Chưa kích hoạt') as Status " +
                             "from TblAccount acc inner join TblAddress ad " +
                             "on (acc.AddressId = ad.AddressId) " +
                             "where Status = " + (isActive ? "1" : "0") + (roleId > 0 ? " And acc.RoleId = " + roleId.ToString() : "") + " Order by FullName");

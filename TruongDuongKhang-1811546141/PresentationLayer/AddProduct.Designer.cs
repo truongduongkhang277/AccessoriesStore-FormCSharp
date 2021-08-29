@@ -163,11 +163,11 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // txtEnteredDate
             // 
+            this.txtEnteredDate.Enabled = false;
             this.txtEnteredDate.Location = new System.Drawing.Point(175, 185);
             this.txtEnteredDate.Name = "txtEnteredDate";
             this.txtEnteredDate.Size = new System.Drawing.Size(150, 26);
             this.txtEnteredDate.TabIndex = 12;
-            this.txtEnteredDate.TextChanged += new System.EventHandler(this.txtEnteredDate_TextChanged);
             // 
             // label6
             // 
@@ -229,7 +229,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtDiscount.TabIndex = 22;
             this.txtDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDiscount.ValidatingType = typeof(int);
-            this.txtDiscount.Leave += new System.EventHandler(this.txtDiscount_Leave);
             // 
             // txtUnitPrice
             // 
