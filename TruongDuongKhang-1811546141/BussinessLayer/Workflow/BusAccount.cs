@@ -42,7 +42,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         {
             return string.Format(
                 "Insert Into TblAccount( Username, Password, RoleId, FirstName, LastName, DateOfBirth, Sex, Phone, Email, Address, AddressId, Status, Description )" +
-                                     " Values (N'{0}', N'{1}', {2}, N'{3}', N'{4}', '{5}', {6}, N'{7}', N'{8}', N'{9}', {10}, {11}, N'{12}');",
+                                     " Values (N'{0}', N'{1}', {2}, N'{3}', N'{4}', {5}, {6}, N'{7}', N'{8}', N'{9}', {10}, {11}, N'{12}');",
                 this.accountInfo.Username,
                 this.accountInfo.Password,
                 this.accountInfo.RoleId,
@@ -62,14 +62,13 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         private string updateSql()
         {
             return string.Format(
-                "Update TblAccount set Password=N'{0}', RoleId={1}, FirstName=N'{2}', LastName=N'{3}', DateOfBirth='{4}', " +
-            " Sex={5}, Phone=N'{6}', Email=N'{7}',Address=N'{8}', AddressId={9}, Status={10}, Description=N'{11}' " +
-                "Where Username='{12}' ;",
-                this.accountInfo.Password,
+                "Update TblAccount set RoleId={0}, FirstName=N'{1}', LastName=N'{2}', DateOfBirth={3}, " +
+            " Sex={4}, Phone=N'{5}', Email=N'{6}',Address=N'{7}', AddressId={8}, Status={9}, Description=N'{10}' " +
+                "Where Username='{11}' ;",
                 this.accountInfo.RoleId,
                 this.accountInfo.FirstName,
                 this.accountInfo.LastName,
-                string.Format("{0:dd/MM/yyyy}", this.accountInfo.DateOfBirth),
+                string.Format("{0:yyyy/MM/dd}", this.accountInfo.DateOfBirth),
                 (this.accountInfo.Sex ? 1 : 0),
                 this.accountInfo.Phone,
                 this.accountInfo.Email,

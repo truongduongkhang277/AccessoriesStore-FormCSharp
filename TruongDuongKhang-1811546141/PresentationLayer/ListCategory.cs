@@ -45,7 +45,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvCategory.Columns[1].HeaderText = "Loại sản phẩm";
             this.dgvCategory.Columns[1].Width = 250;
             this.dgvCategory.Columns[2].HeaderText = "Chú thích";
-            this.dgvCategory.Columns[2].Width = 300;
+            this.dgvCategory.Columns[2].Width = 400;
 
             // dòng được chọn
             this.dgvCategory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

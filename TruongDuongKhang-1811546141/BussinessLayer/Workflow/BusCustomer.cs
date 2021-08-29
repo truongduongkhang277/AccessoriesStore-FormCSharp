@@ -40,7 +40,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         {
             return string.Format(
                 "Insert Into TblCustomer( CustomerId, CustomerName, DateOfBirth, Sex, Phone, Email, Address, AddressId, Description )" +
-                                     " Values (N'{0}', N'{1}', '{2}', {3}, '{4}', N'{5}', N'{6}', {7}, N'{8}');",
+                                     " Values (N'{0}', N'{1}', {2}, {3}, '{4}', N'{5}', N'{6}', {7}, N'{8}');",
                 this.customerInfo.CustomerId,
                 this.customerInfo.CustomerName,
                 string.Format("{0:dd/MM/yyyy}", this.customerInfo.DateOfBirth),
@@ -56,7 +56,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         private string updateSql()
         {
             return string.Format(
-                "Update TblCustomer set CustomerName=N'{0}', DateOfBirth='{1}', Sex={2}, Phone=N'{3}', Email=N'{4}',Address=N'{5}', AddressId={6}, Description=N'{7}' Where CustomerId='{8}' ;",
+                "Update TblCustomer set CustomerName=N'{0}', DateOfBirth={1}, Sex={2}, Phone=N'{3}', Email=N'{4}',Address=N'{5}', AddressId={6}, Description=N'{7}' Where CustomerId='{8}' ;",
                 this.customerInfo.CustomerName,
                 string.Format("{0:dd/MM/yyyy}", this.customerInfo.DateOfBirth),
                 (this.customerInfo.Sex ? 1 : 0),

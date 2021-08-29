@@ -48,6 +48,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radFemale = new System.Windows.Forms.RadioButton();
             this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radMale = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.radFemale = new System.Windows.Forms.RadioButton();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -124,7 +124,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.btnExit.Image = global::TruongDuongKhang_1811546141.Properties.Resources.close;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(699, 489);
+            this.btnExit.Location = new System.Drawing.Point(700, 475);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 40);
             this.btnExit.TabIndex = 40;
@@ -137,7 +137,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.clear;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(467, 489);
+            this.btnClear.Location = new System.Drawing.Point(467, 475);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(115, 40);
             this.btnClear.TabIndex = 38;
@@ -168,7 +168,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnSave.Enabled = false;
             this.btnSave.Image = global::TruongDuongKhang_1811546141.Properties.Resources.save;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(250, 489);
+            this.btnSave.Location = new System.Drawing.Point(250, 475);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 40);
             this.btnSave.TabIndex = 39;
@@ -249,6 +249,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
             // 
+            // radFemale
+            // 
+            this.radFemale.AutoSize = true;
+            this.radFemale.Location = new System.Drawing.Point(603, 77);
+            this.radFemale.Name = "radFemale";
+            this.radFemale.Size = new System.Drawing.Size(47, 24);
+            this.radFemale.TabIndex = 16;
+            this.radFemale.Text = "Nữ";
+            this.radFemale.UseVisualStyleBackColor = true;
+            // 
             // txtCustomerId
             // 
             this.txtCustomerId.Location = new System.Drawing.Point(144, 32);
@@ -326,16 +336,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label1.Size = new System.Drawing.Size(245, 31);
             this.label1.TabIndex = 41;
             this.label1.Text = "Thêm khách hàng";
-            // 
-            // radFemale
-            // 
-            this.radFemale.AutoSize = true;
-            this.radFemale.Location = new System.Drawing.Point(603, 77);
-            this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(47, 24);
-            this.radFemale.TabIndex = 16;
-            this.radFemale.Text = "Nữ";
-            this.radFemale.UseVisualStyleBackColor = true;
             // 
             // AddCustomer
             // 
