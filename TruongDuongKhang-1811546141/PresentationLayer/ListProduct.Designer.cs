@@ -31,6 +31,13 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picImage = new System.Windows.Forms.PictureBox();
+            this.btnFilter = new System.Windows.Forms.Button();
+            this.cbbFilterCate = new System.Windows.Forms.ComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.txtDiscount = new System.Windows.Forms.MaskedTextBox();
             this.txtUnitPrice = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -57,18 +64,11 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.cbbFilterCate = new System.Windows.Forms.ComboBox();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.ErrorMessage = new System.Windows.Forms.ToolTip(this.components);
-            this.picImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,6 +108,94 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 325);
             this.panel1.TabIndex = 0;
+            // 
+            // picImage
+            // 
+            this.picImage.Image = global::TruongDuongKhang_1811546141.Properties.Resources.noImage;
+            this.picImage.Location = new System.Drawing.Point(850, 175);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(100, 75);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImage.TabIndex = 44;
+            this.picImage.TabStop = false;
+            this.picImage.Click += new System.EventHandler(this.picImage_Click);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Enabled = false;
+            this.btnFilter.Image = global::TruongDuongKhang_1811546141.Properties.Resources.filter;
+            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFilter.Location = new System.Drawing.Point(227, 269);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(100, 40);
+            this.btnFilter.TabIndex = 43;
+            this.btnFilter.Text = "Lọc";
+            this.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // cbbFilterCate
+            // 
+            this.cbbFilterCate.FormattingEnabled = true;
+            this.cbbFilterCate.Location = new System.Drawing.Point(27, 274);
+            this.cbbFilterCate.Name = "cbbFilterCate";
+            this.cbbFilterCate.Size = new System.Drawing.Size(175, 28);
+            this.cbbFilterCate.TabIndex = 42;
+            this.cbbFilterCate.SelectedIndexChanged += new System.EventHandler(this.cbbFilterCate_SelectedIndexChanged);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(550, 269);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 40);
+            this.btnDelete.TabIndex = 41;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::TruongDuongKhang_1811546141.Properties.Resources.close;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(873, 269);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 40);
+            this.btnExit.TabIndex = 40;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.Image = global::TruongDuongKhang_1811546141.Properties.Resources.update;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(381, 269);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(115, 40);
+            this.btnUpdate.TabIndex = 39;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.clear;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(704, 269);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(115, 40);
+            this.btnClear.TabIndex = 38;
+            this.btnClear.Text = "Tạo mới";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtDiscount
             // 
@@ -222,15 +310,15 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // txtEnteredDate
             // 
             this.txtEnteredDate.Enabled = false;
-            this.txtEnteredDate.Location = new System.Drawing.Point(800, 75);
+            this.txtEnteredDate.Location = new System.Drawing.Point(775, 75);
             this.txtEnteredDate.Name = "txtEnteredDate";
-            this.txtEnteredDate.Size = new System.Drawing.Size(150, 26);
+            this.txtEnteredDate.Size = new System.Drawing.Size(175, 26);
             this.txtEnteredDate.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(665, 75);
+            this.label3.Location = new System.Drawing.Point(640, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 20);
             this.label3.TabIndex = 12;
@@ -339,98 +427,10 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvProduct.TabIndex = 30;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
-            // btnFilter
-            // 
-            this.btnFilter.Enabled = false;
-            this.btnFilter.Image = global::TruongDuongKhang_1811546141.Properties.Resources.filter;
-            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFilter.Location = new System.Drawing.Point(227, 269);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(100, 40);
-            this.btnFilter.TabIndex = 43;
-            this.btnFilter.Text = "Lọc";
-            this.btnFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
-            // 
-            // cbbFilterCate
-            // 
-            this.cbbFilterCate.FormattingEnabled = true;
-            this.cbbFilterCate.Location = new System.Drawing.Point(27, 274);
-            this.cbbFilterCate.Name = "cbbFilterCate";
-            this.cbbFilterCate.Size = new System.Drawing.Size(175, 28);
-            this.cbbFilterCate.TabIndex = 42;
-            this.cbbFilterCate.SelectedIndexChanged += new System.EventHandler(this.cbbFilterCate_SelectedIndexChanged);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(550, 269);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 40);
-            this.btnDelete.TabIndex = 41;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Image = global::TruongDuongKhang_1811546141.Properties.Resources.close;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(873, 269);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 40);
-            this.btnExit.TabIndex = 40;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.Image = global::TruongDuongKhang_1811546141.Properties.Resources.update;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(381, 269);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(115, 40);
-            this.btnUpdate.TabIndex = 39;
-            this.btnUpdate.Text = "Cập nhật";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.clear;
-            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(704, 269);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(115, 40);
-            this.btnClear.TabIndex = 38;
-            this.btnClear.Text = "Tạo mới";
-            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // ErrorMessage
             // 
             this.ErrorMessage.IsBalloon = true;
             this.ErrorMessage.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
-            // 
-            // picImage
-            // 
-            this.picImage.Image = global::TruongDuongKhang_1811546141.Properties.Resources.noImage;
-            this.picImage.Location = new System.Drawing.Point(850, 175);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(100, 75);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImage.TabIndex = 44;
-            this.picImage.TabStop = false;
-            this.picImage.Click += new System.EventHandler(this.picImage_Click);
             // 
             // ListProduct
             // 
@@ -447,9 +447,9 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Text = "Product";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
 
         }

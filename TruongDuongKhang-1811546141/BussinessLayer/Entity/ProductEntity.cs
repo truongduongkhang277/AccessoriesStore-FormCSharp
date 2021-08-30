@@ -37,10 +37,10 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Entity
         public int Quantity { get; set; }
 
         // lưu trữ thông tin giá bán
-        public float UnitPrice { get; set; }
+        public int UnitPrice { get; set; }
 
         // lưu trữ thông tin giảm giá
-        public float Discount { get; set; }
+        public int Discount { get; set; }
 
         // lưu trữ thông tin khác
         public string Description { get; set; }

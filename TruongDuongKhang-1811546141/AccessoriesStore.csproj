@@ -69,6 +69,12 @@
     <Compile Include="Lib\Encryption.cs" />
     <Compile Include="Lib\Tools.cs" />
     <Compile Include="Lib\ValidationByRegex.cs" />
+    <Compile Include="Logging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logging.Designer.cs">
+      <DependentUpon>Logging.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainApp.cs">
       <SubType>Form</SubType>
     </Compile>

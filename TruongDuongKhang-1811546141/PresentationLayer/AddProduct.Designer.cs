@@ -168,7 +168,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtEnteredDate.Enabled = false;
             this.txtEnteredDate.Location = new System.Drawing.Point(175, 185);
             this.txtEnteredDate.Name = "txtEnteredDate";
-            this.txtEnteredDate.Size = new System.Drawing.Size(150, 26);
+            this.txtEnteredDate.Size = new System.Drawing.Size(175, 26);
             this.txtEnteredDate.TabIndex = 12;
             // 
             // label6
@@ -341,7 +341,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // btnSave
             // 
-            this.btnSave.Enabled = false;
             this.btnSave.Image = global::TruongDuongKhang_1811546141.Properties.Resources.save;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(250, 475);

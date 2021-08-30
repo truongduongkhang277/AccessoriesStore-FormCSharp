@@ -35,7 +35,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         {
             return string.Format("Select ProductId, ProductName, CategoryId, Image, Manufactur, FORMAT(EnteredDate, 'dd/MM/yyyy') as EnteredDate, " +
                             "Account, iif(Status=1,N'Đã phê duyệt', N'Chưa phê duyệt') as Status, Quantity, UnitPrice, Discount, Description " +
-                            "from TblProduct " + " Order by ProductName");
+                            "from TblProduct " + " Order by ProductId");
         }
 
         // lấy dữ liệu về mã SP, mã loại SP, tên SP, nhà sản xuất, số lượng, ngày nhập hàng, tài khoản phê duyệt, giá SP, giảm giá, chú thích, hình ứng với mã SP
@@ -50,15 +50,16 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         private string insertSql()
         {
             return string.Format(
+                "set dateformat dmy;" +
                 "Insert Into TblProduct" +
                 "(ProductId, ProductName, CategoryId, Image, Manufactur, EnteredDate, Account, Status, Quantity, UnitPrice, Discount, Description )" +
-                " Values (N'{0}', N'{1}', {2}, '{3}', N'{4}', {5}, N'{6}', {7}, {8}, {9}, {10}, N'{11}');",
+                " Values (N'{0}', N'{1}', {2}, '{3}', N'{4}', '{5}', N'{6}', {7}, {8}, {9}, {10}, N'{11}');",
                 this.productInfo.ProductId,
                 this.productInfo.ProductName,
                 this.productInfo.CategoryId.ToString(),
                 Tools.imageToString(this.productInfo.Image),
                 this.productInfo.Manufactur,
-                string.Format("{0:dd/MM/yyyy}", DateTime.Now),
+                string.Format("{0:dd/MM/yyyy hh:mm:ss}", DateTime.Now),
                 this.productInfo.Account,
                 "0",
                 this.productInfo.Quantity.ToString(),
@@ -71,11 +72,10 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         private string updateSql()
         {
             return string.Format(
-                "Update TblProduct set ProductName =N'{0}', CategoryId ={1}, Image ='{2}', Manufactur =N'{3}', Status ={4}, " +
-                                       "Quantity ={5}, UnitPrice ={6}, Discount ={7}, Description =N'{8}' Where ProductId=N'{9}' ;",
+                "Update TblProduct set ProductName =N'{0}', CategoryId ={1}, Manufactur =N'{2}', Status ={3}, " +
+                                       "Quantity ={4}, UnitPrice ={5}, Discount ={6}, Description =N'{7}' Where ProductId=N'{8}' ;",
                 this.productInfo.ProductName,
                 this.productInfo.CategoryId,
-                Tools.imageToString(this.productInfo.Image),
                 this.productInfo.Manufactur,
                 (this.productInfo.Status ? 1 : 0),
                 this.productInfo.Quantity,
@@ -128,8 +128,8 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
                 ProductEntity.Account       = reader.GetString(6);
                 ProductEntity.Status        = reader.GetBoolean(7);
                 ProductEntity.Quantity      = reader.GetByte(8);
-                ProductEntity.UnitPrice     = reader.GetInt32(9);
-                ProductEntity.Discount      = reader.GetInt32(10);
+                ProductEntity.UnitPrice     = (int)reader.GetDouble(9);
+                ProductEntity.Discount      = (int)reader.GetDouble(10);
                 ProductEntity.Description   = reader.GetString(11);
             }
 

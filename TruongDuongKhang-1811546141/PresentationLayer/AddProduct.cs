@@ -11,6 +11,7 @@ using TruongDuongKhang_1811546141.Lib;
 using TruongDuongKhang_1811546141.BussinessLayer.Entity;
 using TruongDuongKhang_1811546141.BussinessLayer.Workflow;
 using System.IO;
+using System.Globalization;
 
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
@@ -40,26 +41,28 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.cbbAccount.DisplayMember = "Username";
             this.cbbAccount.ValueMember   = "Username";
             this.cbbAccount.SelectedIndex = 1;
+
+            this.txtEnteredDate.Text = string.Format("{0:dd/MM/yyyy hh:mm:ss}", DateTime.Now);
         }
 
         private void txtProductId_TextChanged(object sender, EventArgs e)
         {
-            this.btnSave.Enabled = enableSave();
+            //this.btnSave.Enabled = enableSave();
         }
 
         private void cbbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.btnSave.Enabled = enableSave();
+           //this.btnSave.Enabled = enableSave();
         }
 
         private void txtProductName_TextChanged(object sender, EventArgs e)
         {
-            this.btnSave.Enabled = enableSave();
+            //this.btnSave.Enabled = enableSave();
         }
 
         private void txtManufactur_TextChanged(object sender, EventArgs e)
         {
-            this.btnSave.Enabled = enableSave();
+            //this.btnSave.Enabled = enableSave();
         }
 
         private void txtQuantity_Leave(object sender, EventArgs e)
@@ -106,12 +109,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             productEntity.ProductId = this.txtProductId.Text.Trim();
             productEntity.ProductName = this.txtProductName.Text.Trim();
             productEntity.CategoryId = int.Parse(this.cbbCategory.SelectedValue.ToString());
-            productEntity.EnteredDate = DateTime.Now;
+            productEntity.EnteredDate = DateTime.ParseExact(this.txtEnteredDate.Text, "dd/MM/yyyy hh:mm:ss", null);        
             productEntity.Manufactur = this.txtManufactur.Text.Trim();
             productEntity.Quantity = int.Parse(this.txtQuantity.Text.Trim());
             productEntity.Account = this.cbbAccount.SelectedValue.ToString();
-            productEntity.UnitPrice = float.Parse(this.txtUnitPrice.Text.Trim());
-            productEntity.Discount = float.Parse(this.txtDiscount.Text.Trim());
+            productEntity.UnitPrice = int.Parse(this.txtUnitPrice.Text.Trim());
+            productEntity.Discount = int.Parse(this.txtDiscount.Text.Trim());
             productEntity.Description = this.txtDescription.Text.Trim();
 
             return productEntity;
@@ -161,7 +164,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.picImage.Image = Properties.Resources.noImage;
             this.txtManufactur.Clear();
             this.txtQuantity.Clear();
-            this.txtEnteredDate.Clear();
+            this.txtEnteredDate.Text = DateTime.Now.ToString();
             this.txtUnitPrice.Clear();
             this.txtDiscount.Clear();
             this.txtDescription.Clear();

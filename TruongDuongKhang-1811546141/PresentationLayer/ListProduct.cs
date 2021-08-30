@@ -19,6 +19,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private DataViewManager dsView;
         private bool isActive;
         private ProductEntity productEntity;
+        private BusProduct busProduct;
 
         public ListProduct(bool isActive)
         {
@@ -30,6 +31,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // khởi chạy truyền dữ liệu cho datagridview
             dataBinding(this.isActive, 0);
             this.productEntity = new ProductEntity(new Bitmap(this.picImage.Width, this.picImage.Height));
+            this.busProduct = new BusProduct(productEntity);
         }
 
         // truyền dữ liệu cho combobox
@@ -103,23 +105,24 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnUpdate.Enabled = true;
             this.btnDelete.Enabled = true;
 
+            this.cbbFilterCate.SelectedIndex = -1;
         }
 
         // truyền vào các textbox và combobox
         private void fillDataToForm(ProductEntity entity)
         {
             //thông tin sản phẩm
-            this.txtProductName.Text = entity.ProductName;
-            this.cbbCategory.SelectedValue = entity.CategoryId.ToString();
-            this.txtEnteredDate.Text = string.Format("{0:dd/MM/yyyy}", entity.EnteredDate);
-            this.txtManufactur.Text = entity.Manufactur;
-            this.txtAccount.Text = entity.Account;
-            this.radStatus.Checked = entity.Status;
-            this.txtQuantity.Text = entity.Quantity.ToString();
-            this.txtUnitPrice.Text = entity.UnitPrice.ToString();
-            this.txtDiscount.Text = entity.Discount.ToString();
-            this.txtDescription.Text = entity.Description;
-            this.picImage.Image = entity.Image;
+            this.txtProductName.Text        = entity.ProductName;
+            this.cbbCategory.SelectedValue  = entity.CategoryId.ToString();
+            this.txtEnteredDate.Text        = string.Format("{0:dd/MM/yyyy hh:mm:ss}", entity.EnteredDate);
+            this.txtManufactur.Text         = entity.Manufactur;
+            this.txtAccount.Text            = entity.Account;
+            this.radStatus.Checked          = entity.Status;
+            this.txtQuantity.Text           = entity.Quantity.ToString();
+            this.txtUnitPrice.Text          = entity.UnitPrice.ToString();
+            this.txtDiscount.Text           = entity.Discount.ToString();
+            this.txtDescription.Text        = entity.Description;
+            this.picImage.Image             = entity.Image;
         }
 
         private void txtQuantity_Leave(object sender, EventArgs e)
@@ -172,59 +175,56 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //string username = this.lblUsername.Text;
+            string productId = this.lblProductId.Text;
             // đóng gói dữ liệu
-            //BusAccount busAccount = new BusAccount();
-            //busAccount.accountInfo.RoleId = int.Parse(this.cbbRole.SelectedValue.ToString());
-            //busAccount.accountInfo.Status = this.radStatus.Checked;
-            // thông tin người dùng
-            //busAccount.accountInfo.FirstName = this.txtFirstName.Text.Trim();
-            //busAccount.accountInfo.LastName = this.txtLastName.Text.Trim();
-            //busAccount.accountInfo.DateOfBirth = DateTime.Parse(this.txtDateOfBirth.Text);
-            //busAccount.accountInfo.Sex = this.radMale.Checked;
-            // địa chỉ - phương thức liên lạc
-            //busAccount.accountInfo.Address = this.txtAddress.Text.Trim();
-            //busAccount.accountInfo.AddressId = int.Parse(this.cbbAddress.SelectedValue.ToString());
-            //busAccount.accountInfo.Phone = this.txtPhone.Text.Trim();
-            //busAccount.accountInfo.Email = this.txtEmail.Text.Trim();
-            //busAccount.accountInfo.Username = username;
+            this.busProduct = new BusProduct();
+            busProduct.productInfo.ProductName = this.txtProductName.Text.Trim();
+            busProduct.productInfo.CategoryId = int.Parse(this.cbbCategory.SelectedValue.ToString());
+            busProduct.productInfo.Manufactur = this.txtManufactur.Text.Trim();
+            busProduct.productInfo.Status = this.radStatus.Checked;
+            busProduct.productInfo.Quantity = int.Parse(this.txtQuantity.Text.Trim());
+            busProduct.productInfo.UnitPrice = int.Parse(this.txtUnitPrice.Text.Trim());
+            busProduct.productInfo.Discount = int.Parse(this.txtDiscount.Text.Trim());
+            busProduct.productInfo.Description = this.txtDescription.Text.Trim();
+            busProduct.productInfo.ProductId = productId;
 
             // gọi hàm từ busRole để cập nhật dữ liệu vào database
-            //int result = busAccount.updateAccount();
-            //if (result == 1)
-            //{
-            //    loadDataSet(isActive, 0);
-            //}
+            int result = busProduct.updateProduct();
+            if (result == 1)
+            {
+                loadDataSet(isActive, 0);
+            }
             // gọi nút thêm mới dữ liệu khởi động
-            //this.btnClear.PerformClick();
+            this.btnClear.PerformClick();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //string username = this.lblUsername.Text;
+            string productId = this.lblProductId.Text;
             // đóng gói dữ liệu
-            //BusAccount busAccount = new BusAccount();
-            //busAccount.accountInfo.Username = username;
-            //if (busAccount.deleteAccount() > 0)
-            //{
-            //    loadDataSet(isActive, 0);
-            //    // gọi nút thêm mới dữ liệu khởi động
-            //    this.btnClear.PerformClick();
-            //}
+            BusProduct busProduct = new BusProduct();
+            busProduct.productInfo.ProductId = productId;
+            if (busProduct.deleteProduct() > 0)
+            {
+                loadDataSet(isActive, 0);
+                // gọi nút thêm mới dữ liệu khởi động
+                this.btnClear.PerformClick();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            //this.lblCustomerId.Text = "";
+            this.lblProductId.Text = "";
 
-            //this.txtCustomerName.Clear();
-            //this.radMale.Checked = true;
-            //this.txtDateOfBirth.Clear();
-
-            //this.txtAddress.Clear();
-            //this.cbbAddress.SelectedIndex = -1;
-            //this.txtPhone.Clear();
-            //this.txtEmail.Clear();
+            this.txtProductName.Clear();
+            this.cbbCategory.SelectedIndex = -1;
+            this.picImage.Image = Properties.Resources.noImage;
+            this.txtManufactur.Clear();
+            this.txtQuantity.Clear();
+            this.txtEnteredDate.Clear();
+            this.txtUnitPrice.Clear();
+            this.txtDiscount.Clear();
+            this.txtDescription.Clear();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
