@@ -162,6 +162,19 @@ namespace TruongDuongKhang_1811546141.Lib
                                 + "@"
                                 + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
         }
+
+        static readonly Regex _isNumericRegex =
+        new Regex("^(" +
+                /*Hex*/ @"0x[0-9a-f]+" + "|" +
+                /*Bin*/ @"0b[01]+" + "|" +
+                /*Oct*/ @"0[0-7]*" + "|" +
+                /*Dec*/ @"((?!0)|[-+]|(?=0+\.))(\d*\.)?\d+(e\d+)?" +
+                ")$");
+
+        public static bool IsNumeric(string value)
+        {
+            return _isNumericRegex.IsMatch(value);
+        }
         #endregion
     }
 }

@@ -28,12 +28,18 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         // lấy dữ liệu truyền vào các combobox
         private void loadDataToCombobox()
         {
-            // cbbAddress
+            // cbbCategory
             DataSet dsCategory = new BusCategory().getData();
             this.cbbCategory.DataSource = dsCategory.Tables[0];
             this.cbbCategory.DisplayMember = "CategoryName";
             this.cbbCategory.ValueMember = "CategoryId";
             this.cbbCategory.SelectedIndex = -1;
+
+            DataSet dsAccount = new BusAccount().getData();
+            this.cbbAccount.DataSource = dsAccount.Tables[0];
+            this.cbbAccount.DisplayMember = "Username";
+            this.cbbAccount.ValueMember   = "Username";
+            this.cbbAccount.SelectedIndex = 1;
         }
 
         private void txtProductId_TextChanged(object sender, EventArgs e)
@@ -58,12 +64,26 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void txtQuantity_Leave(object sender, EventArgs e)
         {
-            this.btnSave.Enabled = enableSave();
+            if (this.txtQuantity.Text.Trim().Length > 0 && !ValidationByRegex.IsNumeric(this.txtQuantity.Text))
+            {
+                this.ErrorMessage.Show("Dữ liệu số lượng không đúng !!", this.txtQuantity, 0, -70, 5000);
+            }
         }
 
         private void txtUnitPrice_Leave(object sender, EventArgs e)
         {
-            this.btnSave.Enabled = enableSave();
+            if (this.txtUnitPrice.Text.Trim().Length > 0 && !ValidationByRegex.IsNumeric(this.txtUnitPrice.Text))
+            {
+                this.ErrorMessage.Show("Dữ liệu giá sản phẩm không đúng !!", this.txtUnitPrice, 0, -70, 5000);
+            }
+        }
+
+        private void txtDiscount_Leave(object sender, EventArgs e)
+        {
+            if (this.txtDiscount.Text.Trim().Length > 0 && !ValidationByRegex.IsNumeric(this.txtDiscount.Text))
+            {
+                this.ErrorMessage.Show("Dữ liệu giảm giá không đúng !!", this.txtDiscount, 0, -70, 5000);
+            }
         }
 
 
@@ -79,6 +99,23 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             }
         }
 
+        // lấy dữ liệu được nhập từ form
+        private ProductEntity getDataFromUI()
+        {
+            // thông tin sản phẩm
+            productEntity.ProductId = this.txtProductId.Text.Trim();
+            productEntity.ProductName = this.txtProductName.Text.Trim();
+            productEntity.CategoryId = int.Parse(this.cbbCategory.SelectedValue.ToString());
+            productEntity.EnteredDate = DateTime.Now;
+            productEntity.Manufactur = this.txtManufactur.Text.Trim();
+            productEntity.Quantity = int.Parse(this.txtQuantity.Text.Trim());
+            productEntity.Account = this.cbbAccount.SelectedValue.ToString();
+            productEntity.UnitPrice = float.Parse(this.txtUnitPrice.Text.Trim());
+            productEntity.Discount = float.Parse(this.txtDiscount.Text.Trim());
+            productEntity.Description = this.txtDescription.Text.Trim();
+
+            return productEntity;
+        }
         // khi có dữ liệu về mã sản phẩm, tên sản phẩm, nhà cung cấp, loại sản phẩm, số lượng và đơn giá thì có thể lưu 
         private bool enableSave()
         {
@@ -97,11 +134,23 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         // khi nhấn nút lưu
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(new BusProduct(this.productEntity).addProduct() == 1)
+            BusProduct busProduct = new BusProduct();
+            busProduct.productInfo = getDataFromUI();
+
+            // gọi hàm addProduct từ busProduct để lưu dữ liệu vào database
+            int result = busProduct.addProduct();
+            if (result == 1)
             {
-                MessageBox.Show("Thêm mới sản phẩm thành công !!");
-                btnClear.PerformClick();
+                MessageBox.Show(string.Format("Thêm mới thành công sản phẩm {0} !", busProduct.productInfo.ProductName));
+
+                // gọi nút thêm mới dữ liệu khởi động
+                this.btnClear.PerformClick();
             }
+            else
+            {
+                MessageBox.Show("Thêm mới thất bại");
+            }
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -109,7 +158,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtProductId.Clear();
             this.txtProductName.Clear();
             this.cbbCategory.SelectedIndex = -1;
-            this.picImage.Image = new Bitmap(this.picImage.Width, this.picImage.Height);
+            this.picImage.Image = Properties.Resources.noImage;
             this.txtManufactur.Clear();
             this.txtQuantity.Clear();
             this.txtEnteredDate.Clear();
@@ -123,5 +172,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             this.Dispose();
         }
+
     }
 }

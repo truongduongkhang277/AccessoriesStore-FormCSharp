@@ -95,12 +95,16 @@ namespace TruongDuongKhang_1811546141
 
         private void ribBtnProductActive_Click(object sender, EventArgs e)
         {
-
+            ListProduct listProduct = new ListProduct(true);
+            listProduct.MdiParent = this;
+            listProduct.Show();
         }
 
         private void ribBtnProductInactive_Click(object sender, EventArgs e)
         {
-
+            ListProduct listProduct = new ListProduct(false);
+            listProduct.MdiParent = this;
+            listProduct.Show();
         }
 
         private void ribBtnCustomer_Click(object sender, EventArgs e)

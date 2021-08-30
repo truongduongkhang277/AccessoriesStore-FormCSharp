@@ -31,6 +31,21 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
                             "where Status = " + (isActive ? "1" : "0") + (roleId > 0 ? " And acc.RoleId = " + roleId.ToString() : "") + " Order by FullName");
         }
 
+        // lấy dữ liệu về họ và tên, tên đăng nhập, ngày sinh, giới tính, điện thoại, địa chỉ của tài khoản
+        private string selectSql()
+        {
+            return string.Format("Select " +
+                            "FirstName + ' '  +LastName as FullName, " +
+                            "Username, " +
+                            "FORMAT(DateOfBirth, 'dd/MM/yyyy') as DateOfBirth, " +
+                            "iif(Sex=1,'Nam', N'Nữ') as Sex, " +
+                            "Phone, " +
+                            "Address + ',' +ad.District + ',' + ad.City as Address, " +
+                            "iif(Status=1,N'Đã kích hoạt', N'Chưa kích hoạt') as Status " +
+                            "from TblAccount acc inner join TblAddress ad " +
+                            "on (acc.AddressId = ad.AddressId) Order by FullName");
+        }
+
         // lấy dữ liệu về họ và tên, tên đăng nhập, ngày sinh, giới tính, điện thoại, địa chỉ, mã loại tài khoản, mã địa chỉ ứng với tên đăng nhập
         private string getInfoSql(string username)
         {
@@ -135,6 +150,12 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         public DataSet getData(bool isActive, int roleId)
         {
             return new DaoMsSqlServer().getData(selectSql(isActive, roleId), "TblAccount");
+        }
+
+        // lấy thông tin tài khoản từ database và trả về dataset object cho nơi gọi
+        public DataSet getData()
+        {
+            return new DaoMsSqlServer().getData(selectSql(), "TblAccount");
         }
     }
 }

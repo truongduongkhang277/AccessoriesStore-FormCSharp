@@ -29,6 +29,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.picImage = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
@@ -42,8 +43,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label5 = new System.Windows.Forms.Label();
             this.txtEnteredDate = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtAccount = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbAccount = new System.Windows.Forms.ComboBox();
             this.txtDiscount = new System.Windows.Forms.MaskedTextBox();
             this.txtUnitPrice = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -59,6 +60,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnSave = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.ErrorMessage = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -172,24 +174,15 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(405, 185);
+            this.label6.Location = new System.Drawing.Point(375, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 20);
             this.label6.TabIndex = 13;
             this.label6.Text = "Tài khoản phê duyệt";
             // 
-            // txtAccount
-            // 
-            this.txtAccount.Enabled = false;
-            this.txtAccount.Location = new System.Drawing.Point(575, 179);
-            this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(100, 26);
-            this.txtAccount.TabIndex = 14;
-            this.txtAccount.Text = "admin";
-            this.txtAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbbAccount);
             this.groupBox1.Controls.Add(this.txtDiscount);
             this.groupBox1.Controls.Add(this.txtUnitPrice);
             this.groupBox1.Controls.Add(this.label15);
@@ -200,7 +193,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.groupBox1.Controls.Add(this.txtDescription);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtAccount);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtEnteredDate);
             this.groupBox1.Controls.Add(this.label5);
@@ -220,20 +212,28 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
             // 
+            // cbbAccount
+            // 
+            this.cbbAccount.Enabled = false;
+            this.cbbAccount.FormattingEnabled = true;
+            this.cbbAccount.Location = new System.Drawing.Point(533, 182);
+            this.cbbAccount.Name = "cbbAccount";
+            this.cbbAccount.Size = new System.Drawing.Size(142, 28);
+            this.cbbAccount.TabIndex = 14;
+            // 
             // txtDiscount
             // 
             this.txtDiscount.Location = new System.Drawing.Point(546, 232);
-            this.txtDiscount.Mask = "000";
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(100, 26);
             this.txtDiscount.TabIndex = 22;
             this.txtDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDiscount.ValidatingType = typeof(int);
+            this.txtDiscount.Leave += new System.EventHandler(this.txtDiscount_Leave);
             // 
             // txtUnitPrice
             // 
             this.txtUnitPrice.Location = new System.Drawing.Point(175, 235);
-            this.txtUnitPrice.Mask = "0000000000";
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(150, 26);
             this.txtUnitPrice.TabIndex = 18;
@@ -253,7 +253,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(546, 135);
-            this.txtQuantity.Mask = "0000000";
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(100, 26);
             this.txtQuantity.TabIndex = 10;
@@ -373,6 +372,11 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label12.TabIndex = 23;
             this.label12.Text = "Click vào hình để chọn ảnh ";
             // 
+            // ErrorMessage
+            // 
+            this.ErrorMessage.IsBalloon = true;
+            this.ErrorMessage.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -413,7 +417,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEnteredDate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDescription;
@@ -430,5 +433,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.MaskedTextBox txtQuantity;
         private System.Windows.Forms.MaskedTextBox txtDiscount;
+        private System.Windows.Forms.ComboBox cbbAccount;
+        private System.Windows.Forms.ToolTip ErrorMessage;
     }
 }
