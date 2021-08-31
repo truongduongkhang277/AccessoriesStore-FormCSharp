@@ -16,7 +16,7 @@ namespace TruongDuongKhang_1811546141
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainApp());
+            Application.Run(new Login());
         }
     }
 }

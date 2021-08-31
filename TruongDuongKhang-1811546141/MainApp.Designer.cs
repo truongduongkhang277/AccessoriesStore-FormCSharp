@@ -70,8 +70,8 @@ namespace TruongDuongKhang_1811546141
             this.ribbonButton18 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton19 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton20 = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab8 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
+            this.ribTabInfo = new System.Windows.Forms.RibbonTab();
+            this.ribPanelInfo = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
@@ -108,7 +108,7 @@ namespace TruongDuongKhang_1811546141
             this.ribbon1.Tabs.Add(this.ribTabCustomer);
             this.ribbon1.Tabs.Add(this.ribbonTab4);
             this.ribbon1.Tabs.Add(this.ribbonTab5);
-            this.ribbon1.Tabs.Add(this.ribbonTab8);
+            this.ribbon1.Tabs.Add(this.ribTabInfo);
             this.ribbon1.Text = "ribbon1";
             // 
             // ribTabDirectory
@@ -435,18 +435,18 @@ namespace TruongDuongKhang_1811546141
             this.ribbonButton20.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton20.SmallImage")));
             this.ribbonButton20.Text = "ribbonButton20";
             // 
-            // ribbonTab8
+            // ribTabInfo
             // 
-            this.ribbonTab8.Name = "ribbonTab8";
-            this.ribbonTab8.Panels.Add(this.ribbonPanel4);
-            this.ribbonTab8.Text = "Thông tin";
+            this.ribTabInfo.Name = "ribTabInfo";
+            this.ribTabInfo.Panels.Add(this.ribPanelInfo);
+            this.ribTabInfo.Text = "Thông tin";
             // 
-            // ribbonPanel4
+            // ribPanelInfo
             // 
-            this.ribbonPanel4.Items.Add(this.ribbonButton6);
-            this.ribbonPanel4.Items.Add(this.ribbonButton14);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Text = "ribbonPanel4";
+            this.ribPanelInfo.Items.Add(this.ribbonButton6);
+            this.ribPanelInfo.Items.Add(this.ribbonButton14);
+            this.ribPanelInfo.Name = "ribPanelInfo";
+            this.ribPanelInfo.Text = "Thông tin sản phẩm";
             // 
             // ribbonButton6
             // 
@@ -565,8 +565,8 @@ namespace TruongDuongKhang_1811546141
         private System.Windows.Forms.RibbonTab ribbonTab4;
         private System.Windows.Forms.RibbonTab ribbonTab5;
         private System.Windows.Forms.RibbonButton ribBtnAddress;
-        private System.Windows.Forms.RibbonTab ribbonTab8;
-        private System.Windows.Forms.RibbonPanel ribbonPanel4;
+        private System.Windows.Forms.RibbonTab ribTabInfo;
+        private System.Windows.Forms.RibbonPanel ribPanelInfo;
         private System.Windows.Forms.RibbonButton ribbonButton6;
         private System.Windows.Forms.RibbonButton ribbonButton14;
         private System.Windows.Forms.RibbonPanel ribPanelRole;
