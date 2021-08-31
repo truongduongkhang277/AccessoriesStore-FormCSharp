@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using TruongDuongKhang_1811546141.BussinessLayer.Entity;
+using TruongDuongKhang_1811546141.BussinessLayer.Workflow;
+using TruongDuongKhang_1811546141.Lib;
 
 namespace TruongDuongKhang_1811546141
 {
@@ -15,45 +18,63 @@ namespace TruongDuongKhang_1811546141
     {
         public Login()
         {
-            Thread t = new Thread(new ThreadStart(Splash));
-            t.Start();
+
             InitializeComponent();
-            // loading data
-            string str = string.Empty;
-            for(int i = 0; i < 100000; i++)
-            {
-                // init data
-                str += i.ToString();
-            }
-            //Complete
-            t.Abort();
         }
 
-        void Splash()
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            SplashScreen.SplashForm frm = new SplashScreen.SplashForm();
-            frm.AppName = "Trương Dương Khang";
-            frm.Icon = Properties.Resources.smartphones;
-            frm.ShowIcon = true;
-            frm.ShowInTaskbar = true;
-            Application.Run(frm);
+            this.btnLogin.Enabled = enableSave();
         }
 
-        private void lblClear_Click(object sender, EventArgs e)
+        private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            txtUsername.Clear();
-            txtPassword.Clear();
-            txtUsername.Focus();
+            this.btnLogin.Enabled = enableSave();
+        }
+
+        // khi có dữ liệu về tên đăng nhập và mật khẩu thì có thể đăng nhập
+        private bool enableSave()
+        {
+            return (
+                //thông tin đăng nhập
+                this.txtUsername.Text.Trim().Length > 0 &&
+                this.txtPassword.Text.Trim().Length > 0 
+                );
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            // kiểm tra thông tin người dùng sau đăng nhập và lưu lại nếu thành công
+            string username = this.txtUsername.Text.Trim();
+            string password = this.txtPassword.Text.Trim();
 
+            if(username.Length > 0 && password.Length > 0)
+            {
+                // mã hóa mật khẩu khi người dùng nhập vào
+                password = new Encryption().SHA512_Hashing(password);
+
+                // tìm thông tin tài khoản người dùng nhập trong database
+                AccountEntity accountEntity = new BusAccount().getInfo(username);
+
+                //so sánh xem tên đăng nhập và mật khẩu được nhập có trùng với database không
+                if (accountEntity.Username.Equals(username) && accountEntity.Password.Equals(password))
+                {
+                    SecurityObject.accInfo = accountEntity;
+                    this.Dispose();
+                } else
+                {
+                    MessageBox.Show("Sai thông tin tài khoản hoặc mật khẩu. Vui lòng thử lại !!"); 
+                    txtUsername.Clear();
+                    txtPassword.Clear();
+                    txtUsername.Focus();
+                }
+            }
         }
 
         private void lblExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
     }
 }

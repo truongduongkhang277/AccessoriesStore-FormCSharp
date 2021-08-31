@@ -223,6 +223,26 @@ namespace TruongDuongKhang_1811546141.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checked_user_male_32px {
+            get {
+                object obj = ResourceManager.GetObject("checked_user_male_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkmark_32px {
+            get {
+                object obj = ResourceManager.GetObject("checkmark_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clear {
             get {
                 object obj = ResourceManager.GetObject("clear", resourceCulture);
@@ -626,6 +646,16 @@ namespace TruongDuongKhang_1811546141.Properties {
         internal static System.Drawing.Bitmap productSlowSelling {
             get {
                 object obj = ResourceManager.GetObject("productSlowSelling", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap receive_cash_32px {
+            get {
+                object obj = ResourceManager.GetObject("receive_cash_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

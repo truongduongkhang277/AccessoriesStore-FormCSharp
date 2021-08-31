@@ -70,6 +70,7 @@
     <Compile Include="BussinessLayer\Workflow\BusRole.cs" />
     <Compile Include="DataAccessLayer\DaoMsSqlServer.cs" />
     <Compile Include="Lib\Encryption.cs" />
+    <Compile Include="Lib\SecurityObject.cs" />
     <Compile Include="Lib\Tools.cs" />
     <Compile Include="Lib\ValidationByRegex.cs" />
     <Compile Include="Login.cs">
@@ -427,6 +428,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\key_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_user_male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receive_cash_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

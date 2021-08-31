@@ -44,15 +44,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label6 = new System.Windows.Forms.Label();
             this.radMale = new System.Windows.Forms.RadioButton();
             this.txtDateOfBirth = new System.Windows.Forms.MaskedTextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.btnClear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radFemale = new System.Windows.Forms.RadioButton();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.panel1.SuspendLayout();
@@ -193,20 +194,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtDateOfBirth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtDateOfBirth.ValidatingType = typeof(System.DateTime);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(414, 139);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 40);
-            this.btnDelete.TabIndex = 33;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -216,52 +203,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label8.TabIndex = 9;
             this.label8.Text = "Ngày sinh";
             // 
-            // btnExit
-            // 
-            this.btnExit.Image = global::TruongDuongKhang_1811546141.Properties.Resources.close;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(719, 139);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 40);
-            this.btnExit.TabIndex = 30;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.Image = global::TruongDuongKhang_1811546141.Properties.Resources.update;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(254, 139);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(115, 40);
-            this.btnUpdate.TabIndex = 29;
-            this.btnUpdate.Text = "Cập nhật";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // txtCustomerName
             // 
             this.txtCustomerName.Location = new System.Drawing.Point(335, 32);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(250, 26);
             this.txtCustomerName.TabIndex = 7;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.clear;
-            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(559, 139);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(115, 40);
-            this.btnClear.TabIndex = 28;
-            this.btnClear.Text = "Tạo mới";
-            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label7
             // 
@@ -274,6 +221,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSelect);
             this.panel1.Controls.Add(this.radFemale);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblCustomerId);
@@ -308,6 +256,73 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radFemale.TabIndex = 34;
             this.radFemale.Text = "Nữ";
             this.radFemale.UseVisualStyleBackColor = true;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Image = global::TruongDuongKhang_1811546141.Properties.Resources.checked_user_male_32px;
+            this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelect.Location = new System.Drawing.Point(267, 139);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(115, 40);
+            this.btnSelect.TabIndex = 35;
+            this.btnSelect.Text = "Chọn KH";
+            this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(631, 139);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 40);
+            this.btnDelete.TabIndex = 33;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::TruongDuongKhang_1811546141.Properties.Resources.close;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(798, 139);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 40);
+            this.btnExit.TabIndex = 30;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.Image = global::TruongDuongKhang_1811546141.Properties.Resources.update;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(449, 139);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(115, 40);
+            this.btnUpdate.TabIndex = 29;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.custAdd;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(85, 139);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(115, 40);
+            this.btnClear.TabIndex = 28;
+            this.btnClear.Text = "Thêm mới";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ListCustomer
             // 
@@ -358,5 +373,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radFemale;
+        private System.Windows.Forms.Button btnSelect;
     }
 }

@@ -49,8 +49,10 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         // lấy dữ liệu về họ và tên, tên đăng nhập, ngày sinh, giới tính, điện thoại, địa chỉ, mã loại tài khoản, mã địa chỉ ứng với tên đăng nhập
         private string getInfoSql(string username)
         {
-            return string.Format("Select Username, RoleId, FirstName, LastName, DateOfBirth, Sex, Phone, Email, Address, AddressId from TblAccount where Username = '"+username+"'");
+            return string.Format("Select Username, Password, RoleId, FirstName, LastName, DateOfBirth, Sex, Phone, Email, Address, AddressId, Description from TblAccount where Username = '" + username + "'");
         }
+
+
 
         // trả về câu SQL insert dữ liệu vào bảng TblAccount ( mssql server )
         private string insertSql()
@@ -125,19 +127,22 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         public AccountEntity getInfo(string username)
         {
             AccountEntity accountEntity = new AccountEntity();
+
             SqlDataReader reader = new DaoMsSqlServer().getDataReader(getInfoSql(username));
             while (reader.Read())
             {
                 accountEntity.Username  = reader.GetString(0);
-                accountEntity.RoleId    = reader.GetInt32(1);
-                accountEntity.FirstName = reader.GetString(2);
-                accountEntity.LastName  = reader.GetString(3);
-                accountEntity.DateOfBirth = reader.GetDateTime(4);
-                accountEntity.Sex       = reader.GetBoolean(5);
-                accountEntity.Phone     = reader.GetString(6);
-                accountEntity.Email     = reader.GetString(7);
-                accountEntity.Address   = reader.GetString(8);
-                accountEntity.AddressId = reader.GetInt32(9);
+                accountEntity.Password  = reader.GetString(1);
+                accountEntity.RoleId    = reader.GetInt32(2);
+                accountEntity.FirstName = reader.GetString(3);
+                accountEntity.LastName  = reader.GetString(4);
+                accountEntity.DateOfBirth = reader.GetDateTime(5);
+                accountEntity.Sex       = reader.GetBoolean(6);
+                accountEntity.Phone     = reader.GetString(7);
+                accountEntity.Email     = reader.GetString(8);
+                accountEntity.Address   = reader.GetString(9);
+                accountEntity.AddressId = reader.GetInt32(10);
+                accountEntity.Description = reader.GetString(11);
             }
 
             return accountEntity;

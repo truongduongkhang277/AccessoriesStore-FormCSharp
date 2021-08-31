@@ -103,6 +103,22 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtEmail.Text = entity.Email;
         }
 
+        // gọi đến form thêm mới người dùng
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            new AddCustomer().Show();
+            this.Dispose();
+        }
+
+        // chọn người dùng đển mua hàng
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            if(this.lblCustomerId.Text.Trim().Length > 0)
+            {
+
+            }
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string customerId = this.lblCustomerId.Text;
@@ -143,25 +159,11 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             }
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            this.lblCustomerId.Text = "";
-            
-            this.txtCustomerName.Clear();
-            this.radMale.Checked = true;
-            this.txtDateOfBirth.Clear();
-
-            this.txtAddress.Clear();
-            this.cbbAddress.SelectedIndex = -1;
-            this.txtPhone.Clear();
-            this.txtEmail.Clear();
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TruongDuongKhang_1811546141.BussinessLayer.Entity
 {
-    class AccountEntity
+    public class AccountEntity
     {
         // lưu trữ thông tin tên đăng nhập
         public string Username  { get; set; }
