@@ -317,6 +317,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radMale.TabStop = true;
             this.radMale.Text = "Nam";
             this.radMale.UseVisualStyleBackColor = true;
+            this.radMale.CheckedChanged += new System.EventHandler(this.radMale_CheckedChanged);
             // 
             // label8
             // 

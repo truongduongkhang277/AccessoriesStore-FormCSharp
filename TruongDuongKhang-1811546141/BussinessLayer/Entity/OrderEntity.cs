@@ -20,8 +20,8 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Entity
         // lưu trữ thông tin ngày đặt hàng
         public DateTime OrderDate { get; set; }
 
-        // lưu trữ thông tin trạng thái đơn hàng
-        public bool Status { get; set; }
+        // lưu trữ thông tin trạng thái đơn hàng (-1: Bị hủy, 0: mới đặt mua, 1: chưa kích hoạt, 2: đang xử lý, 3: giao cho khách, 4: đã thanh toán)
+        public int Status { get; set; }
 
         // lưu trữ thông tin ngày giao hàng
         public DateTime DepartureDate { get; set; }
@@ -35,6 +35,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Entity
         // default contructor:: initalize all of member in class
         public OrderEntity()
         {
+            this.OrderId = "";
             this.Account = "";
             this.CustomerId = "";
             this.OrderDate = new DateTime(1900, 1, 1);

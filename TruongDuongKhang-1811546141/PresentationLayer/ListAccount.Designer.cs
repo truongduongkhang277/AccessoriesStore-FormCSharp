@@ -30,6 +30,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radFemale = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radStatus = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.radFemale = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -94,6 +94,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 225);
             this.panel1.TabIndex = 28;
+            // 
+            // radFemale
+            // 
+            this.radFemale.AutoSize = true;
+            this.radFemale.Location = new System.Drawing.Point(919, 77);
+            this.radFemale.Name = "radFemale";
+            this.radFemale.Size = new System.Drawing.Size(47, 24);
+            this.radFemale.TabIndex = 39;
+            this.radFemale.Text = "Nữ";
+            this.radFemale.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -255,6 +265,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radMale.TabStop = true;
             this.radMale.Text = "Nam";
             this.radMale.UseVisualStyleBackColor = true;
+            this.radMale.CheckedChanged += new System.EventHandler(this.radMale_CheckedChanged);
             // 
             // txtDateOfBirth
             // 
@@ -379,16 +390,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label1.Size = new System.Drawing.Size(280, 31);
             this.label1.TabIndex = 30;
             this.label1.Text = "Danh sách tài khoản";
-            // 
-            // radFemale
-            // 
-            this.radFemale.AutoSize = true;
-            this.radFemale.Location = new System.Drawing.Point(919, 77);
-            this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(47, 24);
-            this.radFemale.TabIndex = 39;
-            this.radFemale.Text = "Nữ";
-            this.radFemale.UseVisualStyleBackColor = true;
             // 
             // ListAccount
             // 

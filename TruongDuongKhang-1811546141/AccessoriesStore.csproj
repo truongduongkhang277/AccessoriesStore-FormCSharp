@@ -477,5 +477,23 @@
   <ItemGroup>
     <None Include="Resources\product_32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shipped_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File Delivery_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt_cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt_dollar_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order_history_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_details_32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

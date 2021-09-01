@@ -31,6 +31,15 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         }
 
         // lấy dữ liệu về mã SP, mã loại SP, tên SP, nhà sản xuất, số lượng, ngày nhập hàng, tài khoản phê duyệt, giá SP, giảm giá, chú thích, hình của SP
+        private string selectSql(string likename)
+        {
+            return string.Format("Select ProductId, ProductName, Manufactur, Quantity, UnitPrice, Discount, cast(UnitPrice * Discount / 100 as int) DiscountPrice, Description  " +
+                            "from TblProduct where Status = 1 " + (likename.Trim().Length > 0 ? " And ProductName like N'%" + likename.Trim() + "%'" : "") +
+                            " Order by ProductId");
+        }
+
+        // lấy dữ liệu về mã SP, mã loại SP, tên SP, nhà sản xuất, số lượng, ngày nhập hàng, tài khoản phê duyệt, giá SP,
+        // giảm giá, chú thích, hình của SP
         private string selectSql()
         {
             return string.Format("Select ProductId, ProductName, CategoryId, Image, Manufactur, FORMAT(EnteredDate, 'dd/MM/yyyy') as EnteredDate, " +
@@ -38,7 +47,8 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
                             "from TblProduct " + " Order by ProductId");
         }
 
-        // lấy dữ liệu về mã SP, mã loại SP, tên SP, nhà sản xuất, số lượng, ngày nhập hàng, tài khoản phê duyệt, giá SP, giảm giá, chú thích, hình ứng với mã SP
+        // lấy dữ liệu về mã SP, mã loại SP, tên SP, nhà sản xuất, số lượng, ngày nhập hàng, tài khoản phê duyệt, giá SP,
+        // giảm giá, chú thích, hình ứng với mã SP
         private string getInfoSql(string productId)
         {
             return string.Format("Select " +
@@ -137,19 +147,24 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         }
 
         // lấy thông tin khách hàng từ database và trả về dataset object cho nơi gọi
-
         public DataSet getData()
         {
             return new DaoMsSqlServer().getData(selectSql(), "TblProduct");
         }
 
         // lấy thông tin sản phẩm từ database và trả về dataset object cho nơi gọi
-
         // dựa vào trạng thái isActive để chọn ds : true - đã kích hoạt, false - chưa kích hoạt
         // dựa vào giá trị cateId để lọc [nếu là 0 thì không lọc ]
         public DataSet getData(bool isActive, int cateId)
         {
             return new DaoMsSqlServer().getData(selectSql(isActive, cateId), "TblProduct");
+        }
+
+        // lấy thông tin sản phẩm từ database và trả về dataset object cho nơi gọi
+        // dựa vào tên sản phẩm truyền vào để chọn ds
+        public DataSet getData(string likename)
+        {
+            return new DaoMsSqlServer().getData(selectSql(likename), "TblProduct");
         }
     }
 }

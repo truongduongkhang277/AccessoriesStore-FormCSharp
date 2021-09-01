@@ -62,5 +62,43 @@ namespace TruongDuongKhang_1811546141.DataAccessLayer
         {
             return new SqlCommand(query, getConnection()).ExecuteReader();
         }
+
+
+        // ds những câu truy vấn cần khởi chạy
+        public bool ExecuteTransaction(List<string> statements)
+        {
+            bool result = false;
+
+            using (SqlConnection connection = getConnection())
+            {
+                SqlCommand cmd = connection.CreateCommand();
+
+                // khởi tạo object transaction
+                SqlTransaction tran = connection.BeginTransaction("CompleteOrder");
+                cmd.Connection = connection;
+                cmd.Transaction = tran;
+
+                // khởi chạy các câu lệnh trong ds
+                try 
+                {
+                    foreach(string s in statements)
+                    {
+                        cmd.CommandText = s;
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // hoàn tất nếu không có lỗi
+                    tran.Commit();
+                    result = true;
+                }
+                catch
+                {
+                    // quay lại nếu có lỗi xảy ra
+                    tran.Rollback();
+                }
+            }
+
+            return result;
+        }
     }
 }

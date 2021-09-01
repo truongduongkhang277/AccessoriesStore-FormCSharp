@@ -31,6 +31,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radFemale = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDateOfBirth = new System.Windows.Forms.MaskedTextBox();
@@ -63,7 +64,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.radFemale = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -86,6 +86,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản";
+            // 
+            // radFemale
+            // 
+            this.radFemale.AutoSize = true;
+            this.radFemale.Location = new System.Drawing.Point(590, 74);
+            this.radFemale.Name = "radFemale";
+            this.radFemale.Size = new System.Drawing.Size(47, 24);
+            this.radFemale.TabIndex = 15;
+            this.radFemale.Text = "Nữ";
+            this.radFemale.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -125,8 +135,10 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radMale.Name = "radMale";
             this.radMale.Size = new System.Drawing.Size(60, 24);
             this.radMale.TabIndex = 11;
+            this.radMale.TabStop = true;
             this.radMale.Text = "Nam";
             this.radMale.UseVisualStyleBackColor = true;
+            this.radMale.CheckedChanged += new System.EventHandler(this.radMale_CheckedChanged);
             // 
             // txtLastName
             // 
@@ -405,16 +417,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // radFemale
-            // 
-            this.radFemale.AutoSize = true;
-            this.radFemale.Location = new System.Drawing.Point(590, 74);
-            this.radFemale.Name = "radFemale";
-            this.radFemale.Size = new System.Drawing.Size(47, 24);
-            this.radFemale.TabIndex = 15;
-            this.radFemale.Text = "Nữ";
-            this.radFemale.UseVisualStyleBackColor = true;
             // 
             // AddAccount
             // 

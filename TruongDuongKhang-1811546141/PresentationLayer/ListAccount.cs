@@ -133,6 +133,11 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnFilter.Enabled = true;
         }
 
+        private void radMale_CheckedChanged(object sender, EventArgs e)
+        {
+            this.radFemale.Checked = !this.radMale.Checked;
+        }
+
         private void btnFilter_Click(object sender, EventArgs e)
         {
             int roleId = int.Parse(this.cbbFilterRole.SelectedValue.ToString());
@@ -205,6 +210,5 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Dispose();
         }
 
-        
     }
 }

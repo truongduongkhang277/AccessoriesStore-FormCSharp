@@ -121,6 +121,11 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnSave.Enabled = enableSave();
         }
 
+        private void radMale_CheckedChanged(object sender, EventArgs e)
+        {
+            this.radFemale.Checked = !this.radMale.Checked;
+        }
+
         // lấy dữ liệu được nhập từ form
         private AccountEntity getDataFromUI()
         {

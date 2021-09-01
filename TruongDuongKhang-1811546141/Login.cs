@@ -32,6 +32,42 @@ namespace TruongDuongKhang_1811546141
             this.btnLogin.Enabled = enableSave();
         }
 
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if(this.txtPassword.Text.Trim().Length > 0)
+                {
+                    btnLogin_Click(this.btnLogin, e);
+                } else
+                {
+                    this.txtPassword.Focus();
+                }
+            } else if(e.KeyCode == Keys.Escape)
+            {
+                this.lblExit_Click(this.lblExit, e);
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (this.txtUsername.Text.Trim().Length > 0)
+                {
+                    btnLogin_Click(this.btnLogin, e);
+                }
+                else
+                {
+                    this.txtUsername.Focus();
+                }
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                this.lblExit_Click(this.lblExit, e);
+            }
+        }
+
         // khi có dữ liệu về tên đăng nhập và mật khẩu thì có thể đăng nhập
         private bool enableSave()
         {
@@ -70,6 +106,7 @@ namespace TruongDuongKhang_1811546141
                 }
             }
         }
+
 
         private void lblExit_Click(object sender, EventArgs e)
         {

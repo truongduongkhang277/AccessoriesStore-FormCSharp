@@ -103,20 +103,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtEmail.Text = entity.Email;
         }
 
+        private void radMale_CheckedChanged(object sender, EventArgs e)
+        {
+            this.radFemale.Checked = !this.radMale.Checked;
+        }
+
         // gọi đến form thêm mới người dùng
         private void btnClear_Click(object sender, EventArgs e)
         {
             new AddCustomer().Show();
             this.Dispose();
-        }
-
-        // chọn người dùng đển mua hàng
-        private void btnSelect_Click(object sender, EventArgs e)
-        {
-            if(this.lblCustomerId.Text.Trim().Length > 0)
-            {
-
-            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

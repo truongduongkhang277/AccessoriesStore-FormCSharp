@@ -16,6 +16,22 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         }
 
         // lấy dữ liệu về mã khách hàng, họ và tên, ngày sinh, giới tính, điện thoại, địa chỉ của khách hàng
+        private string selectSql(string likename)
+        {
+            return string.Format("Select " +
+                            "CustomerId, " +
+                            "CustomerName, " +
+                            "FORMAT(DateOfBirth, 'dd/MM/yyyy') as DateOfBirth, " +
+                            "iif(Sex=1,'Nam', N'Nữ') as Sex, " +
+                            "Phone, " +
+                            "Address + ',' +ad.District + ',' + ad.City as Address " +
+                            "from TblCustomer cus inner join TblAddress ad " +
+                            "on (cus.AddressId = ad.AddressId) " + 
+                            (likename.Trim().Length > 0 ? " And CustomerName like N'%" + likename.Trim() + "%'" : "") +
+                            " Order by CustomerName");
+        }
+
+        // lấy dữ liệu về mã khách hàng, họ và tên, ngày sinh, giới tính, điện thoại, địa chỉ của khách hàng
         private string selectSql()
         {
             return string.Format("Select " +
@@ -33,6 +49,12 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         private string getInfoSql(string customerId)
         {
             return string.Format("Select CustomerId, CustomerName, DateOfBirth, Sex, Phone, Email, Address, AddressId from TblCustomer where CustomerId = '" + customerId + "'");
+        }
+
+        // lấy dữ liệu về mã khách hàng, họ và tên, ngày sinh, giới tính, điện thoại, địa chỉ, mã địa chỉ ứng với mã khách hàng,
+        private string getInfoCustomerSql(string customerId)
+        {
+            return string.Format("Select CustomerId, CustomerName, DateOfBirth, Sex, Phone, Email,Address + ',' +ad.District + ',' + ad.City as Address from TblCustomer cus inner join TblAddress ad on (cus.AddressId = ad.AddressId) where CustomerId = '" + customerId + "'");
         }
 
         // trả về câu SQL insert dữ liệu vào bảng TblCustomer ( mssql server )
@@ -115,11 +137,36 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
             return customerEntity;
         }
 
-        // lấy thông tin khách hàng từ database và trả về dataset object cho nơi gọi
+        // đọc thông tin khách hàng từ database theo mã khách hàng và trả về CustomerEntity object cho nơi gọi
+        // customerId: mã khách hàng muốn lấy dữ liệu
+        public CustomerEntity getInfoCustomer(string customerId)
+        {
+            CustomerEntity customerEntity = new CustomerEntity();
+            SqlDataReader reader = new DaoMsSqlServer().getDataReader(getInfoCustomerSql(customerId));
+            while (reader.Read())
+            {
+                customerEntity.CustomerId = reader.GetString(0);
+                customerEntity.CustomerName = reader.GetString(1);
+                customerEntity.DateOfBirth = reader.GetDateTime(2);
+                customerEntity.Sex = reader.GetBoolean(3);
+                customerEntity.Phone = reader.GetString(4);
+                customerEntity.Email = reader.GetString(5);
+                customerEntity.Address = reader.GetString(6);
+            }
 
+            return customerEntity;
+        }
+
+        // lấy thông tin khách hàng từ database và trả về dataset object cho nơi gọi
         public DataSet getData()
         {
             return new DaoMsSqlServer().getData(selectSql(), "TblCustomer");
+        }
+
+        // lấy thông tin khách hàng từ database và trả về dataset object cho nơi gọi
+        public DataSet getData(string likename)
+        {
+            return new DaoMsSqlServer().getData(selectSql(likename), "TblCustomer");
         }
     }
 }
