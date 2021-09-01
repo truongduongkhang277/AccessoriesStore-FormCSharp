@@ -58,11 +58,11 @@ namespace TruongDuongKhang_1811546141
             this.ribPanelCustomer = new System.Windows.Forms.RibbonPanel();
             this.ribBtnCustomer = new System.Windows.Forms.RibbonButton();
             this.ribBtnAddCustomer = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel11 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
+            this.ribTabOrder = new System.Windows.Forms.RibbonTab();
+            this.ribPanelOrder = new System.Windows.Forms.RibbonPanel();
+            this.ribBtnOrder = new System.Windows.Forms.RibbonButton();
+            this.ribBtnOrderApproved = new System.Windows.Forms.RibbonButton();
+            this.ribBtnDeclined = new System.Windows.Forms.RibbonButton();
             this.ribbonTab5 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel12 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton16 = new System.Windows.Forms.RibbonButton();
@@ -70,19 +70,19 @@ namespace TruongDuongKhang_1811546141
             this.ribbonButton18 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton19 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton20 = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribTabInfo = new System.Windows.Forms.RibbonTab();
             this.ribPanelInfo = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
-            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbon1
@@ -106,7 +106,7 @@ namespace TruongDuongKhang_1811546141
             this.ribbon1.Tabs.Add(this.ribTabDirectory);
             this.ribbon1.Tabs.Add(this.ribTabProduct);
             this.ribbon1.Tabs.Add(this.ribTabCustomer);
-            this.ribbon1.Tabs.Add(this.ribbonTab4);
+            this.ribbon1.Tabs.Add(this.ribTabOrder);
             this.ribbon1.Tabs.Add(this.ribbonTab5);
             this.ribbon1.Tabs.Add(this.ribTabInfo);
             this.ribbon1.Text = "ribbon1";
@@ -338,43 +338,46 @@ namespace TruongDuongKhang_1811546141
             this.ribBtnAddCustomer.Text = "Thêm khách hàng";
             this.ribBtnAddCustomer.Click += new System.EventHandler(this.ribBtnAddCustomer_Click);
             // 
-            // ribbonTab4
+            // ribTabOrder
             // 
-            this.ribbonTab4.Name = "ribbonTab4";
-            this.ribbonTab4.Panels.Add(this.ribbonPanel11);
-            this.ribbonTab4.Text = "Cửa hàng";
+            this.ribTabOrder.Name = "ribTabOrder";
+            this.ribTabOrder.Panels.Add(this.ribPanelOrder);
+            this.ribTabOrder.Text = "Cửa hàng";
             // 
-            // ribbonPanel11
+            // ribPanelOrder
             // 
-            this.ribbonPanel11.Items.Add(this.ribbonButton12);
-            this.ribbonPanel11.Items.Add(this.ribbonButton13);
-            this.ribbonPanel11.Items.Add(this.ribbonButton15);
-            this.ribbonPanel11.Name = "ribbonPanel11";
-            this.ribbonPanel11.Text = "ribbonPanel11";
+            this.ribPanelOrder.Items.Add(this.ribBtnOrder);
+            this.ribPanelOrder.Items.Add(this.ribBtnOrderApproved);
+            this.ribPanelOrder.Items.Add(this.ribBtnDeclined);
+            this.ribPanelOrder.Name = "ribPanelOrder";
+            this.ribPanelOrder.Text = "Đơn hàng";
             // 
-            // ribbonButton12
+            // ribBtnOrder
             // 
-            this.ribbonButton12.Image = global::TruongDuongKhang_1811546141.Properties.Resources.orderAdd;
-            this.ribbonButton12.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.orderAdd;
-            this.ribbonButton12.Name = "ribbonButton12";
-            this.ribbonButton12.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.SmallImage")));
-            this.ribbonButton12.Text = "Mua hàng";
+            this.ribBtnOrder.Image = global::TruongDuongKhang_1811546141.Properties.Resources.add_receipt_32px;
+            this.ribBtnOrder.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.add_receipt_32px;
+            this.ribBtnOrder.Name = "ribBtnOrder";
+            this.ribBtnOrder.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnOrder.SmallImage")));
+            this.ribBtnOrder.Text = "Mua hàng";
+            this.ribBtnOrder.DoubleClick += new System.EventHandler(this.ribBtnOrder_DoubleClick);
             // 
-            // ribbonButton13
+            // ribBtnOrderApproved
             // 
-            this.ribbonButton13.Image = global::TruongDuongKhang_1811546141.Properties.Resources.orderInfo;
-            this.ribbonButton13.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.orderInfo;
-            this.ribbonButton13.Name = "ribbonButton13";
-            this.ribbonButton13.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.SmallImage")));
-            this.ribbonButton13.Text = "Đặt hàng thành công";
+            this.ribBtnOrderApproved.Image = global::TruongDuongKhang_1811546141.Properties.Resources.receipt_approved_32px;
+            this.ribBtnOrderApproved.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.receipt_approved_32px;
+            this.ribBtnOrderApproved.Name = "ribBtnOrderApproved";
+            this.ribBtnOrderApproved.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnOrderApproved.SmallImage")));
+            this.ribBtnOrderApproved.Text = "Đặt hàng thành công";
+            this.ribBtnOrderApproved.Click += new System.EventHandler(this.ribBtnOrderApproved_Click);
             // 
-            // ribbonButton15
+            // ribBtnDeclined
             // 
-            this.ribbonButton15.Image = global::TruongDuongKhang_1811546141.Properties.Resources.orderDelete;
-            this.ribbonButton15.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.orderDelete;
-            this.ribbonButton15.Name = "ribbonButton15";
-            this.ribbonButton15.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton15.SmallImage")));
-            this.ribbonButton15.Text = "Hủy đơn hàng";
+            this.ribBtnDeclined.Image = global::TruongDuongKhang_1811546141.Properties.Resources.receipt_declined_32px;
+            this.ribBtnDeclined.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.receipt_declined_32px;
+            this.ribBtnDeclined.Name = "ribBtnDeclined";
+            this.ribBtnDeclined.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnDeclined.SmallImage")));
+            this.ribBtnDeclined.Text = "Hủy đơn hàng";
+            this.ribBtnDeclined.Click += new System.EventHandler(this.ribBtnDeclined_Click);
             // 
             // ribbonTab5
             // 
@@ -435,6 +438,66 @@ namespace TruongDuongKhang_1811546141
             this.ribbonButton20.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton20.SmallImage")));
             this.ribbonButton20.Text = "ribbonButton20";
             // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.Items.Add(this.ribbonButton5);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Text = "Doanh thu";
+            // 
+            // ribbonButton5
+            // 
+            this.ribbonButton5.Image = global::TruongDuongKhang_1811546141.Properties.Resources.graphPie;
+            this.ribbonButton5.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.graphPie;
+            this.ribbonButton5.Name = "ribbonButton5";
+            this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
+            this.ribbonButton5.Text = "Doanh Thu";
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.Items.Add(this.ribbonButton7);
+            this.ribbonPanel5.Name = "ribbonPanel5";
+            this.ribbonPanel5.Text = "Thống kê";
+            // 
+            // ribbonButton7
+            // 
+            this.ribbonButton7.Image = global::TruongDuongKhang_1811546141.Properties.Resources.graphLine;
+            this.ribbonButton7.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.graphLine;
+            this.ribbonButton7.Name = "ribbonButton7";
+            this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
+            this.ribbonButton7.Text = "Thống kê";
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.Items.Add(this.ribbonButton1);
+            this.ribbonPanel6.Items.Add(this.ribbonButton3);
+            this.ribbonPanel6.Items.Add(this.ribbonButton4);
+            this.ribbonPanel6.Name = "ribbonPanel6";
+            this.ribbonPanel6.Text = "Tình trạng kinh doanh";
+            // 
+            // ribbonButton1
+            // 
+            this.ribbonButton1.Image = global::TruongDuongKhang_1811546141.Properties.Resources.productBestSelling;
+            this.ribbonButton1.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.productBestSelling;
+            this.ribbonButton1.Name = "ribbonButton1";
+            this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
+            this.ribbonButton1.Text = "Sản phẩm bán chạy";
+            // 
+            // ribbonButton3
+            // 
+            this.ribbonButton3.Image = global::TruongDuongKhang_1811546141.Properties.Resources.company;
+            this.ribbonButton3.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.company;
+            this.ribbonButton3.Name = "ribbonButton3";
+            this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
+            this.ribbonButton3.Text = "Nhà sản xuất uy tín";
+            // 
+            // ribbonButton4
+            // 
+            this.ribbonButton4.Image = global::TruongDuongKhang_1811546141.Properties.Resources.productSlowSelling;
+            this.ribbonButton4.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.productSlowSelling;
+            this.ribbonButton4.Name = "ribbonButton4";
+            this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
+            this.ribbonButton4.Text = "Sản phẩm bán chậm";
+            // 
             // ribTabInfo
             // 
             this.ribTabInfo.Name = "ribTabInfo";
@@ -472,66 +535,6 @@ namespace TruongDuongKhang_1811546141
             this.ribbonButton10.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.SmallImage")));
             this.ribbonButton10.Text = "Danh sách loại SP";
             // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.Items.Add(this.ribbonButton5);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Text = "Doanh thu";
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.ribbonButton7);
-            this.ribbonPanel5.Name = "ribbonPanel5";
-            this.ribbonPanel5.Text = "Thống kê";
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.Items.Add(this.ribbonButton1);
-            this.ribbonPanel6.Items.Add(this.ribbonButton3);
-            this.ribbonPanel6.Items.Add(this.ribbonButton4);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Text = "Tình trạng kinh doanh";
-            // 
-            // ribbonButton1
-            // 
-            this.ribbonButton1.Image = global::TruongDuongKhang_1811546141.Properties.Resources.productBestSelling;
-            this.ribbonButton1.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.productBestSelling;
-            this.ribbonButton1.Name = "ribbonButton1";
-            this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
-            this.ribbonButton1.Text = "Sản phẩm bán chạy";
-            // 
-            // ribbonButton3
-            // 
-            this.ribbonButton3.Image = global::TruongDuongKhang_1811546141.Properties.Resources.company;
-            this.ribbonButton3.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.company;
-            this.ribbonButton3.Name = "ribbonButton3";
-            this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
-            this.ribbonButton3.Text = "Nhà sản xuất uy tín";
-            // 
-            // ribbonButton4
-            // 
-            this.ribbonButton4.Image = global::TruongDuongKhang_1811546141.Properties.Resources.productSlowSelling;
-            this.ribbonButton4.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.productSlowSelling;
-            this.ribbonButton4.Name = "ribbonButton4";
-            this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
-            this.ribbonButton4.Text = "Sản phẩm bán chậm";
-            // 
-            // ribbonButton5
-            // 
-            this.ribbonButton5.Image = global::TruongDuongKhang_1811546141.Properties.Resources.graphPie;
-            this.ribbonButton5.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.graphPie;
-            this.ribbonButton5.Name = "ribbonButton5";
-            this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
-            this.ribbonButton5.Text = "Doanh Thu";
-            // 
-            // ribbonButton7
-            // 
-            this.ribbonButton7.Image = global::TruongDuongKhang_1811546141.Properties.Resources.graphLine;
-            this.ribbonButton7.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.graphLine;
-            this.ribbonButton7.Name = "ribbonButton7";
-            this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
-            this.ribbonButton7.Text = "Thống kê";
-            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -562,7 +565,7 @@ namespace TruongDuongKhang_1811546141
         private System.Windows.Forms.RibbonPanel ribbonPanel3;
         private System.Windows.Forms.RibbonTab ribTabProduct;
         private System.Windows.Forms.RibbonTab ribTabCustomer;
-        private System.Windows.Forms.RibbonTab ribbonTab4;
+        private System.Windows.Forms.RibbonTab ribTabOrder;
         private System.Windows.Forms.RibbonTab ribbonTab5;
         private System.Windows.Forms.RibbonButton ribBtnAddress;
         private System.Windows.Forms.RibbonTab ribTabInfo;
@@ -584,10 +587,10 @@ namespace TruongDuongKhang_1811546141
         private System.Windows.Forms.RibbonButton ribbonButton26;
         private System.Windows.Forms.RibbonButton ribBtnAddProduct;
         private System.Windows.Forms.RibbonButton ribBtnProductInactive;
-        private System.Windows.Forms.RibbonPanel ribbonPanel11;
-        private System.Windows.Forms.RibbonButton ribbonButton12;
-        private System.Windows.Forms.RibbonButton ribbonButton13;
-        private System.Windows.Forms.RibbonButton ribbonButton15;
+        private System.Windows.Forms.RibbonPanel ribPanelOrder;
+        private System.Windows.Forms.RibbonButton ribBtnOrder;
+        private System.Windows.Forms.RibbonButton ribBtnOrderApproved;
+        private System.Windows.Forms.RibbonButton ribBtnDeclined;
         private System.Windows.Forms.RibbonPanel ribbonPanel12;
         private System.Windows.Forms.RibbonButton ribbonButton16;
         private System.Windows.Forms.RibbonButton ribbonButton17;

@@ -33,8 +33,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // chuyển dữ liệu đến dataGridView
             this.dgvCategory.DataSource = dsView;
             this.dgvCategory.DataMember = "TblCategory";
-
         }
+
         private void dataBinding()
         {
             loadDataSet();

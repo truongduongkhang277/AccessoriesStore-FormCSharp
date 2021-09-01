@@ -75,7 +75,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             }
         }
 
-
         // Khi có dữ liệu truyền vào form
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
@@ -86,8 +85,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             this.btnSave.Enabled = enableSave();
         }
-
-        
 
         private void txtAddress_TextChanged(object sender, EventArgs e)
         {

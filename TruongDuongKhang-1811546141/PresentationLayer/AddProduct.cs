@@ -89,7 +89,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             }
         }
 
-
         // khi nhấn vào picture box 
         private void picImage_Click(object sender, EventArgs e)
         {

@@ -141,7 +141,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnUpdate.Enabled = this.btnDelete.Enabled = false;
         }
 
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string username = this.lblUsername.Text;

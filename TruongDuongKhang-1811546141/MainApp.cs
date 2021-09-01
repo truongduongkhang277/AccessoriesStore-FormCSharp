@@ -121,6 +121,21 @@ namespace TruongDuongKhang_1811546141
             addCustomer.Show();
         }
 
+        private void ribBtnOrder_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribBtnOrderApproved_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribBtnDeclined_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ribBtnBestSellProduct_Click(object sender, EventArgs e)
         {
 
@@ -135,7 +150,6 @@ namespace TruongDuongKhang_1811546141
         {
 
         }
-
 
     }
 }

@@ -109,11 +109,23 @@
     <Compile Include="PresentationLayer\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\AddCustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\AddCustomerInfo.Designer.cs">
+      <DependentUpon>AddCustomerInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\AddProductItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\AddProductItem.Designer.cs">
+      <DependentUpon>AddProductItem.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\AddRole.cs">
       <SubType>Form</SubType>
@@ -189,8 +201,14 @@
     <EmbeddedResource Include="PresentationLayer\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\AddCustomerInfo.resx">
+      <DependentUpon>AddCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\AddProductItem.resx">
+      <DependentUpon>AddProductItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\AddRole.resx">
       <DependentUpon>AddRole.cs</DependentUpon>
@@ -215,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ListRole.resx">
       <DependentUpon>ListRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\OrderDetail.resx">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -437,6 +458,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\receive_cash_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_receipt_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt_approved_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt_declined_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_shopping_cart_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
-    public partial class Order : Form
+    public partial class AddProductItem : Form
     {
-        public Order()
+        public AddProductItem()
         {
             InitializeComponent();
         }
 
-        private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void txtProductName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnSelectCustomer_Click(object sender, EventArgs e)
+        private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
         {
 
         }
@@ -32,25 +37,9 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         }
 
-        private void btnSelectProduct_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
-
     }
 }

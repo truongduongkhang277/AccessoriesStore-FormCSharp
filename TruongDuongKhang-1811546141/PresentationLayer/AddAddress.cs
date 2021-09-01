@@ -62,6 +62,5 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Dispose();
         }
 
-       
     }
 }

@@ -35,6 +35,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvRole.DataMember = "TblRole";
 
         }
+
         private void dataBinding()
         {
             loadDataSet();

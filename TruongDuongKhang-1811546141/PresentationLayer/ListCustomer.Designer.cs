@@ -49,7 +49,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radFemale = new System.Windows.Forms.RadioButton();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -221,7 +220,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnSelect);
             this.panel1.Controls.Add(this.radFemale);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblCustomerId);
@@ -257,25 +255,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radFemale.Text = "Nữ";
             this.radFemale.UseVisualStyleBackColor = true;
             // 
-            // btnSelect
-            // 
-            this.btnSelect.Image = global::TruongDuongKhang_1811546141.Properties.Resources.checked_user_male_32px;
-            this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelect.Location = new System.Drawing.Point(267, 139);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(115, 40);
-            this.btnSelect.TabIndex = 35;
-            this.btnSelect.Text = "Chọn KH";
-            this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSelect.UseVisualStyleBackColor = true;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
-            // 
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
             this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(631, 139);
+            this.btnDelete.Location = new System.Drawing.Point(547, 150);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
             this.btnDelete.TabIndex = 33;
@@ -288,7 +273,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.btnExit.Image = global::TruongDuongKhang_1811546141.Properties.Resources.close;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(798, 139);
+            this.btnExit.Location = new System.Drawing.Point(718, 150);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 40);
             this.btnExit.TabIndex = 30;
@@ -302,7 +287,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnUpdate.Enabled = false;
             this.btnUpdate.Image = global::TruongDuongKhang_1811546141.Properties.Resources.update;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(449, 139);
+            this.btnUpdate.Location = new System.Drawing.Point(361, 150);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(115, 40);
             this.btnUpdate.TabIndex = 29;
@@ -315,7 +300,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.custAdd;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(85, 139);
+            this.btnClear.Location = new System.Drawing.Point(175, 150);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(115, 40);
             this.btnClear.TabIndex = 28;
@@ -373,6 +358,5 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radFemale;
-        private System.Windows.Forms.Button btnSelect;
     }
 }

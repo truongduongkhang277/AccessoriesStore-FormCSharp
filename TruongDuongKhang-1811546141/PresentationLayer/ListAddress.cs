@@ -54,7 +54,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvAddress.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-
         private void dgvAddress_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // chuyển dữ liệu đến Textbox (txtDistrict, txtCity, txtDescription
