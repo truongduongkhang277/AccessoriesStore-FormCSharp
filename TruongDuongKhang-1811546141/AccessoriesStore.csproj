@@ -157,17 +157,17 @@
     <Compile Include="PresentationLayer\ListCustomer.Designer.cs">
       <DependentUpon>ListCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\ListOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ListOrders.Designer.cs">
+      <DependentUpon>ListOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Order.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PresentationLayer\OrderDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\OrderDetail.Designer.cs">
-      <DependentUpon>OrderDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\ListProduct.cs">
       <SubType>Form</SubType>
@@ -180,6 +180,12 @@
     </Compile>
     <Compile Include="PresentationLayer\ListRole.Designer.cs">
       <DependentUpon>ListRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Print.Designer.cs">
+      <DependentUpon>Print.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -225,6 +231,9 @@
     <EmbeddedResource Include="PresentationLayer\ListCustomer.resx">
       <DependentUpon>ListCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\ListOrders.resx">
+      <DependentUpon>ListOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,8 +243,8 @@
     <EmbeddedResource Include="PresentationLayer\ListRole.resx">
       <DependentUpon>ListRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\OrderDetail.resx">
-      <DependentUpon>OrderDetail.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

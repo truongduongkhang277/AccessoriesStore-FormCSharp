@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TruongDuongKhang_1811546141.BussinessLayer.Workflow;
 using TruongDuongKhang_1811546141.BussinessLayer.Entity;
@@ -51,10 +46,11 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         // khi chọn nút chọn khách hàng
         private void btnSelectCustomer_Click(object sender, EventArgs e)
         {
-            new AddCustomerInfo().ShowDialog(this);
-            /*AddCustomerInfo productItem = new AddCustomerInfo();
-            customerInfo.customerInfo = this.MdiParent;
-            customerInfo.Show();*/
+            //new AddCustomerInfo().ShowDialog(this);
+            AddCustomerInfo customer = new AddCustomerInfo();
+            customer.MdiParent = this.MdiParent;
+            customer.Location = new Point(0, 0);
+            customer.Show();
             if(CustomerId.Length > 0)
             {
                 this.lblCustomerId.Text = CustomerId;
@@ -94,11 +90,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnSelectProduct_Click(object sender, EventArgs e)
         {
-            new AddProductItem().ShowDialog(this);
-            /*AddProductItem productItem = new AddProductItem();
+            //new AddProductItem().ShowDialog(this);
+            AddProductItem productItem = new AddProductItem();
             productItem.MdiParent = this.MdiParent;
+            productItem.Location = new Point(0, 0);
             productItem.Show();
-            */
+            
             if (ProductId.Length > 0)
             {
                 // lấy sản phẩm dựa vào phương thức getInfo trong BusProduct
@@ -220,7 +217,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             orderEntity.Account = SecurityObject.accInfo.Username;
             orderEntity.OrderDate = DateTime.Now;
             orderEntity.DepartureDate = DateTime.Now.AddHours(24);
-            orderEntity.Status = 4;
+            orderEntity.Status = 0;
             orderEntity.DeliveryAddress = this.txtDeliveryAddress.Text.Trim();
 
             // chuyển dgvOrder đến List<OrderDetail>

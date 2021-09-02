@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Text;
-using System.Threading.Tasks;
 using TruongDuongKhang_1811546141.BussinessLayer.Entity;
 using TruongDuongKhang_1811546141.DataAccessLayer;
 
@@ -28,6 +24,23 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         private string selectSql()
         {
             return string.Format("Select OrderId, CustomerId, Account, OrderDate, Status, DepartureDate, DeliveryAddress, Description from TblAccount from TblOrder");
+        }
+
+        private string selectSql(int status, string customerName, string phone, int addressId)
+        {
+            // tạo biến lưu trữ các điều kiện lọc dựa vào dữ liệu truyền vào
+            string condition = (status >= -1 ? (" And Status = " + status.ToString()) : "");
+            condition += (customerName.Length > 0 ? (" And c.CustomerName like N'%" + customerName +"%'") : "");
+            condition += (phone.Length > 0 ? (" And c.Phone like N'%" + phone + "%'") : "");
+            condition += (addressId > 0 ? (" And c.AddressId = " + addressId.ToString()) : "");
+
+            return string.Format(
+                    "select o.OrderId, c.CustomerName, o.Account, o.OrderDate, o.DepartureDate, o.DeliveryAddress, " +
+                    "       (select sum(Quantity * UnitPrice - DiscountPrice) from TblOrderDetail where OrderId = o.OrderId) as 'Total'" +
+                    " from TblOrder o inner " +
+                    " join TblCustomer c on (o.CustomerId = c.CustomerId) " +
+                    " Where 1 = 1 " + condition
+                );
         }
 
         // trả về câu SQL insert dữ liệu vào bảng TblOrder ( mssql server )
@@ -62,6 +75,11 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
                 this.orderInfo.OrderId);
         }
 
+        private string updateStatusSql(string orderId, int status)
+        {
+            return string.Format("Update TblOrder set Status= " + status + " Where OrderId='" + orderId + "';");
+        }
+
         // trả về câu SQL xóa dữ liệu vào bảng TblOrder ( mssql server )
         private string deleteSql()
         {
@@ -80,6 +98,12 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         {
 
             return new DaoMsSqlServer().executeNonQuery(updateSql());
+        }
+
+        public int updateStatusOrder(string orderId, int status)
+        {
+
+            return new DaoMsSqlServer().executeNonQuery(updateStatusSql(orderId, status));
         }
 
         // xóa thông tin địa chỉ vào database
@@ -117,6 +141,11 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         public DataSet getData()
         {
             return new DaoMsSqlServer().getData(selectSql(), "TblOrder");
+        }
+
+        public DataSet getData(int status, string customerName, string phone, int addressId)
+        {
+            return new DaoMsSqlServer().getData(selectSql(status, customerName, phone, addressId), "TblOrder");
         }
     }
 }

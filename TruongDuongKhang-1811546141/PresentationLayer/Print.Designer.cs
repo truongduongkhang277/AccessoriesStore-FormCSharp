@@ -1,7 +1,7 @@
 ﻿
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
-    partial class OrderDetail
+    partial class Print
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             this.SuspendLayout();
             // 
-            // OrderDetail
+            // Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -39,9 +39,9 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "OrderDetail";
+            this.Name = "Print";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderDetail";
+            this.Text = "Print";
             this.ResumeLayout(false);
 
         }

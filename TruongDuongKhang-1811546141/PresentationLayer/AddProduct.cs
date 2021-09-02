@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TruongDuongKhang_1811546141.Lib;
 using TruongDuongKhang_1811546141.BussinessLayer.Entity;
 using TruongDuongKhang_1811546141.BussinessLayer.Workflow;
-using System.IO;
-using System.Globalization;
 
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {

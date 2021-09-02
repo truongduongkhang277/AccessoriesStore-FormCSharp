@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TruongDuongKhang_1811546141.PresentationLayer;
 
@@ -23,132 +17,124 @@ namespace TruongDuongKhang_1811546141
 
         }
 
+        public void displayForm(Form form)
+        {
+            form.MdiParent = this;
+            form.Location = new Point(0, 0);
+            form.Show();
+        }
+
         private void ribBtnAddAccount_Click(object sender, EventArgs e)
         {
-            AddAccount account = new AddAccount();
-            account.MdiParent = this;
-            account.Show();
+            displayForm(new AddAccount());
         }
 
         private void ribBtnAccountActive_Click(object sender, EventArgs e)
         {
-            ListAccount listAccount = new ListAccount(true);
-            listAccount.MdiParent = this;
-            listAccount.Show();
+            displayForm(new ListAccount(true));
         }
 
         private void ribBtnAccountInactive_Click(object sender, EventArgs e)
         {
-            ListAccount listAccount = new ListAccount(false);
-            listAccount.MdiParent = this;
-            listAccount.Show();
+            displayForm(new ListAccount(false));
         }
 
         private void ribBtnRole_Click(object sender, EventArgs e)
         {
-            ListRole listRole = new ListRole();
-            listRole.MdiParent = this;
-            listRole.Show();
+            displayForm(new ListRole());
         }
         private void ribBtnAddRole_Click(object sender, EventArgs e)
         {
-            AddRole addRole = new AddRole();
-            addRole.MdiParent = this;
-            addRole.Show();
+            displayForm(new AddRole());
         }
 
         private void ribBtnAddress_Click(object sender, EventArgs e)
         {
-            ListAddress listAddress = new ListAddress();
-            listAddress.MdiParent = this;
-            listAddress.Show();
+            displayForm(new ListAddress());
         }
 
 
         private void ribBtnAddAddress_Click(object sender, EventArgs e)
         {
-            AddAddress addAddress = new AddAddress();
-            addAddress.MdiParent = this;
-            addAddress.Show();
+            displayForm(new AddAddress());
         }
 
         private void ribBtnCategory_Click(object sender, EventArgs e)
         {
-            ListCategory listCategory = new ListCategory();
-            listCategory.MdiParent = this;
-            listCategory.Show();
+            displayForm(new ListCategory());
         }
 
         private void ribBtnAddCategory_Click(object sender, EventArgs e)
         {
-            AddCategory addCategory = new AddCategory();
-            addCategory.MdiParent = this;
-            addCategory.Show();
+            displayForm(new AddCategory());
         }
 
         private void ribBtnAddProduct_Click(object sender, EventArgs e)
         {
-            AddProduct addProduct = new AddProduct();
-            addProduct.MdiParent = this;
-            addProduct.Show();
+            displayForm(new AddProduct());
         }
 
         private void ribBtnProductActive_Click(object sender, EventArgs e)
         {
-            ListProduct listProduct = new ListProduct(true);
-            listProduct.MdiParent = this;
-            listProduct.Show();
+            displayForm(new ListProduct(true));
         }
 
         private void ribBtnProductInactive_Click(object sender, EventArgs e)
         {
-            ListProduct listProduct = new ListProduct(false);
-            listProduct.MdiParent = this;
-            listProduct.Show();
+            displayForm(new ListProduct(false));
         }
 
         private void ribBtnCustomer_Click(object sender, EventArgs e)
         {
-            ListCustomer listCustomer = new ListCustomer();
-            listCustomer.MdiParent = this;
-            listCustomer.Show();
+            displayForm(new ListCustomer());
         }
 
         private void ribBtnAddCustomer_Click(object sender, EventArgs e)
         {
-            AddCustomer addCustomer = new AddCustomer();
-            addCustomer.MdiParent = this;
-            addCustomer.Show();
+            displayForm(new AddCustomer());
         }
 
         private void ribBtnDeclined_Click(object sender, EventArgs e)
         {
-
+            displayForm(new ListOrders(-1));
         }
 
-        private void ribBtnOrder_DoubleClick(object sender, EventArgs e)
+        private void ribBtnOrderList_Click(object sender, EventArgs e)
         {
-            Order ord = new Order();
-            ord.MdiParent = this;
-            ord.Show();
+            displayForm(new ListOrders(0));
         }
 
         private void ribBtnWaiting_Click(object sender, EventArgs e)
         {
+            displayForm(new ListOrders(1));
+        }
 
+        private void ribBtnOrderApproved_Click(object sender, EventArgs e)
+        {
+            displayForm(new ListOrders(2));
         }
 
         private void ribBtnAreShipping_Click(object sender, EventArgs e)
         {
-
+            displayForm(new ListOrders(3));
         }
 
         private void ribBtnSuccessfully_Click(object sender, EventArgs e)
         {
+            displayForm(new ListOrders(4));
+        }
+
+        private void ribBtnCreateOrder_Click(object sender, EventArgs e)
+        {
+            displayForm(new Order());
+        }
+
+        private void ribBtnRevenue_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void ribBtnOrderApproved_Click(object sender, EventArgs e)
+        private void ribBtnStatistical_Click(object sender, EventArgs e)
         {
 
         }
@@ -164,6 +150,11 @@ namespace TruongDuongKhang_1811546141
         }
 
         private void ribBtnSlowSellProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribBtnInfo_Click(object sender, EventArgs e)
         {
 
         }
