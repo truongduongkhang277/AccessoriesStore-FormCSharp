@@ -156,7 +156,7 @@ namespace TruongDuongKhang_1811546141
 
         private void ribBtnInfo_Click(object sender, EventArgs e)
         {
-
+            displayForm(new InfoForm());
         }
 
     }

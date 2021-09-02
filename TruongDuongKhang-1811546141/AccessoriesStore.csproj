@@ -154,6 +154,12 @@
     <Compile Include="PresentationLayer\AddRole.Designer.cs">
       <DependentUpon>AddRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\ListAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\AddRole.resx">
       <DependentUpon>AddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\ListAccount.resx">
       <DependentUpon>ListAccount.cs</DependentUpon>
