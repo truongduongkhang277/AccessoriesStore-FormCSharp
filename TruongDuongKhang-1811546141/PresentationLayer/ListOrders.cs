@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using TruongDuongKhang_1811546141.BussinessLayer.Workflow;
 
@@ -12,13 +13,14 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             InitializeComponent();
 
+            this.status = tt;
+
             this.loadDataToCombobox();
 
             this.loadDataToDgv();
 
             this.formatDgv();
 
-            this.status = tt;
         }
 
         // load data to combobox
@@ -39,8 +41,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             {
                 addressId = int.Parse(this.cbbDistrict.SelectedValue.ToString());
             }
-
-            this.dgvOrder.DataSource = new BusOrder().getData(status, customerName, phone, addressId).Tables[0];
+            this.dgvOrder.DataSource = new BusOrder().getData(this.status, customerName, phone, addressId).Tables[0];
         }
 
         private void formatDgv()
@@ -54,7 +55,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
             this.dgvOrder.Columns[2].HeaderText = "Duyệt bởi";
 
-            this.dgvOrder.Columns[3].Width = 140;
+            this.dgvOrder.Columns[3].Width = 145;
             this.dgvOrder.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             this.dgvOrder.Columns[3].DefaultCellStyle.Format = "hh:mm dd/MM/yyyy";
             this.dgvOrder.Columns[3].HeaderText = "Ngày tạo";
@@ -67,7 +68,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvOrder.Columns[5].Width = 225;
             this.dgvOrder.Columns[5].HeaderText = "Địa chỉ giao hàng";
 
-            this.dgvOrder.Columns[6].Width = 115;
+            this.dgvOrder.Columns[6].Width = 110;
             this.dgvOrder.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             this.dgvOrder.Columns[6].DefaultCellStyle.Format = "#,##0";
             this.dgvOrder.Columns[6].HeaderText = "Số tiền ";
@@ -132,7 +133,11 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            //new PrintForm(this.status).ShowDialog(this);
+            //PrintForm print = new PrintForm(this.status);
+            //print.MdiParent = this.MdiParent;
+            //print.Location = new Point(0, 0);
+            //print.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

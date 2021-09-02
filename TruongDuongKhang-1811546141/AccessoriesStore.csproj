@@ -33,11 +33,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.13.0.15.1840\lib\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="SplashScreen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SplashScreen.Winforms.1.0.0\lib\SplashScreen.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
       <HintPath>..\packages\RibbonWinForms.5.0.1.1\lib\net472\System.Windows.Forms.Ribbon.dll</HintPath>
     </Reference>
@@ -84,6 +100,11 @@
     </Compile>
     <Compile Include="MainApp.Designer.cs">
       <DependentUpon>MainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTable\orderListPreview.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>orderListPreview.xsd</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\AddAccount.cs">
       <SubType>Form</SubType>
@@ -181,14 +202,20 @@
     <Compile Include="PresentationLayer\ListRole.Designer.cs">
       <DependentUpon>ListRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Print.cs">
+    <Compile Include="PresentationLayer\PrintForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Print.Designer.cs">
-      <DependentUpon>Print.cs</DependentUpon>
+    <Compile Include="PresentationLayer\PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\OrderList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,8 +270,8 @@
     <EmbeddedResource Include="PresentationLayer\ListRole.resx">
       <DependentUpon>ListRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Print.resx">
-      <DependentUpon>Print.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -256,6 +283,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\OrderList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSetTable\orderListPreview.xsc">
+      <DependentUpon>orderListPreview.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTable\orderListPreview.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>orderListPreview.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTable\orderListPreview.xss">
+      <DependentUpon>orderListPreview.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -503,6 +545,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\contact_details_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

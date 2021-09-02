@@ -23,7 +23,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
 
         private string selectSql()
         {
-            return string.Format("Select OrderId, CustomerId, Account, OrderDate, Status, DepartureDate, DeliveryAddress, Description from TblAccount from TblOrder");
+            return string.Format("Select OrderId, CustomerId, Account, OrderDate, Status, DepartureDate, DeliveryAddress, Description from TblOrder");
         }
 
         private string selectSql(int status, string customerName, string phone, int addressId)
