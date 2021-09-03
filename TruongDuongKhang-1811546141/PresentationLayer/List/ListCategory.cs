@@ -95,7 +95,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            new AddCategory().Show();
+            this.Dispose();
+        }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintCategoryList print = new PrintCategoryList();
+            print.MdiParent = this.MdiParent;
+            //print.Location = new Point(0, 0);
+            print.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

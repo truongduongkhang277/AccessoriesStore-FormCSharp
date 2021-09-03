@@ -162,40 +162,40 @@
     <Compile Include="MainApp.Designer.cs">
       <DependentUpon>MainApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\PrintAccountList.cs">
+    <Compile Include="PresentationLayer\Print\PrintAccountList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\PrintAccountList.Designer.cs">
+    <Compile Include="PresentationLayer\Print\PrintAccountList.Designer.cs">
       <DependentUpon>PrintAccountList.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\PrintAddressList.cs">
+    <Compile Include="PresentationLayer\Print\PrintAddressList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\PrintAddressList.Designer.cs">
+    <Compile Include="PresentationLayer\Print\PrintAddressList.Designer.cs">
       <DependentUpon>PrintAddressList.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\PrintCategoryList.cs">
+    <Compile Include="PresentationLayer\Print\PrintCategoryList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\PrintCategoryList.Designer.cs">
+    <Compile Include="PresentationLayer\Print\PrintCategoryList.Designer.cs">
       <DependentUpon>PrintCategoryList.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\PrintCustomerList.cs">
+    <Compile Include="PresentationLayer\Print\PrintCustomerList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\PrintCustomerList.Designer.cs">
+    <Compile Include="PresentationLayer\Print\PrintCustomerList.Designer.cs">
       <DependentUpon>PrintCustomerList.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\PrintProductList.cs">
+    <Compile Include="PresentationLayer\Print\PrintProductList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\PrintProductList.Designer.cs">
+    <Compile Include="PresentationLayer\Print\PrintProductList.Designer.cs">
       <DependentUpon>PrintProductList.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\PrintRoleList.cs">
+    <Compile Include="PresentationLayer\Print\PrintRoleList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\PrintRoleList.Designer.cs">
+    <Compile Include="PresentationLayer\Print\PrintRoleList.Designer.cs">
       <DependentUpon>PrintRoleList.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportGenerator\CrystalReports\crptAccountList.cs">
@@ -281,112 +281,112 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>orderListPreview.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\AddAccount.cs">
+    <Compile Include="PresentationLayer\Add\AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\AddAccount.Designer.cs">
+    <Compile Include="PresentationLayer\Add\AddAccount.Designer.cs">
       <DependentUpon>AddAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\AddAddress.cs">
+    <Compile Include="PresentationLayer\Add\AddAddress.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\AddAddress.Designer.cs">
+    <Compile Include="PresentationLayer\Add\AddAddress.Designer.cs">
       <DependentUpon>AddAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\AddCategory.cs">
+    <Compile Include="PresentationLayer\Add\AddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\AddCategory.Designer.cs">
+    <Compile Include="PresentationLayer\Add\AddCategory.Designer.cs">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\AddCustomer.cs">
+    <Compile Include="PresentationLayer\Add\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\AddCustomer.Designer.cs">
+    <Compile Include="PresentationLayer\Add\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\AddCustomerInfo.cs">
+    <Compile Include="PresentationLayer\Add\AddCustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\AddCustomerInfo.Designer.cs">
+    <Compile Include="PresentationLayer\Add\AddCustomerInfo.Designer.cs">
       <DependentUpon>AddCustomerInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\AddProduct.cs">
+    <Compile Include="PresentationLayer\Add\AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\AddProduct.Designer.cs">
+    <Compile Include="PresentationLayer\Add\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\AddProductItem.cs">
+    <Compile Include="PresentationLayer\Add\AddProductItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\AddProductItem.Designer.cs">
+    <Compile Include="PresentationLayer\Add\AddProductItem.Designer.cs">
       <DependentUpon>AddProductItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\AddRole.cs">
+    <Compile Include="PresentationLayer\Add\AddRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\AddRole.Designer.cs">
+    <Compile Include="PresentationLayer\Add\AddRole.Designer.cs">
       <DependentUpon>AddRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\InfoForm.cs">
+    <Compile Include="PresentationLayer\List\InfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\InfoForm.Designer.cs">
+    <Compile Include="PresentationLayer\List\InfoForm.Designer.cs">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ListAccount.cs">
+    <Compile Include="PresentationLayer\List\ListAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ListAccount.Designer.cs">
+    <Compile Include="PresentationLayer\List\ListAccount.Designer.cs">
       <DependentUpon>ListAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ListAddress.cs">
+    <Compile Include="PresentationLayer\List\ListAddress.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ListAddress.Designer.cs">
+    <Compile Include="PresentationLayer\List\ListAddress.Designer.cs">
       <DependentUpon>ListAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ListCategory.cs">
+    <Compile Include="PresentationLayer\List\ListCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ListCategory.Designer.cs">
+    <Compile Include="PresentationLayer\List\ListCategory.Designer.cs">
       <DependentUpon>ListCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ListCustomer.cs">
+    <Compile Include="PresentationLayer\List\ListCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ListCustomer.Designer.cs">
+    <Compile Include="PresentationLayer\List\ListCustomer.Designer.cs">
       <DependentUpon>ListCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ListOrders.cs">
+    <Compile Include="PresentationLayer\List\ListOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ListOrders.Designer.cs">
+    <Compile Include="PresentationLayer\List\ListOrders.Designer.cs">
       <DependentUpon>ListOrders.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\Order.cs">
+    <Compile Include="PresentationLayer\Add\Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\Order.Designer.cs">
+    <Compile Include="PresentationLayer\Add\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ListProduct.cs">
+    <Compile Include="PresentationLayer\List\ListProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ListProduct.Designer.cs">
+    <Compile Include="PresentationLayer\List\ListProduct.Designer.cs">
       <DependentUpon>ListProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\ListRole.cs">
+    <Compile Include="PresentationLayer\List\ListRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\ListRole.Designer.cs">
+    <Compile Include="PresentationLayer\List\ListRole.Designer.cs">
       <DependentUpon>ListRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\PrintListOrder.cs">
+    <Compile Include="PresentationLayer\Print\PrintListOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\PrintListOrder.Designer.cs">
+    <Compile Include="PresentationLayer\Print\PrintListOrder.Designer.cs">
       <DependentUpon>PrintListOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -397,65 +397,77 @@
     <EmbeddedResource Include="MainApp.resx">
       <DependentUpon>MainApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\AddAccount.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\AddAccount.resx">
       <DependentUpon>AddAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\AddAddress.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\AddAddress.resx">
       <DependentUpon>AddAddress.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\AddCategory.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\AddCustomer.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\AddCustomerInfo.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\AddCustomerInfo.resx">
       <DependentUpon>AddCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\AddProduct.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\AddProductItem.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\AddProductItem.resx">
       <DependentUpon>AddProductItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\AddRole.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\AddRole.resx">
       <DependentUpon>AddRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\InfoForm.resx">
+    <EmbeddedResource Include="PresentationLayer\List\InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ListAccount.resx">
+    <EmbeddedResource Include="PresentationLayer\List\ListAccount.resx">
       <DependentUpon>ListAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ListAddress.resx">
+    <EmbeddedResource Include="PresentationLayer\List\ListAddress.resx">
       <DependentUpon>ListAddress.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ListCategory.resx">
+    <EmbeddedResource Include="PresentationLayer\List\ListCategory.resx">
       <DependentUpon>ListCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ListCustomer.resx">
+    <EmbeddedResource Include="PresentationLayer\List\ListCustomer.resx">
       <DependentUpon>ListCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ListOrders.resx">
+    <EmbeddedResource Include="PresentationLayer\List\ListOrders.resx">
       <DependentUpon>ListOrders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\Order.resx">
+    <EmbeddedResource Include="PresentationLayer\Add\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ListProduct.resx">
+    <EmbeddedResource Include="PresentationLayer\List\ListProduct.resx">
       <DependentUpon>ListProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\ListRole.resx">
+    <EmbeddedResource Include="PresentationLayer\List\ListRole.resx">
       <DependentUpon>ListRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\PrintAccountList.resx">
+    <EmbeddedResource Include="PresentationLayer\Print\PrintAccountList.resx">
       <DependentUpon>PrintAccountList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\PrintAddressList.resx">
+    <EmbeddedResource Include="PresentationLayer\Print\PrintAddressList.resx">
       <DependentUpon>PrintAddressList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\PrintListOrder.resx">
+    <EmbeddedResource Include="PresentationLayer\Print\PrintCategoryList.resx">
+      <DependentUpon>PrintCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Print\PrintCustomerList.resx">
+      <DependentUpon>PrintCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Print\PrintListOrder.resx">
       <DependentUpon>PrintListOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Print\PrintProductList.resx">
+      <DependentUpon>PrintProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Print\PrintRoleList.resx">
+      <DependentUpon>PrintRoleList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

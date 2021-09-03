@@ -53,6 +53,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.panel1.SuspendLayout();
@@ -221,6 +222,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.radFemale);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lblCustomerId);
@@ -261,7 +263,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnDelete.Enabled = false;
             this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(547, 150);
+            this.btnDelete.Location = new System.Drawing.Point(471, 150);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
             this.btnDelete.TabIndex = 33;
@@ -274,7 +276,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.btnExit.Image = global::TruongDuongKhang_1811546141.Properties.Resources.close;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(718, 150);
+            this.btnExit.Location = new System.Drawing.Point(717, 150);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 40);
             this.btnExit.TabIndex = 30;
@@ -288,7 +290,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnUpdate.Enabled = false;
             this.btnUpdate.Image = global::TruongDuongKhang_1811546141.Properties.Resources.update;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(361, 150);
+            this.btnUpdate.Location = new System.Drawing.Point(323, 150);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(115, 40);
             this.btnUpdate.TabIndex = 29;
@@ -309,6 +311,19 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = global::TruongDuongKhang_1811546141.Properties.Resources.print;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(604, 150);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(80, 40);
+            this.btnPrint.TabIndex = 42;
+            this.btnPrint.Text = "In";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // ListCustomer
             // 
@@ -359,5 +374,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radFemale;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

@@ -43,6 +43,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvCategory = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
@@ -50,6 +51,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.lblCategoryId);
             this.panel1.Controls.Add(this.label5);
@@ -70,7 +72,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnDelete.Enabled = false;
             this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(346, 175);
+            this.btnDelete.Location = new System.Drawing.Point(312, 175);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
             this.btnDelete.TabIndex = 33;
@@ -135,9 +137,9 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // btnClear
             // 
-            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.clear;
+            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.categoryAdd;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(502, 175);
+            this.btnClear.Location = new System.Drawing.Point(434, 175);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(115, 40);
             this.btnClear.TabIndex = 28;
@@ -198,6 +200,19 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label1.TabIndex = 27;
             this.label1.Text = "Danh sách loại sản phẩm";
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = global::TruongDuongKhang_1811546141.Properties.Resources.print;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(571, 175);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(80, 40);
+            this.btnPrint.TabIndex = 42;
+            this.btnPrint.Text = "In";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // ListCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -237,5 +252,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvCategory;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

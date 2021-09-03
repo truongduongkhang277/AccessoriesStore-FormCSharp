@@ -209,17 +209,16 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            this.lblProductId.Text = "";
+            new AddProduct().Show();
+            this.Dispose();
+        }
 
-            this.txtProductName.Clear();
-            this.cbbCategory.SelectedIndex = -1;
-            this.picImage.Image = Properties.Resources.noImage;
-            this.txtManufactur.Clear();
-            this.txtQuantity.Clear();
-            this.txtEnteredDate.Clear();
-            this.txtUnitPrice.Clear();
-            this.txtDiscount.Clear();
-            this.txtDescription.Clear();
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintProductList print = new PrintProductList(isActive, 0);
+            print.MdiParent = this.MdiParent;
+            //print.Location = new Point(0, 0);
+            print.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

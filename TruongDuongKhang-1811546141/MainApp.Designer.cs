@@ -59,6 +59,8 @@ namespace TruongDuongKhang_1811546141
             this.ribBtnCustomer = new System.Windows.Forms.RibbonButton();
             this.ribBtnAddCustomer = new System.Windows.Forms.RibbonButton();
             this.ribTabOrder = new System.Windows.Forms.RibbonTab();
+            this.ribPanelCreate = new System.Windows.Forms.RibbonPanel();
+            this.ribBtnCreateOrder = new System.Windows.Forms.RibbonButton();
             this.ribPanelOrderList = new System.Windows.Forms.RibbonPanel();
             this.ribBtnDeclined = new System.Windows.Forms.RibbonButton();
             this.ribBtnOrderList = new System.Windows.Forms.RibbonButton();
@@ -66,8 +68,6 @@ namespace TruongDuongKhang_1811546141
             this.ribBtnOrderApproved = new System.Windows.Forms.RibbonButton();
             this.ribBtnAreShipping = new System.Windows.Forms.RibbonButton();
             this.ribBtnSuccessfully = new System.Windows.Forms.RibbonButton();
-            this.ribPanelCreate = new System.Windows.Forms.RibbonPanel();
-            this.ribBtnCreateOrder = new System.Windows.Forms.RibbonButton();
             this.ribbonTab5 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribBtnRevenue = new System.Windows.Forms.RibbonButton();
@@ -343,6 +343,21 @@ namespace TruongDuongKhang_1811546141
             this.ribTabOrder.Panels.Add(this.ribPanelOrderList);
             this.ribTabOrder.Text = "Cửa hàng";
             // 
+            // ribPanelCreate
+            // 
+            this.ribPanelCreate.Items.Add(this.ribBtnCreateOrder);
+            this.ribPanelCreate.Name = "ribPanelCreate";
+            this.ribPanelCreate.Text = "Tạo đơn hàng";
+            // 
+            // ribBtnCreateOrder
+            // 
+            this.ribBtnCreateOrder.Image = global::TruongDuongKhang_1811546141.Properties.Resources.orderProcess_04;
+            this.ribBtnCreateOrder.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.orderProcess_04;
+            this.ribBtnCreateOrder.Name = "ribBtnCreateOrder";
+            this.ribBtnCreateOrder.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnCreateOrder.SmallImage")));
+            this.ribBtnCreateOrder.Text = "Tạo đơn hàng";
+            this.ribBtnCreateOrder.Click += new System.EventHandler(this.ribBtnCreateOrder_Click);
+            // 
             // ribPanelOrderList
             // 
             this.ribPanelOrderList.Items.Add(this.ribBtnDeclined);
@@ -407,21 +422,6 @@ namespace TruongDuongKhang_1811546141
             this.ribBtnSuccessfully.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnSuccessfully.SmallImage")));
             this.ribBtnSuccessfully.Text = "Đã giao hàng";
             this.ribBtnSuccessfully.Click += new System.EventHandler(this.ribBtnSuccessfully_Click);
-            // 
-            // ribPanelCreate
-            // 
-            this.ribPanelCreate.Items.Add(this.ribBtnCreateOrder);
-            this.ribPanelCreate.Name = "ribPanelCreate";
-            this.ribPanelCreate.Text = "Tạo đơn hàng";
-            // 
-            // ribBtnCreateOrder
-            // 
-            this.ribBtnCreateOrder.Image = global::TruongDuongKhang_1811546141.Properties.Resources.orderProcess_04;
-            this.ribBtnCreateOrder.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.orderProcess_04;
-            this.ribBtnCreateOrder.Name = "ribBtnCreateOrder";
-            this.ribBtnCreateOrder.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnCreateOrder.SmallImage")));
-            this.ribBtnCreateOrder.Text = "Tạo đơn hàng";
-            this.ribBtnCreateOrder.Click += new System.EventHandler(this.ribBtnCreateOrder_Click);
             // 
             // ribbonTab5
             // 

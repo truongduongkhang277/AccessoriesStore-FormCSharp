@@ -11,7 +11,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private DataSet ds;
         private DataViewManager dsView;
         private bool isActive;
-        private int roleId;
 
         public ListAccount(bool isActive)
         {
@@ -186,14 +185,13 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            AddAccount account = new AddAccount();
-            account.MdiParent = this.MdiParent;
-            account.Show();
+            new AddAccount().Show();
+            this.Dispose();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            PrintAccountList print = new PrintAccountList(isActive, 0);
+            PrintAccountList print = new PrintAccountList(this.isActive, 0);
             print.MdiParent = this.MdiParent;
             //print.Location = new Point(0, 0);
             print.Show();

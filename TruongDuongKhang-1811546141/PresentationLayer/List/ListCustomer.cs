@@ -109,6 +109,14 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Dispose();
         }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintCustomerList print = new PrintCustomerList();
+            print.MdiParent = this.MdiParent;
+            //print.Location = new Point(0, 0);
+            print.Show();
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string customerId = this.lblCustomerId.Text;
