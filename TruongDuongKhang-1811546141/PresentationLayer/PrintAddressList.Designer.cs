@@ -1,7 +1,7 @@
 ﻿
 namespace TruongDuongKhang_1811546141.PresentationLayer
 {
-    partial class PrintForm
+    partial class PrintAddressList
     {
         /// <summary>
         /// Required designer variable.
@@ -40,22 +40,19 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.previewArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.previewArea.Location = new System.Drawing.Point(0, 0);
             this.previewArea.Name = "previewArea";
-            this.previewArea.Size = new System.Drawing.Size(1200, 550);
-            this.previewArea.TabIndex = 0;
+            this.previewArea.Size = new System.Drawing.Size(800, 450);
+            this.previewArea.TabIndex = 2;
+            this.previewArea.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.previewArea.Load += new System.EventHandler(this.previewArea_Load);
             // 
-            // Print
+            // PrintAddressList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 550);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.previewArea);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Print";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Print";
+            this.Name = "PrintAddressList";
+            this.Text = "PrintAddressList";
             this.ResumeLayout(false);
 
         }

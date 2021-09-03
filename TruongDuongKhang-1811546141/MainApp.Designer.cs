@@ -552,7 +552,6 @@ namespace TruongDuongKhang_1811546141
         private System.Windows.Forms.RibbonTab ribTabDirectory;
         private System.Windows.Forms.RibbonPanel ribPanelAccount;
         private System.Windows.Forms.RibbonPanel ribPanelAddress;
-        private System.Windows.Forms.RibbonPanel ribbonPanel3;
         private System.Windows.Forms.RibbonTab ribTabProduct;
         private System.Windows.Forms.RibbonTab ribTabCustomer;
         private System.Windows.Forms.RibbonTab ribTabOrder;
@@ -586,7 +585,6 @@ namespace TruongDuongKhang_1811546141
         private System.Windows.Forms.RibbonButton ribBtnAddRole;
         private System.Windows.Forms.RibbonButton ribbonButton2;
         private System.Windows.Forms.RibbonButton ribBtnAddAddress;
-        private System.Windows.Forms.RibbonPanel ribbonPanel1;
         private System.Windows.Forms.RibbonButton ribBtnAddCustomer;
         private System.Windows.Forms.RibbonPanel ribbonPanel2;
         private System.Windows.Forms.RibbonButton ribBtnRevenue;

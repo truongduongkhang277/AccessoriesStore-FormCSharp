@@ -100,7 +100,17 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            AddAddress address = new AddAddress();
+            address.MdiParent = this.MdiParent;
+            address.Show();
+        }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintAddressList print = new PrintAddressList();
+            print.MdiParent = this.MdiParent;
+            //print.Location = new Point(0, 0);
+            print.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

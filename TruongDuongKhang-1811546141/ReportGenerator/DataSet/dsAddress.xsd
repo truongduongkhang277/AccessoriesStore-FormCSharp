@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAddress" targetNamespace="http://tempuri.org/dsAddress.xsd" xmlns:mstns="http://tempuri.org/dsAddress.xsd" xmlns="http://tempuri.org/dsAddress.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAddress" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsAddress" msprop:Generator_UserDSName="dsAddress">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Address" msprop:Generator_TableClassName="AddressDataTable" msprop:Generator_TableVarName="tableAddress" msprop:Generator_TablePropName="Address" msprop:Generator_RowDeletingName="AddressRowDeleting" msprop:Generator_RowChangingName="AddressRowChanging" msprop:Generator_RowEvHandlerName="AddressRowChangeEventHandler" msprop:Generator_RowDeletedName="AddressRowDeleted" msprop:Generator_UserTableName="Address" msprop:Generator_RowChangedName="AddressRowChanged" msprop:Generator_RowEvArgName="AddressRowChangeEvent" msprop:Generator_RowClassName="AddressRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AddressId" msprop:Generator_ColumnVarNameInTable="columnAddressId" msprop:Generator_ColumnPropNameInRow="AddressId" msprop:Generator_ColumnPropNameInTable="AddressIdColumn" msprop:Generator_UserColumnName="AddressId" type="xs:string" minOccurs="0" />
+              <xs:element name="District" msprop:Generator_ColumnVarNameInTable="columnDistrict" msprop:Generator_ColumnPropNameInRow="District" msprop:Generator_ColumnPropNameInTable="DistrictColumn" msprop:Generator_UserColumnName="District" type="xs:string" minOccurs="0" />
+              <xs:element name="City" msprop:Generator_ColumnVarNameInTable="columnCity" msprop:Generator_ColumnPropNameInRow="City" msprop:Generator_ColumnPropNameInTable="CityColumn" msprop:Generator_UserColumnName="City" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

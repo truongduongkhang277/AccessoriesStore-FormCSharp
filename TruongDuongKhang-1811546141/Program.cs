@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TruongDuongKhang_1811546141.PresentationLayer;
 
 namespace TruongDuongKhang_1811546141
 {
@@ -18,6 +19,7 @@ namespace TruongDuongKhang_1811546141
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
             Application.Run(new MainApp());
+
         }
     }
 }

@@ -45,6 +45,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvAddress = new System.Windows.Forms.DataGridView();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddress)).BeginInit();
@@ -52,6 +53,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.lblAddressId);
             this.panel1.Controls.Add(this.label5);
@@ -74,7 +76,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnDelete.Enabled = false;
             this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(321, 176);
+            this.btnDelete.Location = new System.Drawing.Point(287, 176);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
             this.btnDelete.TabIndex = 33;
@@ -148,7 +150,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.clear;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(477, 176);
+            this.btnClear.Location = new System.Drawing.Point(409, 176);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(115, 40);
             this.btnClear.TabIndex = 28;
@@ -218,6 +220,19 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvAddress.TabIndex = 0;
             this.dgvAddress.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddress_CellClick);
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = global::TruongDuongKhang_1811546141.Properties.Resources.print;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(546, 176);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(80, 40);
+            this.btnPrint.TabIndex = 41;
+            this.btnPrint.Text = "In";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // ListAddress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -259,5 +274,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.TextBox txtDistrict;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvAddress;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

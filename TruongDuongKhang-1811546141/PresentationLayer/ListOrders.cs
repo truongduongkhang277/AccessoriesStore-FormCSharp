@@ -134,10 +134,10 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private void btnPrint_Click(object sender, EventArgs e)
         {
             //new PrintForm(this.status).ShowDialog(this);
-            //PrintForm print = new PrintForm(this.status);
-            //print.MdiParent = this.MdiParent;
+            PrintListOrder print = new PrintListOrder(this.status);
+            print.MdiParent = this.MdiParent;
             //print.Location = new Point(0, 0);
-            //print.Show();
+            print.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

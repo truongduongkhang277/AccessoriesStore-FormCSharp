@@ -60,6 +60,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,6 +69,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.radFemale);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btnFilter);
@@ -282,7 +284,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnDelete.Enabled = false;
             this.btnDelete.Image = global::TruongDuongKhang_1811546141.Properties.Resources.remove;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(548, 175);
+            this.btnDelete.Location = new System.Drawing.Point(494, 175);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
             this.btnDelete.TabIndex = 33;
@@ -311,7 +313,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.btnExit.Image = global::TruongDuongKhang_1811546141.Properties.Resources.close;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(871, 175);
+            this.btnExit.Location = new System.Drawing.Point(870, 175);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 40);
             this.btnExit.TabIndex = 30;
@@ -325,7 +327,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnUpdate.Enabled = false;
             this.btnUpdate.Image = global::TruongDuongKhang_1811546141.Properties.Resources.update;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(379, 175);
+            this.btnUpdate.Location = new System.Drawing.Point(352, 175);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(115, 40);
             this.btnUpdate.TabIndex = 29;
@@ -343,9 +345,9 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             // btnClear
             // 
-            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.clear;
+            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.custAdd;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(702, 175);
+            this.btnClear.Location = new System.Drawing.Point(621, 175);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(115, 40);
             this.btnClear.TabIndex = 28;
@@ -390,6 +392,19 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label1.Size = new System.Drawing.Size(280, 31);
             this.label1.TabIndex = 30;
             this.label1.Text = "Danh sách tài khoản";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = global::TruongDuongKhang_1811546141.Properties.Resources.print;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(763, 175);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(80, 40);
+            this.btnPrint.TabIndex = 40;
+            this.btnPrint.Text = "In";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // ListAccount
             // 
@@ -449,5 +464,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.ComboBox cbbFilterRole;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.RadioButton radFemale;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
