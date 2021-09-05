@@ -68,7 +68,7 @@ namespace TruongDuongKhang_1811546141
             this.ribBtnOrderApproved = new System.Windows.Forms.RibbonButton();
             this.ribBtnAreShipping = new System.Windows.Forms.RibbonButton();
             this.ribBtnSuccessfully = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab5 = new System.Windows.Forms.RibbonTab();
+            this.ribTabStatistical = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribBtnRevenue = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
@@ -105,7 +105,7 @@ namespace TruongDuongKhang_1811546141
             this.ribbon1.Tabs.Add(this.ribTabProduct);
             this.ribbon1.Tabs.Add(this.ribTabCustomer);
             this.ribbon1.Tabs.Add(this.ribTabOrder);
-            this.ribbon1.Tabs.Add(this.ribbonTab5);
+            this.ribbon1.Tabs.Add(this.ribTabStatistical);
             this.ribbon1.Tabs.Add(this.ribTabInfo);
             this.ribbon1.Text = "ribbon1";
             // 
@@ -423,13 +423,13 @@ namespace TruongDuongKhang_1811546141
             this.ribBtnSuccessfully.Text = "Đã giao hàng";
             this.ribBtnSuccessfully.Click += new System.EventHandler(this.ribBtnSuccessfully_Click);
             // 
-            // ribbonTab5
+            // ribTabStatistical
             // 
-            this.ribbonTab5.Name = "ribbonTab5";
-            this.ribbonTab5.Panels.Add(this.ribbonPanel2);
-            this.ribbonTab5.Panels.Add(this.ribbonPanel5);
-            this.ribbonTab5.Panels.Add(this.ribbonPanel6);
-            this.ribbonTab5.Text = "Báo Cáo - Thống Kê";
+            this.ribTabStatistical.Name = "ribTabStatistical";
+            this.ribTabStatistical.Panels.Add(this.ribbonPanel2);
+            this.ribTabStatistical.Panels.Add(this.ribbonPanel5);
+            this.ribTabStatistical.Panels.Add(this.ribbonPanel6);
+            this.ribTabStatistical.Text = "Báo Cáo - Thống Kê";
             // 
             // ribbonPanel2
             // 
@@ -555,7 +555,7 @@ namespace TruongDuongKhang_1811546141
         private System.Windows.Forms.RibbonTab ribTabProduct;
         private System.Windows.Forms.RibbonTab ribTabCustomer;
         private System.Windows.Forms.RibbonTab ribTabOrder;
-        private System.Windows.Forms.RibbonTab ribbonTab5;
+        private System.Windows.Forms.RibbonTab ribTabStatistical;
         private System.Windows.Forms.RibbonButton ribBtnAddress;
         private System.Windows.Forms.RibbonTab ribTabInfo;
         private System.Windows.Forms.RibbonPanel ribPanelInfo;

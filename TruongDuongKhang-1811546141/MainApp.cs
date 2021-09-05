@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using TruongDuongKhang_1811546141.PresentationLayer;
+using TruongDuongKhang_1811546141.Lib;
 
 namespace TruongDuongKhang_1811546141
 {
@@ -12,9 +13,48 @@ namespace TruongDuongKhang_1811546141
             InitializeComponent();
         }
 
+        public void enableControl(int maLTK)
+        {
+            switch (maLTK)
+            {
+                case 1: //admin
+                    ribTabDirectory.Enabled = true;
+                    ribTabProduct.Enabled = true;
+                    ribTabCustomer.Enabled = true;
+                    ribTabOrder.Enabled = true;
+                    ribTabStatistical.Enabled = true;
+                    ribTabInfo.Enabled = true;
+                    break;
+                case 2: //Nhân viên bán hàng                
+                    ribTabDirectory.Enabled = false;
+                    ribTabProduct.Enabled = false;
+                    ribTabCustomer.Enabled = true;
+                    ribTabOrder.Enabled = true;
+                    ribTabStatistical.Enabled = false;
+                    ribTabInfo.Enabled = true;
+                    break;
+                case 3: //Nhân viên quản lý kho               
+                    ribTabDirectory.Enabled = false;
+                    ribTabProduct.Enabled = true;
+                    ribTabCustomer.Enabled = false;
+                    ribTabOrder.Enabled = false;
+                    ribTabStatistical.Enabled = true;
+                    ribTabInfo.Enabled = true;
+                    break;
+                default:
+                    ribTabDirectory.Enabled = false;
+                    ribTabProduct.Enabled = false;
+                    ribTabCustomer.Enabled = false;
+                    ribTabOrder.Enabled = false;
+                    ribTabStatistical.Enabled = false;
+                    ribTabInfo.Enabled = true;
+                    break;
+            }
+        }
+
         private void MainApp_Load(object sender, EventArgs e)
         {
-
+            enableControl(SecurityObject.accInfo.RoleId);
         }
 
         public void displayForm(Form form)
