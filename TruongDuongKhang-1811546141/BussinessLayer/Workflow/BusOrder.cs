@@ -63,7 +63,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         private string updateSql()
         {
             return string.Format(
-                "Update TblOrder set CustomerId='{0}', Account={1}, OrderDate={2}, Status={3}, DepartureDate={4}, DeliveryAddress={5}, Description={6} " +
+                "Update TblOrder set CustomerId='{0}', Account={1}, OrderDate='{2}', Status={3}, DepartureDate='{4}', DeliveryAddress={5}, Description={6} " +
                 "Where OrderId='{7}';",
                 this.orderInfo.CustomerId,
                 this.orderInfo.Account,

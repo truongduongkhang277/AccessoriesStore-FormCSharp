@@ -77,10 +77,16 @@ namespace TruongDuongKhang_1811546141
             this.ribBtnBestSelling = new System.Windows.Forms.RibbonButton();
             this.ribBtnManufacturer = new System.Windows.Forms.RibbonButton();
             this.ribBtnSlowSelling = new System.Windows.Forms.RibbonButton();
+            this.ribTabMyAcc = new System.Windows.Forms.RibbonTab();
+            this.ribPanelAccInfo = new System.Windows.Forms.RibbonPanel();
+            this.ribBtnUpdate = new System.Windows.Forms.RibbonButton();
+            this.ribBtnChangePassword = new System.Windows.Forms.RibbonButton();
             this.ribTabInfo = new System.Windows.Forms.RibbonTab();
             this.ribPanelInfo = new System.Windows.Forms.RibbonPanel();
             this.ribBtnInfo = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
+            this.ribPanelLogout = new System.Windows.Forms.RibbonPanel();
+            this.ribBtnLogout = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbon1
@@ -106,6 +112,7 @@ namespace TruongDuongKhang_1811546141
             this.ribbon1.Tabs.Add(this.ribTabCustomer);
             this.ribbon1.Tabs.Add(this.ribTabOrder);
             this.ribbon1.Tabs.Add(this.ribTabStatistical);
+            this.ribbon1.Tabs.Add(this.ribTabMyAcc);
             this.ribbon1.Tabs.Add(this.ribTabInfo);
             this.ribbon1.Text = "ribbon1";
             // 
@@ -496,6 +503,38 @@ namespace TruongDuongKhang_1811546141
             this.ribBtnSlowSelling.Text = "Sản phẩm bán chậm";
             this.ribBtnSlowSelling.Click += new System.EventHandler(this.ribBtnSlowSellProduct_Click);
             // 
+            // ribTabMyAcc
+            // 
+            this.ribTabMyAcc.Name = "ribTabMyAcc";
+            this.ribTabMyAcc.Panels.Add(this.ribPanelAccInfo);
+            this.ribTabMyAcc.Panels.Add(this.ribPanelLogout);
+            this.ribTabMyAcc.Text = "Tài khoản";
+            // 
+            // ribPanelAccInfo
+            // 
+            this.ribPanelAccInfo.Items.Add(this.ribBtnUpdate);
+            this.ribPanelAccInfo.Items.Add(this.ribBtnChangePassword);
+            this.ribPanelAccInfo.Name = "ribPanelAccInfo";
+            this.ribPanelAccInfo.Text = "Thông tin tài khoản";
+            // 
+            // ribBtnUpdate
+            // 
+            this.ribBtnUpdate.Image = global::TruongDuongKhang_1811546141.Properties.Resources.accountList;
+            this.ribBtnUpdate.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.accountList;
+            this.ribBtnUpdate.Name = "ribBtnUpdate";
+            this.ribBtnUpdate.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnUpdate.SmallImage")));
+            this.ribBtnUpdate.Text = "Cập nhật tài khoản";
+            this.ribBtnUpdate.Click += new System.EventHandler(this.ribBtnUpdate_Click);
+            // 
+            // ribBtnChangePassword
+            // 
+            this.ribBtnChangePassword.Image = global::TruongDuongKhang_1811546141.Properties.Resources.password_32px;
+            this.ribBtnChangePassword.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.password_32px;
+            this.ribBtnChangePassword.Name = "ribBtnChangePassword";
+            this.ribBtnChangePassword.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnChangePassword.SmallImage")));
+            this.ribBtnChangePassword.Text = "Đổi mật khẩu";
+            this.ribBtnChangePassword.Click += new System.EventHandler(this.ribBtnChangePassword_Click);
+            // 
             // ribTabInfo
             // 
             this.ribTabInfo.Name = "ribTabInfo";
@@ -524,6 +563,21 @@ namespace TruongDuongKhang_1811546141
             this.ribbonButton10.Name = "ribbonButton10";
             this.ribbonButton10.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.SmallImage")));
             this.ribbonButton10.Text = "Danh sách loại SP";
+            // 
+            // ribPanelLogout
+            // 
+            this.ribPanelLogout.Items.Add(this.ribBtnLogout);
+            this.ribPanelLogout.Name = "ribPanelLogout";
+            this.ribPanelLogout.Text = "Đăng xuất";
+            // 
+            // ribBtnLogout
+            // 
+            this.ribBtnLogout.Image = global::TruongDuongKhang_1811546141.Properties.Resources.undo_32px;
+            this.ribBtnLogout.LargeImage = global::TruongDuongKhang_1811546141.Properties.Resources.undo_32px;
+            this.ribBtnLogout.Name = "ribBtnLogout";
+            this.ribBtnLogout.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribBtnLogout.SmallImage")));
+            this.ribBtnLogout.Text = "Đăng xuất";
+            this.ribBtnLogout.Click += new System.EventHandler(this.ribBtnLogout_Click);
             // 
             // MainApp
             // 
@@ -599,6 +653,12 @@ namespace TruongDuongKhang_1811546141
         private System.Windows.Forms.RibbonButton ribBtnSuccessfully;
         private System.Windows.Forms.RibbonPanel ribPanelCreate;
         private System.Windows.Forms.RibbonButton ribBtnCreateOrder;
+        private System.Windows.Forms.RibbonTab ribTabMyAcc;
+        private System.Windows.Forms.RibbonPanel ribPanelAccInfo;
+        private System.Windows.Forms.RibbonButton ribBtnUpdate;
+        private System.Windows.Forms.RibbonButton ribBtnChangePassword;
+        private System.Windows.Forms.RibbonPanel ribPanelLogout;
+        private System.Windows.Forms.RibbonButton ribBtnLogout;
     }
 }
 

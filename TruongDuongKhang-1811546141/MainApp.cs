@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using TruongDuongKhang_1811546141.PresentationLayer.Add;
 using TruongDuongKhang_1811546141.PresentationLayer;
 using TruongDuongKhang_1811546141.Lib;
+using TruongDuongKhang_1811546141.PresentationLayer;
 
 namespace TruongDuongKhang_1811546141
 {
@@ -23,7 +25,6 @@ namespace TruongDuongKhang_1811546141
                     ribTabCustomer.Enabled = true;
                     ribTabOrder.Enabled = true;
                     ribTabStatistical.Enabled = true;
-                    ribTabInfo.Enabled = true;
                     break;
                 case 2: //Nhân viên bán hàng                
                     ribTabDirectory.Enabled = false;
@@ -31,7 +32,6 @@ namespace TruongDuongKhang_1811546141
                     ribTabCustomer.Enabled = true;
                     ribTabOrder.Enabled = true;
                     ribTabStatistical.Enabled = false;
-                    ribTabInfo.Enabled = true;
                     break;
                 case 3: //Nhân viên quản lý kho               
                     ribTabDirectory.Enabled = false;
@@ -39,7 +39,6 @@ namespace TruongDuongKhang_1811546141
                     ribTabCustomer.Enabled = false;
                     ribTabOrder.Enabled = false;
                     ribTabStatistical.Enabled = true;
-                    ribTabInfo.Enabled = true;
                     break;
                 default:
                     ribTabDirectory.Enabled = false;
@@ -47,7 +46,6 @@ namespace TruongDuongKhang_1811546141
                     ribTabCustomer.Enabled = false;
                     ribTabOrder.Enabled = false;
                     ribTabStatistical.Enabled = false;
-                    ribTabInfo.Enabled = true;
                     break;
             }
         }
@@ -192,6 +190,22 @@ namespace TruongDuongKhang_1811546141
         private void ribBtnSlowSellProduct_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ribBtnUpdate_Click(object sender, EventArgs e)
+        {
+            displayForm(new UpdateInfoAccount());
+        }
+
+        private void ribBtnChangePassword_Click(object sender, EventArgs e)
+        {
+            displayForm(new ChangePassword());
+        }
+
+        private void ribBtnLogout_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            form.Show();
         }
 
         private void ribBtnInfo_Click(object sender, EventArgs e)

@@ -180,6 +180,18 @@
     <Compile Include="MainApp.Designer.cs">
       <DependentUpon>MainApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Add\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Add\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Add\UpdateInfoAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Add\UpdateInfoAccount.Designer.cs">
+      <DependentUpon>UpdateInfoAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Print\PrintAccountList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -438,6 +450,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Add\AddRole.resx">
       <DependentUpon>AddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Add\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Add\UpdateInfoAccount.resx">
+      <DependentUpon>UpdateInfoAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\List\InfoForm.resx">
       <DependentUpon>InfoForm.cs</DependentUpon>
@@ -870,6 +888,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

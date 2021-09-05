@@ -52,14 +52,18 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
             return string.Format("Select Username, Password, RoleId, FirstName, LastName, DateOfBirth, Sex, Phone, Email, Address, AddressId, Description from TblAccount where Username = '" + username + "'");
         }
 
-
+        // trả về câu SQL update pass vào bảng TblAccount (mssql server)
+        private string changePassSql(string username, string pass)
+        {
+            return string.Format("Update TblAccount set Password = '" + pass + "' Where Username='" + username + "';");
+        }
 
         // trả về câu SQL insert dữ liệu vào bảng TblAccount ( mssql server )
         private string insertSql()
         {
             return string.Format(
                 "Insert Into TblAccount( Username, Password, RoleId, FirstName, LastName, DateOfBirth, Sex, Phone, Email, Address, AddressId, Status, Description )" +
-                                     " Values (N'{0}', N'{1}', {2}, N'{3}', N'{4}', {5}, {6}, N'{7}', N'{8}', N'{9}', {10}, {11}, N'{12}');",
+                                     " Values (N'{0}', N'{1}', {2}, N'{3}', N'{4}', '{5}', {6}, N'{7}', N'{8}', N'{9}', {10}, {11}, N'{12}');",
                 this.accountInfo.Username,
                 this.accountInfo.Password,
                 this.accountInfo.RoleId,
@@ -79,7 +83,7 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
         private string updateSql()
         {
             return string.Format(
-                "Update TblAccount set RoleId={0}, FirstName=N'{1}', LastName=N'{2}', DateOfBirth={3}, " +
+                "Update TblAccount set RoleId={0}, FirstName=N'{1}', LastName=N'{2}', DateOfBirth='{3}', " +
             " Sex={4}, Phone=N'{5}', Email=N'{6}',Address=N'{7}', AddressId={8}, Status={9}, Description=N'{10}' " +
                 "Where Username='{11}' ;",
                 this.accountInfo.RoleId,
@@ -102,21 +106,26 @@ namespace TruongDuongKhang_1811546141.BussinessLayer.Workflow
             return string.Format("Delete TblAccount where Username='{0}'", this.accountInfo.Username);
         }
 
-        // thêm thông tin địa chỉ vào database
+        // thêm thông tin vào database
         public int addAccount()
         {
 
             return new DaoMsSqlServer().executeNonQuery(insertSql());
         }
 
-        // cập nhật thông tin địa chỉ vào database
+        // cập nhật vào database
         public int updateAccount()
-        {
-
+        { 
             return new DaoMsSqlServer().executeNonQuery(updateSql());
         }
 
-        // xóa thông tin địa chỉ vào database
+        // cập nhật mật khẩu vào database
+        public int changePassword(string username, string password)
+        {
+            return new DaoMsSqlServer().executeNonQuery(changePassSql(username, password));
+        }
+
+        // xóa thông tin trong database
         public int deleteAccount()
         {
             return new DaoMsSqlServer().executeNonQuery(deleteSql());

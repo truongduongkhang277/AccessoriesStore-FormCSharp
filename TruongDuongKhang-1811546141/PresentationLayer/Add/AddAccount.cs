@@ -178,7 +178,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
                 int result = busAccount.addAccount();
                 if (result == 1)
                 {
-                    MessageBox.Show(string.Format("Thêm mới thành công tài khoản {0} cho thành viên {1} {2}", 
+                    MessageBox.Show(string.Format("Cập nhật thành công tài khoản {0} cho thành viên {1} {2}", 
                         busAccount.accountInfo.Username, busAccount.accountInfo.FirstName , busAccount.accountInfo.LastName));
                     
                     // gọi nút thêm mới dữ liệu khởi động
