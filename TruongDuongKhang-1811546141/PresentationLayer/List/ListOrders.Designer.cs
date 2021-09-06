@@ -30,7 +30,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbFilter = new System.Windows.Forms.GroupBox();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,36 +42,36 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label3 = new System.Windows.Forms.Label();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.gbFilter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 100);
             this.panel1.TabIndex = 6;
             // 
-            // groupBox1
+            // gbFilter
             // 
-            this.groupBox1.Controls.Add(this.txtCustomerName);
-            this.groupBox1.Controls.Add(this.btnExit);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtPhone);
-            this.groupBox1.Controls.Add(this.cbbDistrict);
-            this.groupBox1.Controls.Add(this.btnPrint);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnFilter);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(25, 10);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1150, 80);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lọc bằng điều kiện";
+            this.gbFilter.Controls.Add(this.txtCustomerName);
+            this.gbFilter.Controls.Add(this.btnExit);
+            this.gbFilter.Controls.Add(this.label2);
+            this.gbFilter.Controls.Add(this.txtPhone);
+            this.gbFilter.Controls.Add(this.cbbDistrict);
+            this.gbFilter.Controls.Add(this.btnPrint);
+            this.gbFilter.Controls.Add(this.label1);
+            this.gbFilter.Controls.Add(this.btnFilter);
+            this.gbFilter.Controls.Add(this.label3);
+            this.gbFilter.Location = new System.Drawing.Point(25, 10);
+            this.gbFilter.Name = "gbFilter";
+            this.gbFilter.Size = new System.Drawing.Size(1150, 80);
+            this.gbFilter.TabIndex = 9;
+            this.gbFilter.TabStop = false;
+            this.gbFilter.Text = "Lọc bằng điều kiện";
             // 
             // txtCustomerName
             // 
@@ -189,8 +189,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListOrders";
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbFilter.ResumeLayout(false);
+            this.gbFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.ResumeLayout(false);
 
@@ -199,7 +199,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbFilter;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label2;

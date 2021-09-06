@@ -106,7 +106,6 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private void btnClear_Click(object sender, EventArgs e)
         {
             new AddCustomer().Show();
-            this.Dispose();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

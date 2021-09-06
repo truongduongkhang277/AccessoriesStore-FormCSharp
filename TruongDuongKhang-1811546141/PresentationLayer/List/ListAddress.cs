@@ -82,7 +82,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
                 loadDataSet();
             }
             // gọi nút thêm mới dữ liệu khởi động
-            this.btnClear.PerformClick();
+            this.btnNew.PerformClick();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             {
                 loadDataSet();
                 // gọi nút thêm mới dữ liệu khởi động
-                this.btnClear.PerformClick();
+                this.btnNew.PerformClick();
             }
         }
 

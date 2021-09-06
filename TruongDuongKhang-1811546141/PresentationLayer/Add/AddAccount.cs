@@ -61,13 +61,13 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         }
 
         // kiểm tra tính hợp lệ của dữ liệu tên đăng nhập được nhập vào
-        private void txtUsername_Leave(object sender, EventArgs e)
+        /*private void txtUsername_Leave(object sender, EventArgs e)
         {
             if (this.txtUsername.Text.Trim().Length > 0 && !ValidationByRegex.checkUsernameRegex(this.txtUsername.Text))
             {
                 this.ErrorMessage.Show("Tài khoản phải có ít nhất 1 chữ, 1 số, nhiều hơn 8 kí tự và không quá 20!!", this.txtUsername, 0, -70, 5000);
             }
-        }
+        }*/
 
         // Khi có dữ liệu truyền vào form
         private void txtFirstName_TextChanged(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbInfo = new System.Windows.Forms.GroupBox();
             this.radFemale = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label8 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbAddress = new System.Windows.Forms.GroupBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label4 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbAccount = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.cbbRole = new System.Windows.Forms.ComboBox();
@@ -64,28 +64,28 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbInfo.SuspendLayout();
+            this.gbAddress.SuspendLayout();
+            this.gbAccount.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbInfo
             // 
-            this.groupBox1.Controls.Add(this.radFemale);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtDateOfBirth);
-            this.groupBox1.Controls.Add(this.radMale);
-            this.groupBox1.Controls.Add(this.txtLastName);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtFirstName);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(50, 15);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 125);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin tài khoản";
+            this.gbInfo.Controls.Add(this.radFemale);
+            this.gbInfo.Controls.Add(this.label13);
+            this.gbInfo.Controls.Add(this.label11);
+            this.gbInfo.Controls.Add(this.txtDateOfBirth);
+            this.gbInfo.Controls.Add(this.radMale);
+            this.gbInfo.Controls.Add(this.txtLastName);
+            this.gbInfo.Controls.Add(this.label8);
+            this.gbInfo.Controls.Add(this.txtFirstName);
+            this.gbInfo.Controls.Add(this.label7);
+            this.gbInfo.Location = new System.Drawing.Point(50, 15);
+            this.gbInfo.Name = "gbInfo";
+            this.gbInfo.Size = new System.Drawing.Size(700, 125);
+            this.gbInfo.TabIndex = 5;
+            this.gbInfo.TabStop = false;
+            this.gbInfo.Text = "Thông tin tài khoản";
             // 
             // radFemale
             // 
@@ -174,22 +174,22 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label7.TabIndex = 6;
             this.label7.Text = "Họ và tên";
             // 
-            // groupBox2
+            // gbAddress
             // 
-            this.groupBox2.Controls.Add(this.txtPhone);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtAddress);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.cbbAddress);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtEmail);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(50, 153);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(700, 129);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Địa chỉ liên lạc";
+            this.gbAddress.Controls.Add(this.txtPhone);
+            this.gbAddress.Controls.Add(this.label9);
+            this.gbAddress.Controls.Add(this.txtAddress);
+            this.gbAddress.Controls.Add(this.label6);
+            this.gbAddress.Controls.Add(this.cbbAddress);
+            this.gbAddress.Controls.Add(this.label4);
+            this.gbAddress.Controls.Add(this.txtEmail);
+            this.gbAddress.Controls.Add(this.label3);
+            this.gbAddress.Location = new System.Drawing.Point(50, 153);
+            this.gbAddress.Name = "gbAddress";
+            this.gbAddress.Size = new System.Drawing.Size(700, 129);
+            this.gbAddress.TabIndex = 13;
+            this.gbAddress.TabStop = false;
+            this.gbAddress.Text = "Địa chỉ liên lạc";
             // 
             // txtPhone
             // 
@@ -264,24 +264,24 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label3.TabIndex = 20;
             this.label3.Text = "Email";
             // 
-            // groupBox3
+            // gbAccount
             // 
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.txtDescription);
-            this.groupBox3.Controls.Add(this.cbbRole);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.txtConfirmPassword);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.txtPassword);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.txtUsername);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(50, 295);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(700, 180);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tài khoản";
+            this.gbAccount.Controls.Add(this.label12);
+            this.gbAccount.Controls.Add(this.txtDescription);
+            this.gbAccount.Controls.Add(this.cbbRole);
+            this.gbAccount.Controls.Add(this.label10);
+            this.gbAccount.Controls.Add(this.txtConfirmPassword);
+            this.gbAccount.Controls.Add(this.label2);
+            this.gbAccount.Controls.Add(this.txtPassword);
+            this.gbAccount.Controls.Add(this.label1);
+            this.gbAccount.Controls.Add(this.txtUsername);
+            this.gbAccount.Controls.Add(this.label5);
+            this.gbAccount.Location = new System.Drawing.Point(50, 295);
+            this.gbAccount.Name = "gbAccount";
+            this.gbAccount.Size = new System.Drawing.Size(700, 180);
+            this.gbAccount.TabIndex = 22;
+            this.gbAccount.TabStop = false;
+            this.gbAccount.Text = "Tài khoản";
             // 
             // label12
             // 
@@ -362,7 +362,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtUsername.Size = new System.Drawing.Size(200, 26);
             this.txtUsername.TabIndex = 24;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
-            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
+            //this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // label5
             // 
@@ -426,29 +426,29 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbAddress);
+            this.Controls.Add(this.gbAccount);
+            this.Controls.Add(this.gbInfo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Account";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbInfo.ResumeLayout(false);
+            this.gbInfo.PerformLayout();
+            this.gbAddress.ResumeLayout(false);
+            this.gbAddress.PerformLayout();
+            this.gbAccount.ResumeLayout(false);
+            this.gbAccount.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbInfo;
+        private System.Windows.Forms.GroupBox gbAddress;
+        private System.Windows.Forms.GroupBox gbAccount;
         private System.Windows.Forms.RadioButton radMale;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label8;

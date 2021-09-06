@@ -164,7 +164,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         {
             int cateId = int.Parse(this.cbbFilterCate.SelectedValue.ToString());
             this.dataBinding(isActive, cateId);
-            this.btnClear.PerformClick();
+            this.btnNew.PerformClick();
             this.btnUpdate.Enabled = this.btnDelete.Enabled = false;
         }
 
@@ -190,7 +190,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
                 loadDataSet(isActive, 0);
             }
             // gọi nút thêm mới dữ liệu khởi động
-            this.btnClear.PerformClick();
+            this.btnNew.PerformClick();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -203,14 +203,13 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             {
                 loadDataSet(isActive, 0);
                 // gọi nút thêm mới dữ liệu khởi động
-                this.btnClear.PerformClick();
+                this.btnNew.PerformClick();
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             new AddProduct().Show();
-            this.Dispose();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

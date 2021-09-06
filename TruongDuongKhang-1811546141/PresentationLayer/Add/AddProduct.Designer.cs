@@ -43,7 +43,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label5 = new System.Windows.Forms.Label();
             this.txtEnteredDate = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbInfo = new System.Windows.Forms.GroupBox();
             this.cbbAccount = new System.Windows.Forms.ComboBox();
             this.txtDiscount = new System.Windows.Forms.MaskedTextBox();
             this.txtUnitPrice = new System.Windows.Forms.MaskedTextBox();
@@ -62,7 +62,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label12 = new System.Windows.Forms.Label();
             this.ErrorMessage = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gbInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // picImage
@@ -180,37 +180,37 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label6.TabIndex = 13;
             this.label6.Text = "Tài khoản phê duyệt";
             // 
-            // groupBox1
+            // gbInfo
             // 
-            this.groupBox1.Controls.Add(this.cbbAccount);
-            this.groupBox1.Controls.Add(this.txtDiscount);
-            this.groupBox1.Controls.Add(this.txtUnitPrice);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.txtQuantity);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.txtDescription);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtEnteredDate);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtManufactur);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtProductName);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtProductId);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbbCategory);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(25, 75);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 375);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin sản phẩm";
+            this.gbInfo.Controls.Add(this.cbbAccount);
+            this.gbInfo.Controls.Add(this.txtDiscount);
+            this.gbInfo.Controls.Add(this.txtUnitPrice);
+            this.gbInfo.Controls.Add(this.label15);
+            this.gbInfo.Controls.Add(this.txtQuantity);
+            this.gbInfo.Controls.Add(this.label14);
+            this.gbInfo.Controls.Add(this.label13);
+            this.gbInfo.Controls.Add(this.label10);
+            this.gbInfo.Controls.Add(this.txtDescription);
+            this.gbInfo.Controls.Add(this.label9);
+            this.gbInfo.Controls.Add(this.label8);
+            this.gbInfo.Controls.Add(this.label6);
+            this.gbInfo.Controls.Add(this.txtEnteredDate);
+            this.gbInfo.Controls.Add(this.label5);
+            this.gbInfo.Controls.Add(this.label4);
+            this.gbInfo.Controls.Add(this.txtManufactur);
+            this.gbInfo.Controls.Add(this.label3);
+            this.gbInfo.Controls.Add(this.txtProductName);
+            this.gbInfo.Controls.Add(this.label1);
+            this.gbInfo.Controls.Add(this.txtProductId);
+            this.gbInfo.Controls.Add(this.label2);
+            this.gbInfo.Controls.Add(this.cbbCategory);
+            this.gbInfo.Controls.Add(this.label7);
+            this.gbInfo.Location = new System.Drawing.Point(25, 75);
+            this.gbInfo.Name = "gbInfo";
+            this.gbInfo.Size = new System.Drawing.Size(700, 375);
+            this.gbInfo.TabIndex = 0;
+            this.gbInfo.TabStop = false;
+            this.gbInfo.Text = "Thông tin sản phẩm";
             // 
             // cbbAccount
             // 
@@ -387,7 +387,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Controls.Add(this.picImage);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbInfo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -395,8 +395,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddProduct";
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbInfo.ResumeLayout(false);
+            this.gbInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,7 +416,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEnteredDate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbInfo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label9;

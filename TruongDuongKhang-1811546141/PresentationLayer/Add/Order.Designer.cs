@@ -29,13 +29,13 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.radFemale = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCustomerId = new System.Windows.Forms.Label();
@@ -51,9 +51,18 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.pId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufactur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbOrder = new System.Windows.Forms.GroupBox();
+            this.cbbPaymentMethod = new System.Windows.Forms.ComboBox();
             this.btnSelectCustomer = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDeliveryAddress = new System.Windows.Forms.TextBox();
@@ -80,22 +89,13 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnNew = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbbPaymentMethod = new System.Windows.Forms.ComboBox();
-            this.pId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufactur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.gbPayment = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbOrder.SuspendLayout();
             this.gbInfoCustomer.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbPayment.SuspendLayout();
             this.SuspendLayout();
             // 
             // radFemale
@@ -251,6 +251,80 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.dgvOrder.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvOrder_RowsAdded);
             this.dgvOrder.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvOrder_RowsRemoved);
             // 
+            // pId
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.pId.DefaultCellStyle = dataGridViewCellStyle8;
+            this.pId.HeaderText = "Mã SP";
+            this.pId.Name = "pId";
+            this.pId.ReadOnly = true;
+            this.pId.Width = 90;
+            // 
+            // pName
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.pName.DefaultCellStyle = dataGridViewCellStyle9;
+            this.pName.HeaderText = "Tên SP";
+            this.pName.Name = "pName";
+            this.pName.ReadOnly = true;
+            this.pName.Width = 190;
+            // 
+            // manufactur
+            // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.manufactur.DefaultCellStyle = dataGridViewCellStyle10;
+            this.manufactur.HeaderText = "Nhà Sản Xuất";
+            this.manufactur.Name = "manufactur";
+            this.manufactur.ReadOnly = true;
+            this.manufactur.Width = 135;
+            // 
+            // qty
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.qty.DefaultCellStyle = dataGridViewCellStyle11;
+            this.qty.HeaderText = "Số lượng";
+            this.qty.Name = "qty";
+            this.qty.ReadOnly = true;
+            this.qty.Width = 115;
+            // 
+            // unitPrice
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "#,##0";
+            this.unitPrice.DefaultCellStyle = dataGridViewCellStyle12;
+            this.unitPrice.HeaderText = "Đơn giá";
+            this.unitPrice.Name = "unitPrice";
+            this.unitPrice.ReadOnly = true;
+            this.unitPrice.Width = 115;
+            // 
+            // discount
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.Format = "#,##0";
+            this.discount.DefaultCellStyle = dataGridViewCellStyle13;
+            this.discount.HeaderText = "Giảm giá";
+            this.discount.Name = "discount";
+            this.discount.ReadOnly = true;
+            this.discount.Width = 115;
+            // 
+            // total
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle14.Format = "#,##0";
+            this.total.DefaultCellStyle = dataGridViewCellStyle14;
+            this.total.HeaderText = "Tổng tiền";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Width = 115;
+            // 
+            // action
+            // 
+            this.action.HeaderText = "Action";
+            this.action.Name = "action";
+            this.action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.action.Width = 75;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvOrder);
@@ -290,6 +364,18 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.gbOrder.Size = new System.Drawing.Size(550, 225);
             this.gbOrder.TabIndex = 1;
             this.gbOrder.TabStop = false;
+            this.gbOrder.Text = "Thông tin đơn hàng";
+            // 
+            // cbbPaymentMethod
+            // 
+            this.cbbPaymentMethod.FormattingEnabled = true;
+            this.cbbPaymentMethod.Items.AddRange(new object[] {
+            "Thanh toán bằng tiền mặt",
+            "Thanh toán bằng thẻ"});
+            this.cbbPaymentMethod.Location = new System.Drawing.Point(192, 188);
+            this.cbbPaymentMethod.Name = "cbbPaymentMethod";
+            this.cbbPaymentMethod.Size = new System.Drawing.Size(348, 28);
+            this.cbbPaymentMethod.TabIndex = 15;
             // 
             // btnSelectCustomer
             // 
@@ -335,6 +421,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.txtDepartureDate.Location = new System.Drawing.Point(405, 62);
             this.txtDepartureDate.Name = "txtDepartureDate";
+            this.txtDepartureDate.ReadOnly = true;
             this.txtDepartureDate.Size = new System.Drawing.Size(135, 26);
             this.txtDepartureDate.TabIndex = 9;
             // 
@@ -419,6 +506,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.gbInfoCustomer.Size = new System.Drawing.Size(450, 225);
             this.gbInfoCustomer.TabIndex = 16;
             this.gbInfoCustomer.TabStop = false;
+            this.gbInfoCustomer.Text = "Thông tin khách hàng";
             // 
             // txtCustomer
             // 
@@ -556,112 +644,28 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // groupBox3
+            // gbPayment
             // 
-            this.groupBox3.Controls.Add(this.txtTotal);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.panel2);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.txtAmount);
-            this.groupBox3.Controls.Add(this.txtDiscount);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Location = new System.Drawing.Point(50, 271);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1100, 223);
-            this.groupBox3.TabIndex = 31;
-            this.groupBox3.TabStop = false;
-            // 
-            // cbbPaymentMethod
-            // 
-            this.cbbPaymentMethod.FormattingEnabled = true;
-            this.cbbPaymentMethod.Items.AddRange(new object[] {
-            "Thanh toán bằng tiền mặt",
-            "Thanh toán bằng thẻ"});
-            this.cbbPaymentMethod.Location = new System.Drawing.Point(192, 188);
-            this.cbbPaymentMethod.Name = "cbbPaymentMethod";
-            this.cbbPaymentMethod.Size = new System.Drawing.Size(348, 28);
-            this.cbbPaymentMethod.TabIndex = 15;
-            // 
-            // pId
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.pId.DefaultCellStyle = dataGridViewCellStyle15;
-            this.pId.HeaderText = "Mã SP";
-            this.pId.Name = "pId";
-            this.pId.ReadOnly = true;
-            this.pId.Width = 90;
-            // 
-            // pName
-            // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.pName.DefaultCellStyle = dataGridViewCellStyle16;
-            this.pName.HeaderText = "Tên SP";
-            this.pName.Name = "pName";
-            this.pName.ReadOnly = true;
-            this.pName.Width = 190;
-            // 
-            // manufactur
-            // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.manufactur.DefaultCellStyle = dataGridViewCellStyle17;
-            this.manufactur.HeaderText = "Nhà Sản Xuất";
-            this.manufactur.Name = "manufactur";
-            this.manufactur.ReadOnly = true;
-            this.manufactur.Width = 135;
-            // 
-            // qty
-            // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.qty.DefaultCellStyle = dataGridViewCellStyle18;
-            this.qty.HeaderText = "Số lượng";
-            this.qty.Name = "qty";
-            this.qty.ReadOnly = true;
-            this.qty.Width = 115;
-            // 
-            // unitPrice
-            // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle19.Format = "#,##0";
-            this.unitPrice.DefaultCellStyle = dataGridViewCellStyle19;
-            this.unitPrice.HeaderText = "Đơn giá";
-            this.unitPrice.Name = "unitPrice";
-            this.unitPrice.ReadOnly = true;
-            this.unitPrice.Width = 115;
-            // 
-            // discount
-            // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle20.Format = "#,##0";
-            this.discount.DefaultCellStyle = dataGridViewCellStyle20;
-            this.discount.HeaderText = "Giảm giá";
-            this.discount.Name = "discount";
-            this.discount.ReadOnly = true;
-            this.discount.Width = 115;
-            // 
-            // total
-            // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle21.Format = "#,##0";
-            this.total.DefaultCellStyle = dataGridViewCellStyle21;
-            this.total.HeaderText = "Tổng tiền";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            this.total.Width = 115;
-            // 
-            // action
-            // 
-            this.action.HeaderText = "Action";
-            this.action.Name = "action";
-            this.action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.action.Width = 75;
+            this.gbPayment.Controls.Add(this.txtTotal);
+            this.gbPayment.Controls.Add(this.label12);
+            this.gbPayment.Controls.Add(this.panel2);
+            this.gbPayment.Controls.Add(this.label14);
+            this.gbPayment.Controls.Add(this.txtAmount);
+            this.gbPayment.Controls.Add(this.txtDiscount);
+            this.gbPayment.Controls.Add(this.label13);
+            this.gbPayment.Location = new System.Drawing.Point(50, 271);
+            this.gbPayment.Name = "gbPayment";
+            this.gbPayment.Size = new System.Drawing.Size(1100, 223);
+            this.gbPayment.TabIndex = 31;
+            this.gbPayment.TabStop = false;
+            this.gbPayment.Text = "Thanh toán";
             // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 550);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.gbPayment);
             this.Controls.Add(this.btnSelectProduct);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPrint);
@@ -681,8 +685,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.gbOrder.PerformLayout();
             this.gbInfoCustomer.ResumeLayout(false);
             this.gbInfoCustomer.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbPayment.ResumeLayout(false);
+            this.gbPayment.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -733,7 +737,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtCustomer;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbPayment;
         private System.Windows.Forms.ComboBox cbbPaymentMethod;
         private System.Windows.Forms.DataGridViewTextBoxColumn pId;
         private System.Windows.Forms.DataGridViewTextBoxColumn pName;

@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using TruongDuongKhang_1811546141.PresentationLayer.Add;
 using TruongDuongKhang_1811546141.PresentationLayer;
 using TruongDuongKhang_1811546141.Lib;
-using TruongDuongKhang_1811546141.PresentationLayer;
 
 namespace TruongDuongKhang_1811546141
 {

@@ -38,7 +38,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label4 = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtDistrict = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtCity);
             this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.txtDistrict);
@@ -159,18 +159,18 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnClear
+            // btnNew
             // 
-            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.districtsAdd;
-            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(409, 176);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(115, 40);
-            this.btnClear.TabIndex = 28;
-            this.btnClear.Text = "Tạo mới";
-            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnNew.Image = global::TruongDuongKhang_1811546141.Properties.Resources.districtsAdd;
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(409, 176);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(115, 40);
+            this.btnNew.TabIndex = 28;
+            this.btnNew.Text = "Tạo mới";
+            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label3
             // 
@@ -268,7 +268,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtDistrict;

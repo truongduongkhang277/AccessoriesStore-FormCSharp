@@ -42,12 +42,12 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbAddress = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbInfo = new System.Windows.Forms.GroupBox();
             this.radFemale = new System.Windows.Forms.RadioButton();
             this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,8 +57,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radMale = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbAddress.SuspendLayout();
+            this.gbInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtPhone
@@ -177,24 +177,24 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // groupBox2
+            // gbAddress
             // 
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtDescription);
-            this.groupBox2.Controls.Add(this.txtPhone);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtAddress);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.cbbAddress);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtEmail);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(150, 261);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(700, 200);
-            this.groupBox2.TabIndex = 36;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Địa chỉ liên lạc";
+            this.gbAddress.Controls.Add(this.label12);
+            this.gbAddress.Controls.Add(this.txtDescription);
+            this.gbAddress.Controls.Add(this.txtPhone);
+            this.gbAddress.Controls.Add(this.label9);
+            this.gbAddress.Controls.Add(this.txtAddress);
+            this.gbAddress.Controls.Add(this.label6);
+            this.gbAddress.Controls.Add(this.cbbAddress);
+            this.gbAddress.Controls.Add(this.label4);
+            this.gbAddress.Controls.Add(this.txtEmail);
+            this.gbAddress.Controls.Add(this.label3);
+            this.gbAddress.Location = new System.Drawing.Point(150, 261);
+            this.gbAddress.Name = "gbAddress";
+            this.gbAddress.Size = new System.Drawing.Size(700, 200);
+            this.gbAddress.TabIndex = 36;
+            this.gbAddress.TabStop = false;
+            this.gbAddress.Text = "Địa chỉ liên lạc";
             // 
             // label12
             // 
@@ -230,24 +230,24 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.label7.TabIndex = 6;
             this.label7.Text = "Họ và tên";
             // 
-            // groupBox1
+            // gbInfo
             // 
-            this.groupBox1.Controls.Add(this.radFemale);
-            this.groupBox1.Controls.Add(this.txtCustomerId);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.txtDateOfBirth);
-            this.groupBox1.Controls.Add(this.radMale);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtCustomerName);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(150, 99);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 125);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin khách hàng";
+            this.gbInfo.Controls.Add(this.radFemale);
+            this.gbInfo.Controls.Add(this.txtCustomerId);
+            this.gbInfo.Controls.Add(this.label2);
+            this.gbInfo.Controls.Add(this.label13);
+            this.gbInfo.Controls.Add(this.label11);
+            this.gbInfo.Controls.Add(this.txtDateOfBirth);
+            this.gbInfo.Controls.Add(this.radMale);
+            this.gbInfo.Controls.Add(this.label8);
+            this.gbInfo.Controls.Add(this.txtCustomerName);
+            this.gbInfo.Controls.Add(this.label7);
+            this.gbInfo.Location = new System.Drawing.Point(150, 99);
+            this.gbInfo.Name = "gbInfo";
+            this.gbInfo.Size = new System.Drawing.Size(700, 125);
+            this.gbInfo.TabIndex = 35;
+            this.gbInfo.TabStop = false;
+            this.gbInfo.Text = "Thông tin khách hàng";
             // 
             // radFemale
             // 
@@ -347,18 +347,18 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbAddress);
+            this.Controls.Add(this.gbInfo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCustomer";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbAddress.ResumeLayout(false);
+            this.gbAddress.PerformLayout();
+            this.gbInfo.ResumeLayout(false);
+            this.gbInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,10 +377,10 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbAddress;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbInfo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.MaskedTextBox txtDateOfBirth;
         private System.Windows.Forms.RadioButton radMale;

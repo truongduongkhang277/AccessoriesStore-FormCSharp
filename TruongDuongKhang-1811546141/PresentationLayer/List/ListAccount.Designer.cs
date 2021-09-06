@@ -32,7 +32,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrint = new System.Windows.Forms.Button();
             this.radFemale = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbInfo = new System.Windows.Forms.GroupBox();
             this.radStatus = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,13 +56,13 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbInfo.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +71,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             // 
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.radFemale);
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.gbInfo);
             this.panel1.Controls.Add(this.btnFilter);
             this.panel1.Controls.Add(this.cbbFilterRole);
             this.panel1.Controls.Add(this.txtPhone);
@@ -90,7 +90,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.txtFirstName);
-            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(100, 75);
             this.panel1.Name = "panel1";
@@ -120,18 +120,18 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.radFemale.Text = "Nữ";
             this.radFemale.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbInfo
             // 
-            this.groupBox1.Controls.Add(this.radStatus);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.lblUsername);
-            this.groupBox1.Controls.Add(this.cbbRole);
-            this.groupBox1.Location = new System.Drawing.Point(25, 15);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(947, 50);
-            this.groupBox1.TabIndex = 39;
-            this.groupBox1.TabStop = false;
+            this.gbInfo.Controls.Add(this.radStatus);
+            this.gbInfo.Controls.Add(this.label10);
+            this.gbInfo.Controls.Add(this.label5);
+            this.gbInfo.Controls.Add(this.lblUsername);
+            this.gbInfo.Controls.Add(this.cbbRole);
+            this.gbInfo.Location = new System.Drawing.Point(25, 15);
+            this.gbInfo.Name = "gbInfo";
+            this.gbInfo.Size = new System.Drawing.Size(947, 50);
+            this.gbInfo.TabIndex = 39;
+            this.gbInfo.TabStop = false;
             // 
             // radStatus
             // 
@@ -356,18 +356,18 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.txtFirstName.Size = new System.Drawing.Size(250, 26);
             this.txtFirstName.TabIndex = 7;
             // 
-            // btnClear
+            // btnNew
             // 
-            this.btnClear.Image = global::TruongDuongKhang_1811546141.Properties.Resources.accountAdd;
-            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(621, 175);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(115, 40);
-            this.btnClear.TabIndex = 28;
-            this.btnClear.Text = "Tạo mới";
-            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnNew.Image = global::TruongDuongKhang_1811546141.Properties.Resources.accountAdd;
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(621, 175);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(115, 40);
+            this.btnNew.TabIndex = 28;
+            this.btnNew.Text = "Tạo mới";
+            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label7
             // 
@@ -422,8 +422,8 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
             this.Text = "AccountList";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbInfo.ResumeLayout(false);
+            this.gbInfo.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.ResumeLayout(false);
@@ -439,7 +439,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvAccount;
         private System.Windows.Forms.Label label11;
@@ -456,7 +456,7 @@ namespace TruongDuongKhang_1811546141.PresentationLayer
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbInfo;
         private System.Windows.Forms.RadioButton radStatus;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbbRole;
